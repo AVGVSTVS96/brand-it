@@ -5,7 +5,7 @@ import { chrome, watch, reportMisses } from "../../../.agents/skills/brand-it/sc
 const sites = {
   hex: { url: "https://hex-sand.vercel.app/", og: "og.png?v=3" },
   commonplace: { url: "https://commonplace-eight-sable.vercel.app/", og: "og.png" },
-  "brand-it": { url: "https://brand-it.vercel.app/", og: "og.png" },
+  "brand-it": { url: "https://brand-it-seven.vercel.app/", og: "og.png" },
 }
 const views = { 1035: 720, 390: 844 }
 const only = process.argv.slice(2)

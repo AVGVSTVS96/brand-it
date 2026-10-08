@@ -113,7 +113,7 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .section-line { margin-top: var(--s4); }
 
 .examples { display: grid; gap: var(--s9); margin-top: var(--s8); }
-.example { display: grid; gap: var(--s6); }
+.example { display: grid; gap: var(--s6); min-width: 0; }
 .example-head { display: grid; gap: var(--s3); }
 .example-head picture, .example-head svg { height: 1.5rem; }
 .example-head picture img { height: 100%; width: auto; }
@@ -122,10 +122,10 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .name { font-weight: 600; letter-spacing: -0.01em; margin-top: var(--s2); }
 .name span { color: var(--ink-2); font-weight: 400; }
 .facts, .links { font: 400 0.8125rem/1.6 var(--mono); color: var(--ink-2); max-width: none; }
-.facts i, .links i { font-style: normal; color: var(--ink-3); padding-inline: var(--s2); }
+.facts i, .links i { font-style: normal; color: var(--ink-3); }
 .links a { text-decoration-color: var(--hair); }
 /* 1035/720 and 390/844 are the shots' aspect ratios, so both land at one height */
-.shots { display: grid; grid-template-columns: 1.4375fr 0.4621fr; gap: var(--s5) var(--s4); align-items: start; }
+.shots { display: grid; grid-template-columns: 1.4375fr 0.4621fr; gap: var(--s5) var(--s4); align-items: start; min-width: 0; }
 .shots .span { grid-column: 1 / -1; }
 .caption { margin-top: var(--s8); font-size: 1.25rem; line-height: 1.4; font-weight: 600; letter-spacing: -0.015em; }
 
@@ -153,8 +153,11 @@ footer a { text-decoration-color: var(--hair); }
   .examples { gap: var(--s8); margin-top: var(--s7); }
   .shots { gap: var(--s4) var(--s3); }
   .shots .narrow .label { display: none; }
-  .tree { column-gap: var(--s4); }
+  .tree { grid-template-columns: 1fr; row-gap: 0; }
   .tree > span:nth-child(odd) { white-space: normal; overflow-wrap: anywhere; }
+  .tree > span:nth-child(even) { padding-left: 2ch; margin-bottom: var(--s2); }
+  .tree > .in + span { padding-left: 4ch; }
+  .tree > span:empty { display: none; }
   .term { padding: var(--s4); }
-  .term pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .term { white-space: pre-wrap; overflow-wrap: anywhere; }
 }
