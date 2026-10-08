@@ -56,6 +56,7 @@
     <div class="dim h" data-measure="width"><span>…</span></div>
     <div class="dim v" data-measure="height"><span>…</span></div>
   </figure>
+  <p class="tagline">brand a project from its own parts</p>
   <h1 id="hero-title">Say brand it.</h1>
   <p class="lede">A skill for coding agents. It makes the name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all as code, the way hex and commonplace were made.</p>
   <div class="install">
@@ -86,7 +87,7 @@
           <div class="dim h"><span>1035</span></div>
         </figure>
         <figure class="framed narrow">
-          <figcaption class="label">390</figcaption>
+          <figcaption class="label"><span class="site">hex · </span>390<span class="sch"> · <span class="scheme"></span></span></figcaption>
           <div class="frame"><picture><source srcset="/examples/hex-390-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/hex-390-light.webp" width="780" height="1688" alt="hex-sand.vercel.app at 390 wide"></picture></div>
           <div class="dim h"><span>390</span></div>
         </figure>
@@ -113,7 +114,7 @@
           <div class="dim h"><span>1035</span></div>
         </figure>
         <figure class="framed narrow">
-          <figcaption class="label">390</figcaption>
+          <figcaption class="label"><span class="site">commonplace · </span>390<span class="sch"> · <span class="scheme"></span></span></figcaption>
           <div class="frame"><picture><source srcset="/examples/commonplace-390-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/commonplace-390-light.webp" width="780" height="1688" alt="commonplace-eight-sable.vercel.app at 390 wide"></picture></div>
           <div class="dim h"><span>390</span></div>
         </figure>
@@ -140,7 +141,7 @@
           <div class="dim h"><span>1035</span></div>
         </figure>
         <figure class="framed narrow">
-          <figcaption class="label">390</figcaption>
+          <figcaption class="label"><span class="site">brand-it · </span>390<span class="sch"> · <span class="scheme"></span></span></figcaption>
           <div class="frame"><picture><source srcset="/examples/brand-it-390-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/brand-it-390-light.webp" width="780" height="1688" alt="this page at 390 wide"></picture></div>
           <div class="dim h"><span>390</span></div>
         </figure>
@@ -169,16 +170,16 @@
   <h2 id="code-title">All of it is code.</h2>
   <p class="small section-line">A brand is one BRAND.md, one specimen page and the scripts that made it, so any asset rebuilds in one command.</p>
   <div class="tree">
-    <span>brand/</span><span></span>
-    <span class="in">BRAND.md</span><span>the system, written down</span>
-    <span class="in">specimen.html</span><span>the system in use: hero, type scale, tokens, motion</span>
-    <span class="in">references.md</span><span>what was taken from your saves, and what wasn't</span>
-    <span class="in">logo/gen.mjs</span><span>three marks from real font outlines, as SVG paths</span>
-    <span>copy/</span><span></span>
-    <span class="in">MESSAGING.md</span><span>the one line, what it is and isn't, the voice, facts with sources</span>
-    <span class="in">SITE.md  LAUNCH.md  README.md</span><span></span>
-    <span>site/</span><span>static, on Vercel: og.png, favicon.svg, the README header</span>
-    <span>video/</span><span>HTML scenes on one clock, sound built from the same clock</span>
+    <b>brand/</b><span></span>
+    <b class="in">BRAND.md</b><span>the system, written down</span>
+    <b class="in">specimen.html</b><span>the system in use: hero, type scale, tokens, motion</span>
+    <b class="in">references.md</b><span>what was taken from your saves, and what wasn't</span>
+    <b class="in">logo/gen.mjs</b><span>three marks from real font outlines, as SVG paths</span>
+    <b>copy/</b><span></span>
+    <b class="in">MESSAGING.md</b><span>the one line, what it is and isn't, the voice, facts with sources</span>
+    <b class="in wide">SITE.md  LAUNCH.md  README.md</b>
+    <b>site/</b><span>static, on Vercel: og.png, favicon.svg, the README header</span>
+    <b>video/</b><span>HTML scenes on one clock, sound built from the same clock</span>
   </div>
 </section>
 
@@ -203,7 +204,7 @@ video/out/video.mp4: -14 LUFS, true peak -2.1 dBTP after AAC</pre>
   <p class="rubric label">04 <span>install</span></p>
   <h2 id="install-title">Install</h2>
   <p class="small section-line">One command. Then open a project in Claude Code and say brand it.</p>
-  <div class="install" style="margin-top: var(--s6)">
+  <div class="install">
     <div class="cmd"><pre>npx skills add AVGVSTVS96/brand-it</pre><button type="button" data-copy="npx skills add AVGVSTVS96/brand-it">Copy</button></div>
   </div>
   <p class="need"><b>You'll need</b><br>Bun, Chrome and ffmpeg, for the scripts. Bun installs puppeteer-core on first run.</p>

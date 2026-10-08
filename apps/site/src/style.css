@@ -57,7 +57,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 
 .label { font: 500 0.75rem/1 var(--mono); color: var(--pencil); font-variant-numeric: tabular-nums; }
-.rubric { display: flex; align-items: center; gap: var(--s4); margin-bottom: var(--s6); }
+.rubric { display: flex; align-items: center; gap: var(--s4); margin-bottom: var(--s6); max-width: none; }
 .rubric span { color: var(--ink-3); }
 .rubric::after { content: ""; flex: 1; height: 1px; background: var(--hair); }
 .scheme::after { content: "light"; }
@@ -83,7 +83,7 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 
 .framed { display: grid; gap: var(--s2); align-content: start; min-width: 0; }
 .framed .label { color: var(--ink-3); white-space: nowrap; }
-.frame { border: 1px solid var(--ink); background: var(--paper); }
+.frame { outline: 1px solid var(--ink); outline-offset: -1px; background: var(--paper); }
 .frame > picture > img, .frame > img, .frame > video { width: 100%; height: auto; }
 
 .bar { display: flex; align-items: center; justify-content: space-between; height: 3.5rem; padding-inline: var(--gutter); border-bottom: 1px solid var(--hair); }
@@ -93,7 +93,8 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .bar a.gh:hover { color: var(--ink); }
 
 .hero { border-top: 0; padding-block: var(--s7) var(--s8); }
-.hero-fig { position: relative; max-width: 30rem; padding-right: 2.25rem; margin-bottom: var(--s6); }
+.hero-fig { position: relative; max-width: 30rem; padding-right: 2.25rem; margin-bottom: var(--s4); }
+.tagline { font-size: 1.125rem; color: var(--ink-2); margin-bottom: var(--s6); }
 .hero-fig svg { width: 100%; height: auto; margin-left: -2.32%; }
 .hero-fig .dim.h { margin-top: var(--s3); }
 .hero-fig .dim.v { position: absolute; right: 0; top: 0; }
@@ -112,7 +113,7 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 
 .section-line { margin-top: var(--s4); }
 
-.examples { display: grid; gap: var(--s9); margin-top: var(--s8); }
+.examples { display: grid; gap: var(--s9); margin-top: var(--s7); }
 .example { display: grid; gap: var(--s6); min-width: 0; }
 .example-head { display: grid; gap: var(--s3); }
 .example-head picture, .example-head svg { height: 1.5rem; }
@@ -130,13 +131,15 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .caption { margin-top: var(--s8); font-size: 1.25rem; line-height: 1.4; font-weight: 600; letter-spacing: -0.015em; }
 
 .tree { display: grid; grid-template-columns: max-content 1fr; column-gap: var(--s6); row-gap: 0.1875rem; margin-top: var(--s7); font: 400 0.875rem/1.6 var(--mono); max-width: 54rem; }
-.tree > span:nth-child(odd) { white-space: nowrap; }
-.tree > span:nth-child(even) { color: var(--ink-2); }
+.tree b { font-weight: 400; white-space: nowrap; }
+.tree span { color: var(--ink-2); }
 .tree .in { padding-left: 2ch; }
+.tree .wide { grid-column: 1 / -1; }
 
 .term { margin-top: var(--s7); padding: var(--s5) var(--s6); background: var(--paper-2); border: 1px solid var(--hair); max-width: 54rem; }
 .term i { font-style: normal; color: var(--ink-3); }
 
+#install .install { margin-top: var(--s7); }
 .need { margin-top: var(--s6); }
 .need b { font-weight: 600; }
 .closing { margin-top: var(--s6); }
@@ -149,14 +152,19 @@ footer a { text-decoration-color: var(--hair); }
   .hero { padding-block: var(--s6) var(--s7); }
   .hero-fig { padding-right: 1.75rem; margin-bottom: var(--s6); }
   .lede { font-size: 1.125rem; }
+  .tagline { font-size: 1rem; }
   .cmd pre { font-size: 0.875rem; white-space: pre-wrap; }
   .examples { gap: var(--s8); margin-top: var(--s7); }
   .shots { gap: var(--s4) var(--s3); }
   .tree { grid-template-columns: 1fr; row-gap: 0; }
-  .tree > span:nth-child(odd) { white-space: normal; overflow-wrap: anywhere; }
-  .tree > span:nth-child(even) { padding-left: 2ch; margin-bottom: var(--s2); }
-  .tree > .in + span { padding-left: 4ch; }
-  .tree > span:empty { display: none; }
+  .tree b { white-space: normal; overflow-wrap: anywhere; }
+  .tree span { padding-left: 2ch; margin-bottom: var(--s2); }
+  .tree .in + span { padding-left: 4ch; }
+  .tree span:empty { display: none; }
+  .tree .wide { margin-bottom: var(--s2); }
+  .narrow .label .site, .narrow .label .sch { display: none; }
+  .links i { display: none; }
+  .links a { display: block; }
   .term { padding: var(--s4); }
   .term { white-space: pre-wrap; overflow-wrap: anywhere; }
 }
