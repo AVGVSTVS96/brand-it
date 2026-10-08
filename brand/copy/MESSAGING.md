@@ -162,4 +162,5 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - The video kit is committed (scenes as data, a deterministic `seek(t)`, sound from the same clock) but the mp4 was never rendered. Don't show or claim a commonplace video.
 
 **brand-it, as a brand**
-- The first project branded with the skill, by itself. The idea line, tokens and files come from `brand/BRAND.md` once the brand agent lands it. Site URL and asset paths are the site agent's; the README rewrite marks them.
+- The first project branded with the skill, by itself. Its idea line and tokens come from `brand/BRAND.md` once the brand agent lands it. The site URL and asset paths are the site agent's; the README rewrite marks them as `SITE_URL` and `.github/assets/brand-it{,-dark}.svg`.
+- hex's facts strip says "name to launch video in two days": the name came Oct 4 14:47, the third video cut Oct 6 11:41.
