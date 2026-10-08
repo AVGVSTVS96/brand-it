@@ -106,7 +106,7 @@ for (const el of document.querySelectorAll("[data-cue]:not([data-type])")) {
 const sweep = document.getElementById("sweep")
 const sweepScene = sweep.closest(".scene")
 const every = +sweep.dataset.every
-const problems = new Set(sweep.dataset.problems.split(" ").map(Number))
+const problems = new Set((sweep.dataset.problems ?? "").split(" ").filter(Boolean).map(Number))
 const steps = []
 let at = +sweepScene.dataset.s + +sweep.dataset.d
 for (const scheme of ["light", "dark"])

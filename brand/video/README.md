@@ -31,7 +31,7 @@ brand-it/
 
 ## Timing
 
-A scene runs from `data-s` to `data-e` seconds. `--k` picks the keyframes (`rise` out of an `.m` mask by default, `up`, `fade`, `pop`, `draw`, `draw-y`, `slide-l`, `slide-r`, `stroke`, `out`), `--t` the timing: `var(--settle)` (the default), `var(--draw)`, `var(--pop)` are springs without bounce, or a fixed `.4s var(--ease)`. Typed lines are `[data-type]` with `data-d`, an optional `data-char` (45 ms a character by default) and `data-verb` (how many characters are the command verb, set in pencil). The sweep steps a width every `data-every` seconds and draws the dimension dashed at the widths `data-problems` lists. The two dimensions that carry numbers measure the rendered wordmark and the rendered b on load; nothing on them is typed.
+A scene runs from `data-s` to `data-e` seconds. `--k` picks the keyframes (`rise` out of an `.m` mask by default, `up`, `fade`, `pop`, `draw`, `draw-y`, `slide-l`, `slide-r`, `stroke`, `out`), `--t` the timing: `var(--settle)` (the default), `var(--draw)`, `var(--pop)` are springs without bounce, or a fixed `.4s var(--ease)`. Typed lines are `[data-type]` with `data-d`, an optional `data-char` (45 ms a character by default) and `data-verb` (how many characters are the command verb, set in pencil). The sweep steps through `data-widths` (a width, or `width:hold` to sit on one) every `data-every` seconds, and draws the dimension dashed at any widths `data-problems` lists. The two dimensions that carry numbers measure the rendered wordmark and the rendered b on load; nothing on them is typed.
 
 Cuts land on half seconds, the beat at 120 BPM. Moving a scene moves everything in it, sound included.
 

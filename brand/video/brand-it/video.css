@@ -80,7 +80,7 @@ body { background: #000; overflow: hidden; }
 .shot { border: 2px solid var(--ink); background: var(--paper); line-height: 0; }
 .shot img { width: 100%; display: block; object-fit: cover; object-position: top; }
 .shot img.hex { aspect-ratio: 1035 / 652; }
-.shot img.cp { aspect-ratio: 1035 / 690; }
+.shot img.cp { aspect-ratio: 1035 / 691; }
 
 .cap { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font: 600 60px/1.1 var(--sans); letter-spacing: -0.02em; }
 .center { display: flex; flex-direction: column; align-items: center; justify-content: center; }
