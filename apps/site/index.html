@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>brand-it · brand a project from its own parts</title>
+<meta name="description" content="A skill for coding agents. Say brand it, and it makes the name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all built as code from the product's own parts, the way hex and commonplace were made.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101214" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://brand-it.vercel.app/">
+<meta property="og:title" content="brand-it · brand a project from its own parts">
+<meta property="og:description" content="A skill for coding agents. Say brand it, and it makes the name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all as code, the way hex and commonplace were made.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brand-it.vercel.app/">
+<meta property="og:image" content="https://brand-it.vercel.app/og.png?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="brand-it: the wordmark with the b's 29 on-curve points shown in pencil blue, measured at 1200 wide. brand a project from its own parts.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="brand-it · brand a project from its own parts">
+<meta name="twitter:description" content="A skill for coding agents. Say brand it, and it makes the name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all as code.">
+<meta name="twitter:image" content="https://brand-it.vercel.app/og.png?v=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/mona-sans-mono.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/src/style.css">
+<script type="module" src="/src/main.ts"></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="wm" d="M34.50 1Q28.20 1 23.55-2.05Q18.90-5.10 16.80-10.40L16.80-10.40L16.60-10.40L16.10 0L4.20 0L4.20-72.90L16.70-72.90L16.70-42.60L16.90-42.60Q18.90-47.90 23.55-51.05Q28.20-54.20 34.50-54.20L34.50-54.20Q41.20-54.20 46.10-50.85Q51-47.50 53.65-41.30Q56.30-35.10 56.30-26.60L56.30-26.60Q56.30-18.10 53.65-11.90Q51-5.70 46.10-2.35Q41.20 1 34.50 1L34.50 1ZM29.80-9.20Q36.40-9.20 39.95-13.80Q43.50-18.40 43.50-26.60L43.50-26.60Q43.50-32 42-35.90Q40.50-39.80 37.45-41.90Q34.40-44 30.10-44L30.10-44Q26-44 23-42.05Q20-40.10 18.35-36.70Q16.70-33.30 16.70-29.20L16.70-29.20L16.70-24Q16.70-19.90 18.30-16.50Q19.90-13.10 22.85-11.15Q25.80-9.20 29.80-9.20L29.80-9.20ZM59.00 0L59.00-53.20L70.30-53.20L70.90-43.50L71-43.50Q72.70-48.40 76.75-51.10Q80.80-53.80 86.40-53.80L86.40-53.80Q87.90-53.80 89.50-53.80L89.50-53.80L89.50-41.70Q87.70-41.80 86.20-41.80L86.20-41.80Q81.40-41.80 78.20-40.30Q75-38.80 73.35-35.85Q71.70-32.90 71.50-28.80L71.50-28.80L71.50 0L59.00 0ZM107.90 0.90Q101.20 0.90 96.25-2.40Q91.30-5.70 88.70-11.90Q86.10-18.10 86.10-26.60L86.10-26.60Q86.10-35.20 88.70-41.40Q91.30-47.60 96.25-50.90Q101.20-54.20 107.90-54.20L107.90-54.20Q114.20-54.20 118.85-51.20Q123.50-48.20 125.70-42.60L125.70-42.60L125.80-42.60L126.30-53.20L138.10-53.20L138.10 0L126.30 0L125.80-10.60L125.70-10.60Q123.50-5.10 118.85-2.10Q114.20 0.90 107.90 0.90L107.90 0.90ZM112.20-9.30Q116.20-9.30 119.25-11.35Q122.30-13.40 123.95-16.95Q125.60-20.50 125.60-24.70L125.60-24.70L125.60-28.40Q125.60-32.50 123.95-36.15Q122.30-39.80 119.20-41.90Q116.10-44 112.20-44L112.20-44Q105.90-44 102.35-39.55Q98.80-35.10 98.80-26.60L98.80-26.60Q98.80-21.20 100.45-17.25Q102.10-13.30 105.10-11.30Q108.10-9.30 112.20-9.30L112.20-9.30ZM143.10 0L143.10-53.20L155.10-53.20L155.60-42.10L155.70-42.10Q158-47.70 162.85-50.95Q167.70-54.20 173.70-54.20L173.70-54.20Q182.70-54.20 187.65-48.60Q192.60-43 192.60-31.90L192.60-31.90L192.60 0L180.10 0L180.10-28.70Q180.10-36.30 177.40-39.95Q174.70-43.60 168.90-43.60L168.90-43.60Q165-43.60 162-41.70Q159-39.80 157.30-36.45Q155.60-33.10 155.60-28.80L155.60-28.80L155.60 0L143.10 0ZM217.20 0.90Q210.70 0.90 205.75-2.40Q200.80-5.70 198.10-11.90Q195.40-18.10 195.40-26.60L195.40-26.60Q195.40-35.20 198.10-41.40Q200.80-47.60 205.75-50.90Q210.70-54.20 217.20-54.20L217.20-54.20Q223.50-54.20 228.15-51.20Q232.80-48.20 234.80-42.90L234.80-42.90L234.90-42.90L234.90-72.90L247.40-72.90L247.40 0L235.60 0L235.10-10.30L234.90-10.30Q232.80-5 228.15-2.05Q223.50 0.90 217.20 0.90L217.20 0.90ZM221.50-9.30Q225.60-9.30 228.70-11.25Q231.80-13.20 233.35-16.70Q234.90-20.20 234.90-24.50L234.90-24.50L234.90-28.60Q234.90-32.90 233.35-36.40Q231.80-39.90 228.80-41.95Q225.80-44 221.70-44L221.70-44Q215.30-44 211.75-39.40Q208.20-34.80 208.20-26.60L208.20-26.60Q208.20-18.50 211.60-13.90Q215-9.30 221.50-9.30L221.50-9.30ZM250.00-21.50L250.00-32L283.10-32L283.10-21.50L250.00-21.50ZM285.60 0L285.60-53.20L298.10-53.20L298.10 0L285.60 0ZM291.80-59.50Q288.50-59.50 286.30-61.55Q284.10-63.60 284.10-66.70L284.10-66.70Q284.10-69.80 286.30-71.85Q288.50-73.90 291.80-73.90L291.80-73.90Q295.20-73.90 297.40-71.85Q299.60-69.80 299.60-66.70L299.60-66.70Q299.60-63.60 297.40-61.55Q295.20-59.50 291.80-59.50L291.80-59.50ZM321.80 0Q315.20 0 312.10-3.10Q309-6.20 309-12.80L309-12.80L309-43.10L299.20-43.10L299.20-53.20L309-53.20L309-67.60L321.50-69.50L321.50-53.20L332.70-53.20L332.70-43.10L321.50-43.10L321.50-15.10Q321.50-12.50 322.75-11.40Q324-10.30 326.40-10.30L326.40-10.30L332.80-10.30L332.80 0L321.80 0Z"/>
+  </defs>
+</svg>
+
+<div class="page">
+
+<header class="bar">
+  <a href="/" aria-label="brand-it"><svg viewBox="0 0 344.6 90.9" role="img" aria-label="brand-it"><g transform="translate(3.8 81.9)" fill="currentColor"><use href="#wm"/></g></svg></a>
+  <a class="gh" href="https://github.com/AVGVSTVS96/brand-it">GitHub</a>
+</header>
+
+<main>
+
+<section class="hero" aria-labelledby="hero-title">
+  <figure class="hero-fig" id="hero-fig">
+    <svg class="lockup" viewBox="0 0 344.6 90.9" role="img" aria-label="brand-it, with the 29 on-curve points of the b shown">
+      <g transform="translate(3.8 81.9)">
+        <use href="#wm" fill="var(--ink)" data-ink/>
+        <g class="nodes" fill="var(--pencil)" stroke="var(--paper)" stroke-width="0.8"><rect x="32.8" y="-0.7" width="3.4" height="3.4"/><rect x="21.85" y="-3.75" width="3.4" height="3.4"/><rect x="15.1" y="-12.1" width="3.4" height="3.4"/><rect x="14.9" y="-12.1" width="3.4" height="3.4"/><rect x="14.4" y="-1.7" width="3.4" height="3.4"/><rect x="2.5" y="-1.7" width="3.4" height="3.4"/><rect x="2.5" y="-74.6" width="3.4" height="3.4"/><rect x="15" y="-74.6" width="3.4" height="3.4"/><rect x="15" y="-44.3" width="3.4" height="3.4"/><rect x="15.2" y="-44.3" width="3.4" height="3.4"/><rect x="21.85" y="-52.75" width="3.4" height="3.4"/><rect x="32.8" y="-55.9" width="3.4" height="3.4"/><rect x="44.4" y="-52.55" width="3.4" height="3.4"/><rect x="51.95" y="-43" width="3.4" height="3.4"/><rect x="54.6" y="-28.3" width="3.4" height="3.4"/><rect x="51.95" y="-13.6" width="3.4" height="3.4"/><rect x="44.4" y="-4.05" width="3.4" height="3.4"/><rect x="28.1" y="-10.9" width="3.4" height="3.4"/><rect x="38.25" y="-15.5" width="3.4" height="3.4"/><rect x="41.8" y="-28.3" width="3.4" height="3.4"/><rect x="40.3" y="-37.6" width="3.4" height="3.4"/><rect x="35.75" y="-43.6" width="3.4" height="3.4"/><rect x="28.4" y="-45.7" width="3.4" height="3.4"/><rect x="21.3" y="-43.75" width="3.4" height="3.4"/><rect x="16.65" y="-38.4" width="3.4" height="3.4"/><rect x="15" y="-30.9" width="3.4" height="3.4"/><rect x="15" y="-25.7" width="3.4" height="3.4"/><rect x="16.6" y="-18.2" width="3.4" height="3.4"/><rect x="21.15" y="-12.85" width="3.4" height="3.4"/></g>
+      </g>
+    </svg>
+    <div class="dim h" data-measure="width"><span>…</span></div>
+    <div class="dim v" data-measure="height"><span>…</span></div>
+  </figure>
+  <h1 id="hero-title">Say brand it.</h1>
+  <p class="lede">A skill for coding agents. It makes the name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all as code, the way hex and commonplace were made.</p>
+  <div class="install">
+    <div class="cmd"><pre>npx skills add AVGVSTVS96/brand-it</pre><button type="button" data-copy="npx skills add AVGVSTVS96/brand-it">Copy</button></div>
+    <a href="https://github.com/AVGVSTVS96/brand-it">View on GitHub</a>
+  </div>
+</section>
+
+<section id="examples" aria-labelledby="examples-title">
+  <p class="rubric label">01 <span>examples</span></p>
+  <h2 id="examples-title">Each one its own look.</h2>
+  <p class="small section-line">The rules come from making hex and commonplace. The first thing the skill branded was itself.</p>
+
+  <div class="examples">
+
+    <article class="example">
+      <div class="example-head">
+        <picture><source srcset="/examples/hex-dark.svg" media="(prefers-color-scheme: dark)"><img class="mark" src="/examples/hex.svg" alt="hex" height="24"></picture>
+        <p class="name">hex <span>· Claude Code as your personal assistant</span></p>
+        <p class="small">Poppy neo-brutalist. Cream and ink, blue, yellow and pink, hard shadows, and the real Telegram, Discord and Buzz on the page.</p>
+        <p class="facts">Archivo<i>·</i>Martian Mono<i>·</i>3 accents<i>·</i>name to launch video in two days</p>
+        <p class="links"><a href="https://hex-sand.vercel.app">hex-sand.vercel.app</a><i>·</i><a href="https://github.com/AVGVSTVS96/hex">github.com/AVGVSTVS96/hex</a></p>
+      </div>
+      <div class="shots">
+        <figure class="framed">
+          <figcaption class="label">hex · 1035 · <span class="scheme"></span></figcaption>
+          <div class="frame"><picture><source srcset="/examples/hex-1035-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/hex-1035-light.webp" width="2070" height="1440" alt="hex-sand.vercel.app at 1035 wide"></picture></div>
+          <div class="dim h"><span>1035</span></div>
+        </figure>
+        <figure class="framed narrow">
+          <figcaption class="label">390</figcaption>
+          <div class="frame"><picture><source srcset="/examples/hex-390-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/hex-390-light.webp" width="780" height="1688" alt="hex-sand.vercel.app at 390 wide"></picture></div>
+          <div class="dim h"><span>390</span></div>
+        </figure>
+        <figure class="framed span">
+          <figcaption class="label">hex · og.png · 1200×630</figcaption>
+          <div class="frame"><img src="/examples/hex-og.webp" width="1200" height="630" alt="hex's link preview image"></div>
+          <div class="dim h"><span>1200</span></div>
+        </figure>
+      </div>
+    </article>
+
+    <article class="example">
+      <div class="example-head">
+        <picture><source srcset="/examples/commonplace-dark.svg" media="(prefers-color-scheme: dark)"><img class="mark cp" src="/examples/commonplace.svg" alt="commonplace" height="34"></picture>
+        <p class="name">commonplace <span>· your personal data kit for agents</span></p>
+        <p class="small">A light terminal. Paper, mono, one red pen. The wordmark is the CLI cursor, drawn from the font's outlines.</p>
+        <p class="facts">Ioskeley Mono<i>·</i>IBM Plex Sans<i>·</i>1 red<i>·</i>name to live site in under two hours</p>
+        <p class="links"><a href="https://commonplace-eight-sable.vercel.app">commonplace-eight-sable.vercel.app</a><i>·</i><a href="https://github.com/AVGVSTVS96/commonplace">github.com/AVGVSTVS96/commonplace</a></p>
+      </div>
+      <div class="shots">
+        <figure class="framed">
+          <figcaption class="label">commonplace · 1035 · <span class="scheme"></span></figcaption>
+          <div class="frame"><picture><source srcset="/examples/commonplace-1035-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/commonplace-1035-light.webp" width="2070" height="1440" alt="commonplace-eight-sable.vercel.app at 1035 wide"></picture></div>
+          <div class="dim h"><span>1035</span></div>
+        </figure>
+        <figure class="framed narrow">
+          <figcaption class="label">390</figcaption>
+          <div class="frame"><picture><source srcset="/examples/commonplace-390-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/commonplace-390-light.webp" width="780" height="1688" alt="commonplace-eight-sable.vercel.app at 390 wide"></picture></div>
+          <div class="dim h"><span>390</span></div>
+        </figure>
+        <figure class="framed span">
+          <figcaption class="label">commonplace · og.png · 1200×630</figcaption>
+          <div class="frame"><img src="/examples/commonplace-og.webp" width="1200" height="630" alt="commonplace's link preview image"></div>
+          <div class="dim h"><span>1200</span></div>
+        </figure>
+      </div>
+    </article>
+
+    <article class="example">
+      <div class="example-head">
+        <svg class="mark" viewBox="0 0 344.6 90.9" role="img" aria-label="brand-it"><g transform="translate(3.8 81.9)" fill="currentColor"><use href="#wm"/></g></svg>
+        <p class="name">brand-it <span>· brand a project from its own parts</span></p>
+        <p class="small">brand-it looks like the drafting layer under a brand: white paper, ink, and one pencil blue for the guides, measures and nodes the method draws while it checks its work, so the brands it shows sit inside as finished things.</p>
+        <p class="facts">Mona Sans<i>·</i>Mona Sans Mono<i>·</i>1 pencil<i>·</i>this page, by the skill</p>
+        <p class="links"><a href="https://github.com/AVGVSTVS96/brand-it">github.com/AVGVSTVS96/brand-it</a></p>
+      </div>
+      <div class="shots">
+        <figure class="framed">
+          <figcaption class="label">brand-it · 1035 · <span class="scheme"></span></figcaption>
+          <div class="frame"><picture><source srcset="/examples/brand-it-1035-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/brand-it-1035-light.webp" width="2070" height="1440" alt="this page at 1035 wide"></picture></div>
+          <div class="dim h"><span>1035</span></div>
+        </figure>
+        <figure class="framed narrow">
+          <figcaption class="label">390</figcaption>
+          <div class="frame"><picture><source srcset="/examples/brand-it-390-dark.webp" media="(prefers-color-scheme: dark)"><img src="/examples/brand-it-390-light.webp" width="780" height="1688" alt="this page at 390 wide"></picture></div>
+          <div class="dim h"><span>390</span></div>
+        </figure>
+        <figure class="framed span">
+          <figcaption class="label">brand-it · og.png · 1200×630</figcaption>
+          <div class="frame"><img src="/examples/brand-it-og.webp" width="1200" height="630" alt="this page's link preview image"></div>
+          <div class="dim h"><span>1200</span></div>
+        </figure>
+        <template id="video">
+          <figure class="framed span">
+            <figcaption class="label">brand-it · launch video · 1920×1080</figcaption>
+            <div class="frame"><video controls playsinline preload="none" width="1920" height="1080" poster="/video/poster.png"><source src="/video/brand-it.mp4" type="video/mp4"></video></div>
+            <div class="dim h"><span>1920</span></div>
+          </figure>
+        </template>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="caption">They share a method, not a look.</p>
+</section>
+
+<section id="code" aria-labelledby="code-title">
+  <p class="rubric label">02 <span>code</span></p>
+  <h2 id="code-title">All of it is code.</h2>
+  <p class="small section-line">A brand is one BRAND.md, one specimen page and the scripts that made it, so any asset rebuilds in one command.</p>
+  <div class="tree">
+    <span>brand/</span><span></span>
+    <span class="in">BRAND.md</span><span>the system, written down</span>
+    <span class="in">specimen.html</span><span>the system in use: hero, type scale, tokens, motion</span>
+    <span class="in">references.md</span><span>what was taken from your saves, and what wasn't</span>
+    <span class="in">logo/gen.mjs</span><span>three marks from real font outlines, as SVG paths</span>
+    <span>copy/</span><span></span>
+    <span class="in">MESSAGING.md</span><span>the one line, what it is and isn't, the voice, facts with sources</span>
+    <span class="in">SITE.md  LAUNCH.md  README.md</span><span></span>
+    <span>site/</span><span>static, on Vercel: og.png, favicon.svg, the README header</span>
+    <span>video/</span><span>HTML scenes on one clock, sound built from the same clock</span>
+  </div>
+</section>
+
+<section id="checks" aria-labelledby="checks-title">
+  <p class="rubric label">03 <span>checks</span></p>
+  <h2 id="checks-title">Checked before it says done.</h2>
+  <p class="small section-line">Two scripts ship with the skill. One shoots a page at 45 widths in light and dark and prints anything that overflows. The other renders the video frame by frame and prints its loudness after encoding.</p>
+  <pre class="term"><i>$</i> <b>bun</b> shoot.mjs site/ shots/
+page scrolls sideways by 14px
+  at light 320, dark 320
+text wider than its box: strong.num "~2,000"
+  at light 1035, dark 1035
+
+2 problems · shots in shots/ at 390@2x, 1035, 1440
+
+<i>$</i> <b>bun</b> video.mjs video/ video
+41s / 41s
+video/out/video.mp4: -14 LUFS, true peak -2.1 dBTP after AAC</pre>
+</section>
+
+<section id="install" aria-labelledby="install-title">
+  <p class="rubric label">04 <span>install</span></p>
+  <h2 id="install-title">Install</h2>
+  <p class="small section-line">One command. Then open a project in Claude Code and say brand it.</p>
+  <div class="install" style="margin-top: var(--s6)">
+    <div class="cmd"><pre>npx skills add AVGVSTVS96/brand-it</pre><button type="button" data-copy="npx skills add AVGVSTVS96/brand-it">Copy</button></div>
+  </div>
+  <p class="need"><b>You'll need</b><br>Bun, Chrome and ffmpeg, for the scripts. Bun installs puppeteer-core on first run.</p>
+  <p class="closing">It points at my own projects and saves, so read it as a worked method, or fork it and point it at yours.</p>
+</section>
+
+</main>
+
+<footer>
+  <p>Open source under MIT. This page was made with it.</p>
+  <p><a href="https://github.com/AVGVSTVS96/brand-it">github.com/AVGVSTVS96/brand-it</a></p>
+  <p>by <a href="https://github.com/AVGVSTVS96">bassim</a></p>
+</footer>
+
+</div>
+</body>
+</html>
