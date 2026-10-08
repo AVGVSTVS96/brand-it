@@ -10,7 +10,7 @@ const TRACK = -35
 const PAD = 8
 const PICK = "a"
 
-const light = { paper: "#FFFFFF", ink: "#0F1113", pencil: "#0B74D4" }
+const light = { paper: "#FFFFFF", ink: "#0F1113", pencil: "#0A6DC8" }
 const dark = { paper: "#101214", ink: "#ECEEF0", pencil: "#62BBFF" }
 const flat = { paper: "none", ink: "currentColor", pencil: "currentColor" }
 

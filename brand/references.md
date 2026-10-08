@@ -27,7 +27,7 @@ What the brand-it system is built on, pulled from Bassim's own X bookmarks and l
 
 ## Outside references that fit
 
-- **The non-photo blue pencil.** Drafters sketched guides in a light cyan-blue because process cameras couldn't see it, so the construction vanished from the print. brand-it's pencil (`#0B74D4`, darkened until it passes 4.5:1 as text) does the same job: it draws the guides, and at small sizes they drop out.
+- **The non-photo blue pencil.** Drafters sketched guides in a light cyan-blue because process cameras couldn't see it, so the construction vanished from the print. brand-it's pencil (`#0A6DC8`, darkened until it passes 4.5:1 as text) does the same job: it draws the guides, and at small sizes they drop out.
 - **Mona Sans and Mona Sans Mono**, GitHub and Degarism, OFL. https://github.com/github/mona-sans. One family with a width axis and a matching mono; the skill is installed from GitHub, which is a fair place for its type to come from.
 - **Engineering drawing conventions** (dimension lines with extension lines and ticks, leader lines with a dot at the part). The vocabulary of the motifs, kept to the few marks that mean something on a web page.
 

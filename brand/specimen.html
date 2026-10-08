@@ -17,7 +17,7 @@
   --ink-3: #6B7177;
   --hair: rgb(15 17 19 / 0.12);
   --hair-2: rgb(15 17 19 / 0.06);
-  --pencil: #0B74D4;
+  --pencil: #0A6DC8;
   --pencil-soft: rgb(11 116 212 / 0.10);
 
   --sans: "Mona Sans", system-ui, "Helvetica Neue", sans-serif;
@@ -55,7 +55,7 @@ a { color: inherit; text-decoration-color: var(--hair); text-underline-offset: 0
 a:hover { text-decoration-color: currentColor; }
 :focus-visible { outline: 2px solid var(--pencil); outline-offset: 2px; }
 ::selection { background: var(--pencil-soft); }
-code, kbd, pre, .mono { font-family: var(--mono); font-variant-ligatures: none; font-variant-numeric: tabular-nums; }
+code, kbd, pre, .mono, .label { font-family: var(--mono); font-variant-ligatures: none; font-variant-numeric: tabular-nums; }
 pre { font-size: 0.875rem; line-height: 1.6; overflow-x: auto; }
 pre b { color: var(--pencil); font-weight: 500; }
 img, svg { display: block; max-width: 100%; }
@@ -117,11 +117,11 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .hero-fig .callout .label { color: var(--ink-2); }
 .hero h1 { margin-bottom: var(--s4); }
 .hero .lede { margin-bottom: var(--s6); }
-.cmd { display: inline-block; max-width: 100%; padding: var(--s3) var(--s4); border: 1px solid var(--ink); font-size: 0.9375rem; }
+.cmd { display: inline-block; max-width: 100%; padding: var(--s3) var(--s4); border: 1px solid var(--ink); font-size: 0.9375rem; white-space: pre; overflow-x: auto; }
 
 /* type */
 .scale { display: grid; gap: var(--s5); }
-.scale > div { display: grid; grid-template-columns: 11rem 1fr; gap: var(--s4); align-items: baseline; border-bottom: 1px solid var(--hair-2); padding-bottom: var(--s4); }
+.scale > div { display: grid; grid-template-columns: 13rem 1fr; gap: var(--s4); align-items: baseline; border-bottom: 1px solid var(--hair-2); padding-bottom: var(--s4); }
 .scale .label { padding-top: var(--s1); color: var(--ink-3); }
 .scale .label b { color: var(--pencil); font-weight: 500; }
 .t-display { font-size: clamp(2.5rem, 6vw, 4.25rem); line-height: 1; font-weight: 600; letter-spacing: -0.03em; }
@@ -139,30 +139,31 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .weights .label { color: var(--ink-3); }
 
 /* color */
-.tokens { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.tokens { width: 100%; min-width: 40rem; border-collapse: collapse; font-size: 0.9375rem; }
 .tokens th { text-align: left; font-weight: 600; padding: 0 var(--s4) var(--s2) 0; border-bottom: 1px solid var(--ink); }
 .tokens td { padding: var(--s3) var(--s4) var(--s3) 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
 .tokens td.mono { font-size: 0.8125rem; white-space: nowrap; }
 .tokens i { display: inline-block; width: 14px; height: 14px; border: 1px solid var(--hair); vertical-align: -2px; margin-right: var(--s2); }
-.chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: var(--s3); margin-bottom: var(--s7); }
+.chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s3); margin-bottom: var(--s7); }
+.chip .label { line-height: 1.3; }
+@media (min-width: 1000px) { .chips { grid-template-columns: repeat(8, 1fr); } }
 .chip { height: 6rem; border: 1px solid var(--hair); padding: var(--s2) var(--s3); display: flex; flex-direction: column; justify-content: space-between; }
 .chip .label { color: inherit; }
 .table-wrap { overflow-x: auto; }
 
 /* parts */
-.parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); gap: var(--s7) var(--s6); }
+.parts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr)); gap: var(--s7) var(--s6); }
 .part > h3 { margin-bottom: var(--s2); }
 .part > p { font-size: 0.9375rem; color: var(--ink-2); margin-bottom: var(--s5); }
 .part-fig { position: relative; min-height: 10rem; display: grid; align-content: start; gap: var(--s3); }
 .part-fig > .dim { justify-self: start; }
-.part-fig .frame.small-frame { aspect-ratio: 16 / 10; width: 14rem; max-width: 100%; }
-.part-fig .frame.small-frame .callout { top: 22%; left: 28%; }
 .fig-nodes { display: flex; align-items: center; gap: var(--s5); }
 .fig-nodes img { width: 7.5rem; height: 7.5rem; border: 1px solid var(--hair); }
 
 /* examples */
 .examples { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(19rem, 100%), 1fr)); gap: var(--s7) var(--s6); margin-top: var(--s7); }
-.example .mark { height: 1.5rem; width: auto; margin-bottom: var(--s4); }
+.example > picture { height: 2.125rem; display: grid; align-items: end; margin-bottom: var(--s4); }
+.example .mark { height: 1.5rem; width: auto; }
 .example .mark.cp { height: 2.125rem; }
 .example .small { margin: var(--s4) 0 0; }
 .example .framed + .framed { margin-top: var(--s5); }
@@ -170,17 +171,18 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 /* logo */
 .dirs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr)); gap: var(--s7) var(--s6); margin-top: var(--s6); }
 .dir .label { margin-bottom: var(--s4); }
-.dir .lk { height: 3.5rem; width: auto; margin-bottom: var(--s5); }
+.dir .lk { width: 13rem; height: auto; margin-bottom: var(--s5); }
 .dir .marks { display: flex; align-items: flex-end; gap: var(--s4); margin-bottom: var(--s5); }
+.dir .marks img, .fig-nodes img, .set img { border-radius: 14%; }
 .dir .marks img { border: 1px solid var(--hair); }
 .dir p { font-size: 0.9375rem; color: var(--ink-2); }
 .dir.pick { outline: 1px solid var(--pencil); outline-offset: var(--s4); }
-.set { display: flex; flex-wrap: wrap; gap: var(--s5) var(--s7); margin-top: var(--s7); align-items: flex-end; }
+.set { display: flex; flex-wrap: wrap; gap: var(--s5) var(--s7); margin-top: var(--s7); align-items: flex-start; }
 .set > div { display: grid; gap: var(--s3); justify-items: start; }
 .tabs { display: flex; flex-wrap: wrap; margin-top: var(--s6); }
 .tab { display: flex; align-items: center; gap: var(--s2); padding: 6px 12px; border: 1px solid var(--hair); font-size: 0.8125rem; background: var(--paper-2); margin: 0 -1px -1px 0; }
 .tab img { width: 16px; height: 16px; }
-.clear { position: relative; display: inline-block; padding: 1.5rem; outline: 1px dashed var(--pencil); margin-top: var(--s6); }
+.clear { position: relative; display: inline-block; padding: calc(2.5rem * 0.824); outline: 1px dashed var(--pencil); margin-top: var(--s6); }
 .clear img { height: 2.5rem; width: auto; }
 
 /* motion */
@@ -196,7 +198,8 @@ section { padding: var(--s8) var(--gutter); border-top: 1px solid var(--hair); }
 .stage .tl img { height: 0.9rem; width: auto; }
 .stage .scene { position: absolute; inset: 24% 18% 26%; display: grid; place-items: center; }
 .stage .scene .cap { position: absolute; bottom: -1.75rem; left: 0; right: 0; text-align: center; font-size: clamp(0.875rem, 1.8vw, 1.25rem); font-weight: 600; letter-spacing: -0.01em; }
-.stage .scene img { width: 60%; height: auto; }
+.stage .scene picture { width: 60%; }
+.stage .scene img { width: 100%; height: auto; }
 .stage .scene .dim.h { position: absolute; left: 20%; right: 20%; bottom: 8%; }
 .board { width: 100%; border-collapse: collapse; font-size: 0.9375rem; margin-top: var(--s6); min-width: 44rem; }
 .board th { text-align: left; font-weight: 600; padding: 0 var(--s4) var(--s2) 0; border-bottom: 1px solid var(--ink); }
@@ -210,6 +213,12 @@ footer .label { line-height: 1.5; overflow-wrap: anywhere; }
   .bar nav { display: none; }
   .stage .tr, .stage .br { display: none; }
   pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .cmd { font-size: 0.875rem; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; }
+  .tab { white-space: nowrap; flex: none; }
+  .dir.pick { outline-offset: var(--s2); }
+  .part-fig { min-height: 0; }
+  .chips { grid-template-columns: repeat(2, 1fr); }
   .scale > div { grid-template-columns: 1fr; gap: var(--s2); }
   .hero-fig { padding-right: 1.75rem; }
 }
@@ -229,7 +238,7 @@ footer .label { line-height: 1.5; overflow-wrap: anywhere; }
     <div class="lockup" data-lockup><picture><source srcset="logo/brand-it-lockup-dark.svg" media="(prefers-color-scheme: dark)"><img src="logo/brand-it-lockup.svg" alt="brand-it, with the on-curve points of the b shown"></picture></div>
     <div class="dim h" data-measure="width"><span>…</span></div>
     <div class="dim v" data-measure="height"><span>…</span></div>
-    <div class="callout" data-callout><i style="--len: 24px"></i><span class="label">1 of 29 points, from the font</span></div>
+    <div class="callout" data-callout><i style="--len: 24px"></i><span class="label">1 of 29 points</span></div>
   </figure>
   <h1>Say brand it.</h1>
   <p class="lede">brand a project from its own parts</p>
@@ -280,14 +289,14 @@ no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
   </div>
   <div class="table-wrap"><table class="tokens">
     <tr><th>token</th><th>light</th><th>dark</th><th>job</th></tr>
-    <tr><td class="mono"><i style="background:#FFFFFF"></i>--paper</td><td class="mono">#FFFFFF</td><td class="mono">#101214</td><td>the page. White, not cream: drafting paper, and the brands shown on it keep their own color.</td></tr>
-    <tr><td class="mono"><i style="background:#F4F5F6"></i>--paper-2</td><td class="mono">#F4F5F6</td><td class="mono">#181B1E</td><td>tab strips, code panels, anything that is a surface inside the page</td></tr>
-    <tr><td class="mono"><i style="background:#0F1113"></i>--ink</td><td class="mono">#0F1113</td><td class="mono">#ECEEF0</td><td>text, the wordmark, frames: the finished thing · 18.9:1</td></tr>
-    <tr><td class="mono"><i style="background:#5B6168"></i>--ink-2</td><td class="mono">#5B6168</td><td class="mono">#9AA1A8</td><td>second-level text, captions · 6.3:1</td></tr>
-    <tr><td class="mono"><i style="background:#6B7177"></i>--ink-3</td><td class="mono">#6B7177</td><td class="mono">#8E959C</td><td>the dimmest text allowed: section names, rail text · 4.9:1</td></tr>
-    <tr><td class="mono"><i style="background:rgb(15 17 19 / .12)"></i>--hair</td><td class="mono">rgb(15 17 19 / .12)</td><td class="mono">rgb(236 238 240 / .14)</td><td>1px rules, table rows, borders of things that are not the subject</td></tr>
-    <tr><td class="mono"><i style="background:#0B74D4"></i>--pencil</td><td class="mono">#0B74D4</td><td class="mono">#62BBFF</td><td>dimension lines, ticks, nodes, callouts, labels, focus: everything the method draws while checking · 4.7:1</td></tr>
-    <tr><td class="mono"><i style="background:rgb(11 116 212 / .10)"></i>--pencil-soft</td><td class="mono">rgb(11 116 212 / .10)</td><td class="mono">rgb(98 187 255 / .14)</td><td>selection, the region a measurement covers</td></tr>
+    <tr><td class="mono"><i style="background: var(--paper)"></i>--paper</td><td class="mono">#FFFFFF</td><td class="mono">#101214</td><td>the page. White, not cream: drafting paper, and the brands shown on it keep their own color.</td></tr>
+    <tr><td class="mono"><i style="background: var(--paper-2)"></i>--paper-2</td><td class="mono">#F4F5F6</td><td class="mono">#181B1E</td><td>tab strips, code panels, anything that is a surface inside the page</td></tr>
+    <tr><td class="mono"><i style="background: var(--ink)"></i>--ink</td><td class="mono">#0F1113</td><td class="mono">#ECEEF0</td><td>text, the wordmark, frames: the finished thing · 18.9:1</td></tr>
+    <tr><td class="mono"><i style="background: var(--ink-2)"></i>--ink-2</td><td class="mono">#5B6168</td><td class="mono">#9AA1A8</td><td>second-level text, captions · 6.3:1</td></tr>
+    <tr><td class="mono"><i style="background: var(--ink-3)"></i>--ink-3</td><td class="mono">#6B7177</td><td class="mono">#8E959C</td><td>the dimmest text allowed: section names, rail text · 4.9:1</td></tr>
+    <tr><td class="mono"><i style="background: var(--hair)"></i>--hair</td><td class="mono">rgb(15 17 19 / 0.12)</td><td class="mono">rgb(236 238 240 / 0.14)</td><td>1px rules, table rows, borders of things that are not the subject</td></tr>
+    <tr><td class="mono"><i style="background: var(--pencil)"></i>--pencil</td><td class="mono">#0A6DC8</td><td class="mono">#62BBFF</td><td>dimension lines, ticks, nodes, callouts, labels, focus: everything the method draws while checking · 5.2:1</td></tr>
+    <tr><td class="mono"><i style="background: var(--pencil-soft)"></i>--pencil-soft</td><td class="mono">rgb(11 116 212 / 0.10)</td><td class="mono">rgb(98 187 255 / 0.14)</td><td>selection, the region a measurement covers</td></tr>
   </table></div>
   <p class="small" style="margin-top: var(--s6)">brand-it has one color because the brands it shows bring theirs: hex is three accents on cream, commonplace is one red on paper. The pencil is the blue of a non-photo pencil, the one a drafter sketches guides with because it drops out of the final print. Dark is the same tokens swapped, never a second design. A problem is a dashed pencil line and a label, not a second color.</p>
 </section>
@@ -316,9 +325,10 @@ no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
       <h3>The frame</h3>
       <p>1px ink around a real render, its width and theme on top, a dimension below. Shots are shown this way, never floating.</p>
       <div class="part-fig">
-        <div class="framed">
-          <div class="frame-cap"><span class="label">hex · 1035 · light</span><span class="label dim-label">2x</span></div>
-          <div class="frame" style="width: 14rem; max-width: 100%"><img src="examples/hex-1035-light.png" alt="hex at 1035, light"></div>
+        <div class="framed" style="width: 14rem; max-width: 100%">
+          <div class="frame-cap"><span class="label">hex · 1035 · light</span></div>
+          <div class="frame"><img src="examples/hex-1035-light.png" alt="hex at 1035, light"></div>
+          <div class="dim h"><span>1035</span></div>
         </div>
       </div>
     </div>
@@ -326,7 +336,7 @@ no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
       <h3>The callout</h3>
       <p>A dot on the part, a leader, a label in the pencil. One per thing, horizontal leaders only, label after the line.</p>
       <div class="part-fig">
-        <div class="frame small-frame" style="background: var(--paper-2)"><span class="callout"><i style="--len: 56px"></i><span class="label">wordmark</span></span></div>
+        <div class="frame" style="width: 14rem; max-width: 100%"><picture><source srcset="examples/hex-1035-dark.png" media="(prefers-color-scheme: dark)"><img src="examples/hex-1035-light.png" alt="hex at 1035"></picture><span class="callout" style="top: 5.5%; left: 4%"><i style="--len: 56px"></i><span class="label">wordmark</span></span></div>
       </div>
     </div>
     <div class="part">
@@ -334,9 +344,11 @@ no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
       <p>What shoot.mjs prints, in its exact shape. A problem is a dashed line and the script's own words.</p>
       <div class="part-fig">
         <pre>$ <b>bun</b> shoot.mjs site/ shots/
+page scrolls sideways by 14px
+  at light 320, dark 320
 text wider than its box: h1.hero "Say brand it."
   at light 320, dark 320
-1 problems · shots in shots/ at 390@2x, 1035, 1440</pre>
+2 problems · shots in shots/ at 390@2x, 1035, 1440</pre>
         <div class="dim h problem" style="width: 10rem"><span>wider by 14</span></div>
       </div>
     </div>
@@ -502,18 +514,20 @@ const inline = async () => {
 }
 
 const measure = () => {
-  const svg = lockup.querySelector("svg")
-  if (!svg) return
+  const ink = lockup.querySelector("path")
+  if (!ink) return
+  const g = fig.getBoundingClientRect(), i = ink.getBoundingClientRect()
   for (const dim of document.querySelectorAll("[data-measure]")) {
-    const target = dim.dataset.target ? document.querySelector(dim.dataset.target) : svg
-    const px = Math.round(target.getBoundingClientRect()[dim.dataset.measure])
+    const axis = dim.dataset.measure
+    const box = dim.dataset.target ? document.querySelector(dim.dataset.target).getBoundingClientRect() : i
+    const px = Math.round(box[axis])
     dim.querySelector("span").textContent = px
-    dim.style[dim.dataset.measure] = `${px}px`
+    dim.style[axis] = `${px}px`
+    if (!dim.dataset.target) dim.style[axis === "width" ? "marginLeft" : "top"] = `${axis === "width" ? i.left - g.left : i.top - g.top}px`
   }
   const top = [...lockup.querySelectorAll("rect")].map(r => r.getBoundingClientRect()).sort((a, b) => a.top - b.top || a.left - b.left)[0]
   const callout = fig.querySelector("[data-callout]")
   if (top) {
-    const g = fig.getBoundingClientRect()
     callout.style.left = `${top.left + top.width / 2 - g.left - 3}px`
     callout.style.top = `${top.top + top.height / 2 - g.top - 6}px`
   }

@@ -5,7 +5,7 @@
 ## Personality
 
 - **A workbench, not a brand.** Its job is to frame other brands. hex is loud and commonplace is quiet, and both have to look right on this page. So the page is white, the type is neutral, and the only color is the one the method draws with.
-- **Measured.** Every number on a brand-it surface was measured by a script, never typed: the wordmark's width in the hero, the 1035 under a shot, the 4.7:1 next to a token. If it can't be measured it isn't shown as a number.
+- **Measured.** Every number on a brand-it surface was measured by a script, never typed: the wordmark's width in the hero, the 1035 under a shot, the 5.2:1 next to a token. If it can't be measured it isn't shown as a number.
 - **Construction visible.** The finished thing with its guides still on. The mark is the b with the 29 points gen.mjs read from the font; the hero wordmark has its dimensions drawn around it. The guides drop out at small sizes, the way a non-photo pencil drops out of the print.
 - **Plain.** It says what the file is and what the script prints. "Shot at 45 widths, light and dark." Not a feature, a fact.
 - **One person's taste, shown.** The examples are the argument. The page spends its space on hex and commonplace, not on describing a method.
@@ -28,7 +28,7 @@ One family, two voices. Mona Sans carries everything a person reads; Mona Sans M
 - **Mona Sans** for prose, headlines, the wordmark. Display at 600, letter-spacing −0.03em, line-height 1.0, `font-optical-sizing: auto`. h2 at 36/1.1 600 −0.025em; h3 at 18/1.3 600; body 17/1.55 at 400, measure 62ch; small 15/1.5 in `--ink-2`. Width 100 everywhere; the narrow cut (85) is for a number that has to fit, never a style.
 - **Mona Sans Mono** for labels, measurements, code, rails. Labels at 12px 500 in `--pencil`, tabular figures, no uppercase, no tracking. Code at 14/1.6 400. Ligatures off (`font-variant-ligatures: none`): `--pencil` stays two hyphens, like a terminal.
 - Shipped as subsets in `fonts/` (Latin plus `→ ← · × ✓ − ≈ ≠`), with weight 300 to 800 and width 85 to 110 kept, optical size kept: `mona-sans.woff2` 202 KB, `mona-sans-mono.woff2` 34 KB. The license is next to them. The static cuts `logo/gen.mjs` reads (SemiBold at width 100 and optical size 100, Mono Medium) are in `logo/ttf/`.
-- Candidates set on the real page and shot (`fonts-compare.html`): Instrument Sans (softer, wider, reads 2024-indie), Overused Grotesk (the Swiss spec-sheet voice, but Helvetica isn't "new"), JetBrains Mono (crisper code, no family tie). Mona Sans was picked for the engineered cut, the axes, and the matching mono.
+- Candidates set on the real page and shot (`fonts-compare.html`): Instrument Sans (softer, wider, reads 2024-indie), Overused Grotesk (the Swiss spec-sheet voice, but Helvetica isn't "new"), JetBrains Mono (crisper code, no family tie). Mona Sans was picked for the engineered cut, the axes, and the matching mono. The compare page reads the full TTFs from `.scratch/fonts/`, which isn't committed; they come from `github/mona-sans`, `google/fonts` (Instrument Sans, JetBrains Mono) and `RandomMaerks/Overused-Grotesk`.
 
 ### Color: paper, ink, one pencil
 
@@ -41,10 +41,10 @@ Light is the default. Dark is the same tokens swapped, never a second design.
 | `--ink` | `#0F1113` | `#ECEEF0` | text, wordmark, frames: the finished thing (18.9:1) |
 | `--ink-2` | `#5B6168` | `#9AA1A8` | second-level text, captions (6.3:1) |
 | `--ink-3` | `#6B7177` | `#8E959C` | the dimmest text allowed: section names, rails (4.9:1) |
-| `--hair` | `rgb(15 17 19 / .12)` | `rgb(236 238 240 / .14)` | 1px rules, table rows, borders of things that aren't the subject |
-| `--hair-2` | `rgb(15 17 19 / .06)` | `rgb(236 238 240 / .07)` | row dividers inside a table |
-| `--pencil` | `#0B74D4` | `#62BBFF` | dimension lines, ticks, nodes, callouts, labels, focus rings (4.7:1 on paper) |
-| `--pencil-soft` | `rgb(11 116 212 / .10)` | `rgb(98 187 255 / .14)` | selection, the region a measurement covers |
+| `--hair` | `rgb(15 17 19 / 0.12)` | `rgb(236 238 240 / 0.14)` | 1px rules, table rows, borders of things that aren't the subject |
+| `--hair-2` | `rgb(15 17 19 / 0.06)` | `rgb(236 238 240 / 0.07)` | row dividers inside a table |
+| `--pencil` | `#0A6DC8` | `#62BBFF` | dimension lines, ticks, nodes, callouts, labels, focus rings (5.2:1 on paper) |
+| `--pencil-soft` | `rgb(11 116 212 / 0.10)` | `rgb(98 187 255 / 0.14)` | selection, the region a measurement covers |
 
 Rule: **the pencil draws the construction and never the thing.** Text, wordmarks, frames and shots are ink; what the method drew around them while checking is pencil. brand-it has one color because the brands it shows bring theirs (hex three accents on cream, commonplace one red on paper). Blue was chosen because it is the non-photo pencil, the one drafters sketch guides in because it drops out of the final print, and it sits well away from hex's violet `#2B3EFF` and commonplace's red. A problem is a dashed pencil line and the script's words, not a second color.
 
