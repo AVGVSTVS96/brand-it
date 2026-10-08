@@ -62,7 +62,7 @@ if (size) {
     }
   }
   for (const [problem, where] of problems) console.log(`${problem}\n  at ${where.join(", ")}`)
-  console.log(problems.size ? `\n${problems.size} problems` : "no problems", `· shots in ${out}/ at 390@2x, 1035, 1440`)
+  console.log(problems.size ? `\n${problems.size} problem${problems.size === 1 ? "" : "s"}` : "no problems", `· shots in ${out}/ at 390@2x, 1035, 1440`)
 }
 
 reportMisses()

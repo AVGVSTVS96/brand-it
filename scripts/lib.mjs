@@ -44,7 +44,7 @@ export const misses = new Set()
 
 export const watch = page => {
   page.on("response", r => r.status() >= 400 && !r.url().endsWith("/favicon.ico") && misses.add(r.url()))
-  page.on("requestfailed", r => misses.add(r.url()))
+  page.on("requestfailed", r => r.failure()?.errorText !== "net::ERR_ABORTED" && misses.add(r.url()))
   return page
 }
 
