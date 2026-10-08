@@ -55,7 +55,7 @@ Render and master with `video.mjs`. The kits' own `render.mjs` files predate its
 - Music isn't generic: "high energy and crafty and elegant and simple and sleek and crisp." Change something every 4 to 8 bars, stop down before a reveal, and end on a button that rings out instead of a fade.
 - Everything is in one key (cuelume's cues are pitched in C major; hex runs 120 BPM in C). No big low hits: the gong "doesn't fit. It sounds strange."
 - Each cue sits on the element it belongs to, panned to where it is on screen, low-cut, in one shared room.
-- You can't listen, so say that and report numbers: loudness and true peak after AAC (`video` prints them), a spectrogram, and cue onsets against picture times.
+- You can't listen, so say that and report numbers: loudness and true peak after AAC (`video` prints them), a spectrogram, and cue onsets against picture times. AAC adds a little overshoot, so -2 dBTP on the master lands around -1.5 in the mp4; under -1 there is fine.
 
 ## Content
 
