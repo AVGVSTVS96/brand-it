@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<p align="center">brand a project from its own parts<br><a href="https://brand-it-seven.vercel.app">https://brand-it-seven.vercel.app</a></p>
+<p align="center">brand a project from its own parts<br><a href="https://brand-it-seven.vercel.app">brand-it-seven.vercel.app</a></p>
 
 A skill for coding agents that brands a project the way [hex](https://github.com/AVGVSTVS96/hex) and [commonplace](https://github.com/AVGVSTVS96/commonplace) were made: name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all built as code from the product's own parts.
 
@@ -37,6 +37,6 @@ The scripts need Bun, Chrome and ffmpeg. Bun installs puppeteer-core on first ru
 | --- | --- | --- |
 | hex | Claude Code as your personal assistant | [hex-sand.vercel.app](https://hex-sand.vercel.app) |
 | commonplace | your personal data kit for agents | [commonplace-eight-sable.vercel.app](https://commonplace-eight-sable.vercel.app) |
-| brand-it | this skill, branded with itself | [https://brand-it-seven.vercel.app](https://brand-it-seven.vercel.app) |
+| brand-it | this skill, branded with itself | [brand-it-seven.vercel.app](https://brand-it-seven.vercel.app) |
 
 MIT
