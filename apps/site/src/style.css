@@ -148,6 +148,10 @@ footer { padding: var(--s6) var(--gutter); border-top: 1px solid var(--hair); di
 footer p { max-width: none; }
 footer a { text-decoration-color: var(--hair); }
 
+@media (max-width: 840px) {
+  .narrow .label .site, .narrow .label .sch { display: none; }
+}
+
 @media (max-width: 640px) {
   .hero { padding-block: var(--s6) var(--s7); }
   .hero-fig { padding-right: 1.75rem; margin-bottom: var(--s6); }
@@ -162,7 +166,6 @@ footer a { text-decoration-color: var(--hair); }
   .tree .in + span { padding-left: 4ch; }
   .tree span:empty { display: none; }
   .tree .wide { margin-bottom: var(--s2); }
-  .narrow .label .site, .narrow .label .sch { display: none; }
   .links i { display: none; }
   .links a { display: block; }
   .term { padding: var(--s4); }
