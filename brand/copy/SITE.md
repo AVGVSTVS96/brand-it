@@ -15,7 +15,7 @@ One page: a hero, the examples, two short sections, install, footer. Every secti
 - Wordmark: brand-it
 - Tagline, under the wordmark: brand a project from its own parts
 - Hero line: Say brand it.
-- Sub line: A skill for coding agents. It makes the name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all as code, the way hex and commonplace were made.
+- Sub line: A skill for coding agents that takes a project from its name to its launch video, all as code.
 - Install line, as code with a copy button: `npx skills add AVGVSTVS96/brand-it`
 - Copy button: Copy · after click: Copied
 - Secondary link: View on GitHub

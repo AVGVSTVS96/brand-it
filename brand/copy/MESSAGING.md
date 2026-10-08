@@ -10,6 +10,8 @@ brand-it is a skill for coding agents that takes a project from a name to a word
 
 Shorter, for a bio or a card: say "brand it".
 
+On the page, under "Say brand it.", the short form: **A skill for coding agents that takes a project from its name to its launch video, all as code.** The hero is the shortest part, so the nine deliverables are never listed there; they appear once each in the meta description and the README.
+
 ## Tagline
 
 **brand a project from its own parts**
