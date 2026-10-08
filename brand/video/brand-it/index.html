@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>brand-it · launch</title>
+<link rel="stylesheet" href="video.css">
+</head>
+<body>
+<main id="stage">
+
+<section class="scene" data-s="0" data-e="3">
+  <div class="frame pair">
+    <figure class="framed">
+      <figcaption><span class="label">hex · 1035 · light</span></figcaption>
+      <div class="shot"><img class="hex" src="../../brand/examples/hex-1035-light.png" alt=""></div>
+      <div class="dim h a" style="--k:fade;--d:.3;--t:.12s var(--ease)"><i class="a" style="--k:draw;--d:.3;--t:.4s var(--ease)"></i><span class="a" style="--k:fade;--d:.65;--t:.3s var(--ease)">1035</span></div>
+    </figure>
+    <figure class="framed">
+      <figcaption><span class="label">commonplace · 1035 · light</span></figcaption>
+      <div class="shot"><img class="cp" src="../../brand/examples/commonplace-1035-light.png" alt=""></div>
+      <div class="dim h a" style="--k:fade;--d:.5;--t:.12s var(--ease)"><i class="a" style="--k:draw;--d:.5;--t:.4s var(--ease)"></i><span class="a" style="--k:fade;--d:.85;--t:.3s var(--ease)">1035</span></div>
+    </figure>
+    <p class="cap">Nothing alike. Made the same way.</p>
+  </div>
+</section>
+
+<section class="scene" data-s="3" data-e="5.5">
+  <div class="frame center one">
+    <figure class="framed">
+      <figcaption><span class="label">hex · 1035 · light</span><span class="label quiet">hex-sand.vercel.app</span></figcaption>
+      <div class="shot"><img class="hex" src="../../brand/examples/hex-1035-light.png" alt=""></div>
+      <div class="dim h a" style="--k:fade;--d:.25;--t:.12s var(--ease)"><i class="a" style="--k:draw;--d:.25;--t:.4s var(--ease)"></i><span class="a" style="--k:fade;--d:.6;--t:.3s var(--ease)">1035</span></div>
+    </figure>
+  </div>
+</section>
+
+<section class="scene" data-s="5.5" data-e="8">
+  <div class="frame center one">
+    <figure class="framed">
+      <figcaption><span class="label">commonplace · 1035 · light</span><span class="label quiet">commonplace-eight-sable.vercel.app</span></figcaption>
+      <div class="shot"><img class="cp" src="../../brand/examples/commonplace-1035-light.png" alt=""></div>
+      <div class="dim h a" style="--k:fade;--d:.25;--t:.12s var(--ease)"><i class="a" style="--k:draw;--d:.25;--t:.4s var(--ease)"></i><span class="a" style="--k:fade;--d:.6;--t:.3s var(--ease)">1035</span></div>
+    </figure>
+  </div>
+</section>
+
+<section class="scene" data-s="8" data-e="10">
+  <div class="frame center intro">
+    <span class="word" data-cue="tap volume=1.4">Introducing</span>
+  </div>
+</section>
+
+<section class="scene" data-s="10" data-e="14">
+  <div class="frame center name">
+    <svg class="lockup" id="lockup" data-cue="success volume=1"></svg>
+    <div class="dim h a" id="name-dim" style="--k:fade;--d:1.3;--t:.12s var(--ease)"><i class="a" style="--k:draw;--d:1.3;--t:.4s var(--ease)"></i><span class="a" style="--k:fade;--d:1.65;--t:.3s var(--ease)">…</span></div>
+    <p class="tagline"><span class="m"><span class="a" style="--d:.5">brand a project from its own parts</span></span></p>
+  </div>
+</section>
+
+<section class="scene" data-s="14" data-e="20">
+  <div class="frame mark">
+    <div class="term">
+      <div class="line cmd" data-type="bun brand/logo/gen.mjs" data-d=".2" data-verb="3"><span class="p">$</span><span class="t"></span><i class="cur"></i></div>
+      <div class="out a" id="gen-out" style="--k:fade;--d:1.5;--t:.15s var(--ease)"><span class="line">{</span><span class="line">  wordmark: {</span><span class="line">    w: 328.6,</span><span class="line">    h: 74.9,</span><span class="line">    advance: 330.2,</span><span class="line">  },</span><span class="line">  b: {</span><span class="line">    w: 52.1,</span><span class="line">    h: 73.9,</span><span class="line">    nodes: 29,</span><span class="line">  },</span><span class="line">  pick: "a",</span><span class="line">}</span></div>
+    </div>
+    <div class="fig" id="mark-fig">
+      <svg id="mark"></svg>
+      <div class="dim v a" id="mark-dim" style="--k:fade;--d:3.4;--t:.12s var(--ease)"><i class="a" style="--k:draw-y;--d:3.4;--t:.4s var(--ease)"></i><span class="a" style="--k:fade;--d:3.75;--t:.3s var(--ease)">…</span></div>
+    </div>
+    <p class="cap">Marks from real font outlines.</p>
+  </div>
+</section>
+
+<section class="scene" data-s="20" data-e="26">
+  <div class="frame check">
+    <div class="term">
+      <div class="line cmd" data-type="bun shoot.mjs site/ shots/" data-d=".2" data-char=".035" data-verb="3"><span class="p">$</span><span class="t"></span><i class="cur"></i></div>
+      <div class="line out a" id="check-result" style="--k:fade;--d:4.6;--t:.15s var(--ease)" data-cue="success emphasis=subtle volume=.85">4 problems · shots in shots/ at 390@2x, 1035, 1440</div>
+    </div>
+    <figure class="sweep" id="sweep" data-d="1.4" data-widths="320:.24 390:.24 480 600 720 840 1035 1200 1366 1512 1720 1920" data-every=".11" data-problems="320 360 390 400">
+      <figcaption><span class="label"></span></figcaption>
+      <div class="shot"></div>
+      <div class="dim h"><i></i><span></span></div>
+    </figure>
+    <p class="cap">45 widths, light and dark, before it says done.</p>
+  </div>
+</section>
+
+<section class="scene" data-s="26" data-e="30">
+  <div class="frame rules">
+    <span class="label">SKILL.md · 99 lines</span>
+    <ol>
+      <li><span class="num a" style="--k:fade;--d:.3;--t:.3s var(--ease)">22</span><span class="rule">Minimal, but never flat.</span></li>
+      <li><span class="num a" style="--k:fade;--d:.8;--t:.3s var(--ease)">26</span><span class="rule">Distinctive beats safe.</span></li>
+      <li><span class="num a" style="--k:fade;--d:1.3;--t:.3s var(--ease)">45</span><span class="rule">No em dashes anywhere.</span></li>
+      <li><span class="num a" style="--k:fade;--d:1.8;--t:.3s var(--ease)">85</span><span class="rule">Finishing isn't redesigning.</span></li>
+    </ol>
+    <p class="cap">Every rule is something one person said to an agent.</p>
+  </div>
+</section>
+
+<section class="scene" data-s="30" data-e="34">
+  <div class="frame code">
+    <span class="label">what a branded repo holds</span>
+    <div class="tree">
+      <span class="line"><span>brand/</span></span>
+      <span class="line"><span>  BRAND.md</span><span class="what a" style="--k:fade;--d:.3;--t:.3s var(--ease)">the system, written down</span></span>
+      <span class="line"><span>  specimen.html</span><span class="what a" style="--k:fade;--d:.55;--t:.3s var(--ease)">the system in use</span></span>
+      <span class="line"><span>  logo/gen.mjs</span><span class="what a" style="--k:fade;--d:.8;--t:.3s var(--ease)">marks from real font outlines</span></span>
+      <span class="line"><span>copy/MESSAGING.md</span><span class="what a" style="--k:fade;--d:1.05;--t:.3s var(--ease)">the one line, the voice, the facts</span></span>
+      <span class="line"><span>site/</span><span class="what a" style="--k:fade;--d:1.3;--t:.3s var(--ease)">og.png, favicon.svg, the README header</span></span>
+      <span class="line"><span>video/</span><span class="what a" style="--k:fade;--d:1.55;--t:.3s var(--ease)">scenes on one clock, sound from the same clock</span></span>
+    </div>
+    <p class="cap">All of it is code. Any asset rebuilds in one command.</p>
+  </div>
+</section>
+
+<section class="scene" data-s="34" data-e="41.5">
+  <div class="frame center end">
+    <svg class="wordmark" id="wordmark"></svg>
+    <p class="tagline"><span class="m"><span class="a" style="--d:.5">brand a project from its own parts</span></span></p>
+    <div class="term">
+      <div class="line cmd" data-type="npx skills add AVGVSTVS96/brand-it" data-d="1.8" data-show="0" data-char=".03" data-verb="3"><span class="p">$</span><span class="t"></span><i class="cur"></i></div>
+      <div class="line cmd" data-type="brand it" data-d="3.4" data-enter=".24" data-cue="tap volume=2.4"><span class="p">&gt;</span><span class="t"></span><i class="cur"></i></div>
+    </div>
+    <div class="links">by bassim</div>
+  </div>
+</section>
+
+<div class="rails">
+  <i class="v" style="left:var(--rail-x)"></i><i class="v" style="right:var(--rail-x)"></i>
+  <i class="h" style="top:var(--rail-y)"></i><i class="h" style="bottom:var(--rail-y)"></i>
+  <span class="wm"><svg id="rail-wm"></svg></span>
+  <span class="rail-t tr">brand a project from its own parts</span>
+  <span class="rail-t bl" id="count">01</span>
+  <span class="rail-t br">github.com/AVGVSTVS96/brand-it</span>
+</div>
+
+</main>
+<script src="../node_modules/motion/dist/motion.js"></script>
+<script type="module" src="video.js"></script>
+<script type="module" src="sound.js"></script>
+</body>
+</html>
