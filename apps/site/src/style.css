@@ -152,7 +152,6 @@ footer a { text-decoration-color: var(--hair); }
   .cmd pre { font-size: 0.875rem; white-space: pre-wrap; }
   .examples { gap: var(--s8); margin-top: var(--s7); }
   .shots { gap: var(--s4) var(--s3); }
-  .shots .narrow .label { display: none; }
   .tree { grid-template-columns: 1fr; row-gap: 0; }
   .tree > span:nth-child(odd) { white-space: normal; overflow-wrap: anywhere; }
   .tree > span:nth-child(even) { padding-left: 2ch; margin-bottom: var(--s2); }
