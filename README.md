@@ -24,7 +24,8 @@ video.md        launch videos: HTML scenes on one clock, rendered frame by frame
                 sound built from the same clock
 scripts/
   shoot.mjs     a page at 45 widths from 320 to 1920 in light and dark,
-                flagging overflow; exact renders for OG images and icons
+                flagging overflow and colors that fight; screen-high tiles
+                to read at real size; exact renders for OG images and icons
   video.mjs     any page with window.seek(t): stills, contact sheets,
                 a -14 LUFS soundtrack, a BT.709 mp4 in 5 s parts that resume
 ```

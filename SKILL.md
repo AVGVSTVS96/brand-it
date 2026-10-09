@@ -11,7 +11,7 @@ A brand here is a small system grown from the product's own parts. It's written 
 | --- | --- | --- |
 | hex | poppy neo-brutalist: cream and ink, blue/yellow/pink blocks, hard shadows, real app UIs | `~/Developer/hex-site/site` (`style.css`, `COPY.md`) |
 | commonplace | a light terminal: paper, mono, one red pen, a cursor wordmark | `~/Developer/commonplace-site/brand` |
-| seqno (unreviewed) | an outliner built from its own parts: bullet, guide line, dot grid, an apricot field | `~/dev/seqno-site/brand` |
+| seqno (dark mode unreviewed) | an outliner built from its own parts: bullet, guide line, dot grid; apricot by day, its screenshots' blue by night | `~/dev/seqno-site/brand` |
 
 Read the closest one before you start. Copy its shape, never its look. `refs.md` has what Bassim has saved and how to find more; `video.md` covers launch videos.
 
@@ -22,7 +22,8 @@ Read the closest one before you start. Copy its shape, never its look. `refs.md`
 - **Minimal, but never flat.** Every element earns its place, and a flat page is just as ugly ("doesn't have much pop, doesn't have much character"). Richness has to carry information or feel: real UIs, data in its real shape, motion that follows state.
 - **Grown from the product.** commonplace's mark is the CLI cursor; seqno's is the outliner's bullet. Start with the forces (who it's for, where it shows up, what it has to say), then draw.
 - **Color means something.** commonplace's one red means "this one, now"; hex runs three poppy accents. A lone accent is how hex v2 went flat.
-- **Dark is the same tokens swapped**, never a second design. Everything follows the system theme.
+- **Dark is designed against what sits on it**, then shipped as the same tokens swapped, following the system theme. Light works for a reason; keep the reason. seqno's apricot held neutral white screenshots, but its dark screenshots are Solarized blue, so its dark field is that blue a step darker. A dark field is the product's hue a step below its UI, or near neutral, never the opposite hue at the same lightness.
+- **A light brand color stays light.** Dark orange is brown: darkened, seqno's apricot cancelled the app's blue into mud. Keep it as it is, or move it into the ink at full strength, and never lay it over a dark field at low opacity (a 30% apricot outline on blue is khaki).
 - **Distinctive beats safe.** Agents keep recommending the safe pick, and Bassim keeps choosing the bolder one (the Berkeley Mono clone over Plex, poppy over flat). Always include the distinctive option.
 - **Never:** gradients, glows, blur and glass on the page itself, aggressive or fake shadows, pills and callouts nobody needs, emoji, isometric or 3D, AI backgrounds, ASCII as wallpaper, bento grids, generic SaaS themes. Serif display type was rejected for hex.
 - **The 2026 "tasteful AI" defaults are tells too:** cream with terracotta, near-black with one acid accent, a hairline broadsheet, tracked all-caps eyebrows, mono labels as costume. hex and commonplace use some of these because their idea calls for it. Never reach for them by default.
@@ -33,8 +34,8 @@ Read the closest one before you start. Copy its shape, never its look. `refs.md`
 2. **References from Bassim's saves.** Pull from the X bookmark folders and Raindrop (`refs.md`). Study one or two deeply instead of making a mood board. Write `references.md`: link, what to take, and a "deliberately not taken" list.
 3. **Brand and copy in parallel.** Two agents, one repo: `brand/` and `copy/`. Copy always gets its own agent. `copy/MESSAGING.md` is the source of truth for words, and brand reads it before committing.
 4. **Marks from real font outlines.** Three directions that genuinely differ, drawn as SVG paths with opentype.js by a `logo/gen.mjs`. Pick one, argue it, and say why not for the others. Check every mark at 16px and next to its neighbors.
-5. **Specimen.** One page with the system in use: a hero, type scale, tokens, a ledger or diagram, the logo directions, motion. Render it, look at every shot, fix what you see. `BRAND.md` follows commonplace's headings.
-6. **Show Bassim, don't block.** Send full-resolution files and the options side by side with your pick, then keep building what doesn't hang on the answer. For fonts, set the real page in each candidate, including the one Bassim admires and a free clone.
+5. **Specimen.** One page with the system in use: a hero, type scale, tokens, a ledger or diagram, the logo directions, motion, and each field holding the product's real screenshot in its theme. Render it in both themes, look at every shot, fix what you see. `BRAND.md` follows commonplace's headings.
+6. **Show Bassim, don't block.** Send full-resolution files and the options side by side with your pick, then keep building what doesn't hang on the answer. Directions are whole designs, not palettes ("these are just color palettes, not an actual like full design direction"), and the site gets its own round: enclave's skipped it and came out "subpar for what I would expect". For fonts, set the real page in each candidate, including the one Bassim admires and a free clone.
 7. **Site.** A static Vite+ page on Vercel, deployed early: link first, polish after. Commit a first pass so there's something to deploy.
 8. **Assets.** The OG image rendered from HTML, a favicon that follows the theme, the README `<picture>` header in light and dark, and every logo file as SVG and PNG, all delivered to Bassim. Sizes are at the bottom.
 9. **Launch.** The X post, then the video (`video.md`).
@@ -59,22 +60,26 @@ Read the closest one before you start. Copy its shape, never its look. `refs.md`
 - Examples show the product's whole breadth. Made up but realistic beats a narrow slice of real data. Bassim's real personal data never goes on a public page without a yes.
 - Other brands' logos are the official SVG or the exact file you were given.
 - Comparisons are like for like: same state, same content.
+- The brand bends to the product: seqno's `BRAND.md` banned Logseq's teal while every dark screenshot on its page was that teal.
+- Credit a direct inspiration by name in the README and the commit (seqno's hero credits Buzz and Wes Billman).
 
 ## Check before saying done
 
 ```sh
 s=~/.agents/skills/brand-it/scripts
 export TMPDIR=$PWD/.scratch                      # the server's /tmp is RAM-backed and fills up
-bun $s/shoot.mjs site/ shots/                    # 320 to 1920px, light and dark: overflow and clipped text, plus shots
+bun $s/shoot.mjs site/ shots/                    # 320 to 1920px, light and dark: overflow, clipped text, colors that fight, plus shots and tiles
 bun $s/shoot.mjs site/og.html 1200x630 og.png    # exact renders: og image, icons (--clear for transparent)
 ```
 
-A local page is served from its repo root, its own folder and its `public/`, so `../brand/fonts`, `/style.css` and Vite's public files all resolve. Anything that fails to load is printed; if the page needs a build step, pass its dev server URL instead.
+A local page is served from its repo root, its own folder and its `public/`, so `../brand/fonts`, `/style.css` and Vite's public files resolve. Lazy images and scroll reveals are loaded before each shot. Anything that fails to load is printed; a page with a build step takes its dev server URL instead.
 
-- Read the shots at 390, 1035 and 1440 yourself. Bassim browses at 1035; that's where the last hero broke.
-- Then hand the shots to a fresh subagent told to find problems, ranked, each with its fix. On hex that found seven real bugs.
+- Read every tile in `shots/tiles/` at 1035 and 390, in both themes. Bassim browses at 1035, often in dark; that's where the last hero broke. A full-page shot reaches you shrunk four to six times, which erases 1px rules, small text and the edges where screenshots meet the page. Look longest where you expect no problem: seqno's dark hero was checked, its dark page never opened.
+- "Colors fight" is two big areas in one view at the same lightness with hues 90° or more apart, like seqno's ember beside its blue screenshots. Contrast ratios are blind to it (1.03:1, as if one surface), and so is a swatch: brown only appears next to something brighter. Move the field to the product's hue or toward neutral.
+- Then hand the tiles to a fresh subagent told to find problems, ranked, each with its fix, naming the two colors at every edge between big surfaces. You're the worst judge of your own palette. On hex that found seven real bugs; on seqno's dark mode, khaki outlines.
 - Every glyph the motifs use exists in the font. Plex Mono had no box drawing, so commonplace's own tree couldn't render.
-- Text tokens pass 4.5:1.
+- Text tokens pass 4.5:1. That's all a ratio checks.
+- Two bugs came back twice: a highlight band touching the line above (hex's yellow "overlapping the Y", then enclave's), and a long URL wrapping instead of ending in a clean ellipsis ("just truncated nicely").
 - After deploying, check the live OG image (bump `?v=`, since X and iMessage cache by URL) and the README header in both themes.
 - If you can't test on the real target (Telegram's in-app Safari, an iPhone), say so instead of shipping guesses.
 - Fix the bugs you notice (overflow, contrast, stale facts) instead of reporting them. Anything that changes the look still needs a yes first.

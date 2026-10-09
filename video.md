@@ -53,6 +53,7 @@ Render and master with `video.mjs`. The kits' own `render.mjs` files predate its
 - Silence is "underwhelming". The ask is music plus generated effects (cuelume).
 - Effects are sparse: "one for a moment that matters, not one per item." The hex cut called "overdone... there just for the sake of being there" had 43 cues in 73 s. Aim for 10 to 15 in 90 s, tiered: volume 1 for the one or two big moments, about .5 for a tap, about .35 for a whoosh.
 - Music isn't generic: "high energy and crafty and elegant and simple and sleek and crisp." Change something every 4 to 8 bars, stop down before a reveal, and end on a button that rings out instead of a fade.
+- The 89 s hex cut got "I hate the music." Make it in Suno: "use that to make much better music."
 - Everything is in one key (cuelume's cues are pitched in C major; hex runs 120 BPM in C). No big low hits: the gong "doesn't fit. It sounds strange."
 - Each cue sits on the element it belongs to, panned to where it is on screen, low-cut, in one shared room.
 - You can't listen, so say that and report numbers: loudness and true peak after AAC (`video` prints them), a spectrogram, and cue onsets against picture times. AAC adds a little overshoot, so -2 dBTP on the master lands around -1.5 in the mp4; under -1 there is fine.
