@@ -35,22 +35,27 @@ Read the closest one before you start. Copy its shape, never its look. `refs.md`
 3. **Brand and copy in parallel.** Two agents, one repo: `brand/` and `copy/`. Copy always gets its own agent. `copy/MESSAGING.md` is the source of truth for words, and brand reads it before committing.
 4. **Marks from real font outlines.** Three directions that genuinely differ, drawn as SVG paths with opentype.js by a `logo/gen.mjs`. Pick one, argue it, and say why not for the others. Check every mark at 16px and next to its neighbors.
 5. **Specimen.** One page with the system in use: a hero, type scale, tokens, a ledger or diagram, the logo directions, motion, and each field holding the product's real screenshot in its theme. Render it in both themes, look at every shot, fix what you see. `BRAND.md` follows commonplace's headings.
-6. **Show Bassim, don't block.** Send full-resolution files and the options side by side with your pick, then keep building what doesn't hang on the answer. Directions are whole designs, not palettes ("these are just color palettes, not an actual like full design direction"), and the site gets its own round: enclave's skipped it and came out "subpar for what I would expect". For fonts, set the real page in each candidate, including the one Bassim admires and a free clone.
-7. **Site.** A static Vite+ page on Vercel, deployed early: link first, polish after. Commit a first pass so there's something to deploy.
-8. **Assets.** The OG image rendered from HTML, a favicon that follows the theme, the README `<picture>` header in light and dark, and every logo file as SVG and PNG, all delivered to Bassim. Sizes are at the bottom.
-9. **Launch.** The X post, then the video (`video.md`).
+6. **Directions as hero mockups.** Two or three real heroes, each with its own layout, type and motif, so they differ at a glance ("these are just color palettes, not an actual like full design direction"; "all three of these are still very, very similar"). Send them full size, side by side, with your pick, then keep building what doesn't hang on the answer. When he narrows to two, ask which one reads busy ("a little bit too busy"). For fonts, set the real page in each candidate, including the one Bassim admires and a free clone.
+7. **Site direction.** The site gets its own round; enclave's skipped it and came out "subpar for what I would expect for something built using my Brandit skill". Write the section list: what each section shows and the visual that carries it. Each section gets a layout of its own, so the page reads as a designed piece and not anchor, heading, line, box on repeat. Show Bassim the hero plus one section first.
+8. **Site.** A static Vite+ page, deployed to Vercel early with the Vercel CLI (`bunx vercel@latest`, logged in on the server and the Mac): link first, polish after. Commit a first pass so there's something to deploy.
+9. **Assets.** The OG image rendered from HTML, a favicon that follows the theme, the README `<picture>` header in light and dark, and every logo file as SVG and PNG, all delivered to Bassim. Each asset's source (`og.html`, `gen.mjs`) is committed beside its output, and the OG image ships with the first deploy. Sizes are at the bottom.
+10. **Launch.** The X post, then the video (`video.md`).
 
 ## Words
 
 - Write like the README: short sentences, real numbers, what works and what doesn't. A craftsman talking, not an ad.
 - No em dashes anywhere. Reword the sentence; don't just swap in a comma.
-- Less text. A section is a headline, one short line and a visual, and the hero is the shortest part: "reduce text... add more visuals."
+- Less text. The hero is the name or one line plus one sentence of about 15 words ("the hero text for it is just too long"). Lists of what ships live in the README and meta tags. A section is a headline, one short line and a visual: "reduce text... add more visuals."
+- Each fact appears once, where it means the most ("I don't think we need to be showing that everywhere").
+- The user's choices are theirs: "pick your apps", not a role we hand them ("Pick your personal surface").
+- When one number dwarfs another, say both in words with a footnote; a bar can't show 3 next to 3,000 ("don't have that kind of visualization at all").
 - No feature lists ("everyone has heard most those features a thousand times"). Say what happened, and lead with the edge, not table stakes.
 - Never: supercharge, seamless, effortless, blazing, powerful, magical, revolutionary, unlock, unleash, AI-native, second brain, waitlist. No moral-of-the-story closers, invented origin stories or manufactured hooks.
 - Numbers are honest and still impressive: count with a script, round yours up and theirs down, and footnote how.
 - Anything landing within the hour is shown as live. "Coming" is only for real future work, and don't label something coming when it's cheap to just build.
 - Bassim's own words (a note, the origin story) stay verbatim.
-- Every claim is checked against the code. Never invent a requirement or a feature.
+- Every claim is checked against the code. Never invent a requirement or a feature ("sad requirement u fabricated").
+- Numbers and names live in one `copy/facts.json`, written by a script that counts them; the site, README, OG image and video read from it. When a fact changes, `rg` every asset for the old value ("there's still discord being mentioned in some places").
 - Launch copy follows `~/Developer/side-projects/x-pipeline/08-writing-style-guide.md` on the Mac. Run drafts through `~/Developer/side-projects/delvish` (`node src/cli.ts draft.txt --no-pager`).
 
 ## Fidelity
@@ -68,7 +73,7 @@ Read the closest one before you start. Copy its shape, never its look. `refs.md`
 ```sh
 s=~/.agents/skills/brand-it/scripts
 export TMPDIR=$PWD/.scratch                      # the server's /tmp is RAM-backed and fills up
-bun $s/shoot.mjs site/ shots/                    # 320 to 1920px, light and dark: overflow, clipped text, colors that fight, plus shots and tiles
+bun $s/shoot.mjs site/ shots/                    # 320 to 1920px, light and dark: overflow, wrapped URLs, highlight overlaps, colors that fight, light images on dark, plus shots and tiles
 bun $s/shoot.mjs site/og.html 1200x630 og.png    # exact renders: og image, icons (--clear for transparent)
 ```
 
@@ -76,12 +81,12 @@ A local page is served from its repo root, its own folder and its `public/`, so 
 
 - Read every tile in `shots/tiles/` at 1035 and 390, in both themes. Bassim browses at 1035, often in dark; that's where the last hero broke. A full-page shot reaches you shrunk four to six times, which erases 1px rules, small text and the edges where screenshots meet the page. Look longest where you expect no problem: seqno's dark hero was checked, its dark page never opened.
 - "Colors fight" is two big areas in one view at the same lightness with hues 90° or more apart, like seqno's ember beside its blue screenshots. Contrast ratios are blind to it (1.03:1, as if one surface), and so is a swatch: brown only appears next to something brighter. Move the field to the product's hue or toward neutral.
-- Then hand the tiles to a fresh subagent told to find problems, ranked, each with its fix, naming the two colors at every edge between big surfaces. You're the worst judge of your own palette. On hex that found seven real bugs; on seqno's dark mode, khaki outlines.
+- Then hand the tiles to a fresh subagent told to find problems, ranked, each with its fix, naming the two colors at every edge between big surfaces, and to answer one question: does this beat the closest approved site (hex or commonplace)? You're the worst judge of your own palette. On hex that found seven real bugs; on seqno's dark mode, khaki outlines.
 - Every glyph the motifs use exists in the font. Plex Mono had no box drawing, so commonplace's own tree couldn't render.
 - Text tokens pass 4.5:1. That's all a ratio checks.
-- Two bugs came back twice: a highlight band touching the line above (hex's yellow "overlapping the Y", then enclave's), and a long URL wrapping instead of ending in a clean ellipsis ("just truncated nicely").
+- Two bugs came back twice, so `shoot.mjs` flags both: a highlight band touching the line above (hex's yellow "overlapping the Y", then enclave's), and a URL or command wrapping onto a second line where it should end in a clean ellipsis ("It should of course be just truncated nicely"). It also flags a big light image on a dark page; light-only assets (OG, posters) sit on a light band in both themes.
 - After deploying, check the live OG image (bump `?v=`, since X and iMessage cache by URL) and the README header in both themes.
-- If you can't test on the real target (Telegram's in-app Safari, an iPhone), say so instead of shipping guesses.
+- Test iOS Safari in the Simulator on the Mac before calling an iOS fix done: `xcrun simctl openurl booted <url>`, then `xcrun simctl io booted screenshot shot.png`. commonplace's untested fix got reverted ("i'm over it bro"). For targets you can't reach (Telegram's in-app browser), say so.
 - Fix the bugs you notice (overflow, contrast, stale facts) instead of reporting them. Anything that changes the look still needs a yes first.
 
 ## Working with Bassim

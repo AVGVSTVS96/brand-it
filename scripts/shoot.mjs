@@ -32,6 +32,57 @@ function findProblems() {
       found.push(`text wider than its box: ${name} "${el.textContent.trim().slice(0, 40)}"`)
     }
   }
+  const lines = el => {
+    const range = document.createRange()
+    range.selectNodeContents(el)
+    return [...range.getClientRects()].filter(r => r.width && r.height)
+  }
+  const label = el => `${el.tagName.toLowerCase()}${el.classList[0] ? `.${el.classList[0]}` : ""} "${el.textContent.trim().slice(0, 40)}"`
+  for (const el of document.body.querySelectorAll("code, kbd, samp, pre, [data-url]")) {
+    if (el.textContent.trim().includes("\n") || el.parentElement.closest("code, kbd, samp, pre, [data-url]")) continue
+    const tops = new Set(lines(el).map(r => Math.round(r.top + r.height / 2)))
+    if (tops.size > 1) found.push(`wraps onto ${tops.size} lines, truncate it with an ellipsis instead: ${label(el)}`)
+  }
+  const painted = style => style.backgroundImage !== "none" || !/^(transparent|rgba\(.*, 0\))$/.test(style.backgroundColor)
+  for (const el of document.body.querySelectorAll("*")) {
+    const style = getComputedStyle(el)
+    if (!style.display.startsWith("inline") || !painted(style) || !el.textContent.trim()) continue
+    const block = el.parentElement.closest(":not(a, b, i, em, strong, span, mark, code, kbd, small, sup, sub)") ?? el.parentElement
+    for (const band of el.getClientRects()) {
+      const above = lines(block).find(r => r.bottom <= band.bottom - band.height / 2 && r.top < band.top && r.bottom > band.top + 0.5 && r.right > band.left && r.left < band.right)
+      if (above) {
+        found.push(`highlight band overlaps the line above by ${Math.round(above.bottom - band.top)}px: ${label(el)}`)
+        break
+      }
+    }
+  }
+  return found
+}
+
+function lightImages() {
+  const luminance = ([r, g, b]) => [r, g, b].map(v => ((v /= 255) <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4)).reduce((sum, v, i) => sum + v * [0.2126, 0.7152, 0.0722][i], 0)
+  const backdrop = el => {
+    for (let at = el.parentElement; at; at = at.parentElement) {
+      const [r, g, b, a = 1] = getComputedStyle(at).backgroundColor.match(/[\d.]+/g).map(Number)
+      if (a > 0.5) return luminance([r, g, b])
+    }
+    return 0
+  }
+  const canvas = new OffscreenCanvas(16, 16)
+  const ctx = canvas.getContext("2d", { willReadFrequently: true })
+  const found = []
+  for (const img of document.querySelectorAll("img, video")) {
+    const { width, height } = img.getBoundingClientRect()
+    if (width * height < 0.08 * innerWidth * Math.min(innerHeight, 900) || backdrop(img) > 0.2) continue
+    try {
+      ctx.clearRect(0, 0, 16, 16)
+      ctx.drawImage(img, 0, 0, 16, 16)
+      const { data } = ctx.getImageData(0, 0, 16, 16)
+      let sum = 0
+      for (let i = 0; i < data.length; i += 4) sum += luminance([data[i], data[i + 1], data[i + 2]]) * (data[i + 3] / 255) + backdrop(img) * (1 - data[i + 3] / 255)
+      if (sum / 256 > 0.5) found.push(`big light image on a dark page, set it on a light band: ${(img.currentSrc || img.src).split("/").pop()}`)
+    } catch {}
+  }
   return found
 }
 
@@ -143,6 +194,7 @@ if (size) {
       if (!shots[width]) continue
       await page.evaluate(showEverything)
       await page.waitForNetworkIdle({ concurrency: 2 })
+      if (scheme === "dark") for (const problem of await page.evaluate(lightImages)) note(problem, `dark ${width}`)
       const scale = shots[width]
       const full = await page.screenshot({ path: join(out, `${width}-${scheme}.png`), fullPage: true })
       const tiles = await decoder.evaluate(tile, Buffer.from(full).toString("base64"), 900 * scale)

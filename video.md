@@ -36,6 +36,7 @@ Render and master with `video.mjs`. The kits' own `render.mjs` files predate its
 - The site's system exactly, at 1920×1080: same fonts and tokens, with rails (wordmark top-left, tagline top-right, scene count bottom-left, URL bottom-right).
 - A phone shows the frame at about a fifth of its size, so anything the viewer has to read is at least 3% of the frame width (about 58 px). Dense CLI output can drop to 28 px. Rules are 2 px; 1 px shimmers or vanishes after X re-encodes.
 - The first frame is composed, never blank paper: X uses it as the poster unless a thumbnail is set in Media Studio.
+- On the cut frame every static element is already in place; only the thing being built animates after it. Text arrives whole (fade or move), never sliced by a clip-path, and numbers show their final value on the cut instead of scrambling or counting.
 - Every frame is complete, not just the last one: no border missing mid-animation, no missing 2 px rule, no foreground text over background text, dot grids padded off the edges and quieter than the text. When something blurs, blur the whole content area, not just the words.
 - One accent object per scene.
 
