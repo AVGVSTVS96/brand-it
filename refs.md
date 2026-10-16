@@ -4,25 +4,19 @@ What Bassim has saved, and how to find more. Those saves beat your defaults: "th
 
 ## Pull from the saves
 
-On the Mac (`ssh mac` from the server). Read `~/Developer/personal/me/AGENTS.md` first; `raw/` is read-only.
+On the Mac (`ssh mac` from the server), through the `commonplace` CLI of the archive in `~/Developer/personal/commonplace`.
 
 ```sh
-# X bookmark folders: inspiration, cool projects, Workflow Tips, CSS Tips, prompts, read later
-d=$(ls -d ~/Developer/personal/me/raw/xbook/2026-* | tail -1)
-jq -rn --arg name inspiration \
-  --slurpfile folders $d/folders/documents.jsonl --slurpfile links $d/bookmarkFolders/documents.jsonl '
-  ($folders[] | select(.name == $name) | ._id) as $f
-  | [$links[] | select(.folderId == $f) | .bookmarkId] as $ids
-  | inputs | select(._id as $id | $ids | index($id))
-  | "@\(.authorUsername)  \(.text | gsub("\n"; " ") | .[0:120])  https://x.com/\(.authorUsername)/status/\(.xTweetId)"' \
-  $d/bookmarks/documents.jsonl
+# X bookmark folders and other saved collections: inspiration, cool projects, Workflow Tips, CSS Tips, prompts, webDev Inspiration (Raindrop)
+commonplace sql "select t.author, substr(replace(t.text, char(10), ' '), 1, 120) as text, t.url
+  from events e join things t on t.id = e.thing_id, json_each(e.collections) c
+  where e.verb = 'saved' and c.value = 'inspiration'"
 
 # likes and everything else, full text
-sqlite3 -readonly ~/Developer/personal/me/me.db \
-  "select id, substr(replace(text, char(10), ' '), 1, 120) from search where search match 'wordmark OR typeface' limit 40"
+commonplace search "wordmark OR typeface" --limit 40
 ```
 
-Raindrop's "webDev Inspiration" collection is in `raw/raindrop/*.csv`. The X data stops in late September, so say how fresh it is. Two brands already mined it, so start from what they took: `~/Developer/commonplace-site/brand/references.md` and `~/dev/seqno-site/brand/references.md` on the server.
+X syncs every day; `commonplace stats` shows how fresh each source is, so say so. Two brands already mined it, so start from what they took: `~/Developer/commonplace-site/brand/references.md` and `~/dev/seqno-site/brand/references.md` on the server.
 
 ## The strongest
 
