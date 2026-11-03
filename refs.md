@@ -39,7 +39,6 @@ X syncs every day; `commonplace stats` shows how fresh each source is, so say so
 - **commonplace:** light-terminal brutalist-minimal; mono, red rubrics, ledger tables. Earlier, openleaf was "brutalist terminal minimalism."
 - **Grid-line sites** like voidzero.dev and greptile: "this new style of minimal grid style design language."
 - **Apple and iOS** for apps and phone pages (`clean-page`, the hex keyboard).
-- **Dashboards, tools and pages:** Vercel and Linear, with rich visualizations and real hierarchy. Not neo-brutalism: "definitely I don't like this neo-brutalist aesthetic."
 - **References Bassim has sent agents to:** factory.ai's site, Logseq's 2021 site, buzz.xyz's hero, Linear.
 
 ## People
