@@ -86,9 +86,9 @@ A number is a dimension or a row. Horizontal bars on a `--hair-2` track in ink, 
 
 ### Video
 
-Same system on a 1920×1080 paper stage, one clock. The video agent builds from this section and `~/.agents/skills/brand-it/video.md`; the closest kit is commonplace's (`~/Developer/commonplace-site/video`), scenes as data with a pure `seek(t)`.
+Same system on a 1920×1080 paper stage, one clock. The video agent builds from this section and `skills/brand-it/video.md`; the closest kit is commonplace's (`~/Developer/commonplace-site/video`), scenes as data with a pure `seek(t)`.
 
-**Contract.** `window.END = 37`, `window.seek(t)` pure, no running animations or timers while rendering, fonts from `brand/fonts/`, `window.soundtrack()` built from the same cue list. Render with `bun ~/.agents/skills/brand-it/scripts/video.mjs video/ video`.
+**Contract.** `window.END = 37`, `window.seek(t)` pure, no running animations or timers while rendering, fonts from `brand/fonts/`, `window.soundtrack()` built from the same cue list. Render with `bun run video` in `brand/`.
 
 **Look.** Paper stage, `--ink` text, pencil lines at 2px (1px shimmers after X re-encodes). Rails in Mona Sans Mono at 28px: wordmark top-left (`logo/brand-it.svg`), tagline top-right (`brand a project from its own parts`), scene count bottom-left (`03 / 07`), URL bottom-right (`github.com/AVGVSTVS96/brand-it`). Captions in Mona Sans 600 at 64px, centered, burned in. Anything read is at least 58px; CLI lines can drop to 28px. The first frame is composed: the rails and the typed prompt line. One pencil object per scene. Shots of hex and commonplace are the real renders in `examples/`, inside ink frames with their labels.
 
@@ -134,6 +134,8 @@ brand/
 ├ fonts-compare.html   the real page set in each type candidate (reads the full TTFs from .scratch/)
 ├ fonts/               Mona Sans and Mona Sans Mono subsets, OFL alongside
 ├ logo/                gen.mjs, png.mjs, the static cuts in ttf/, every SVG, png/ when rendered
+├ copy/                messaging, site copy, launch post
+├ video/               the launch video (video/README.md)
 ├ examples/            hex and commonplace: official wordmarks and icons, live renders at 1035 (bun examples/shoot.mjs)
 └ shots/               specimen at 390@2x, 1035 and 1440 in light and dark (the skill's shoot.mjs)
 ```

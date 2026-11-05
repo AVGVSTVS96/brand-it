@@ -1,4 +1,4 @@
-import { chrome, watch, reportMisses } from "../../../../.agents/skills/brand-it/scripts/lib.mjs"
+import { chrome, watch, reportMisses } from "../../skills/brand-it/scripts/lib.mjs"
 
 const sites = {
   hex: "https://hex-sand.vercel.app/",

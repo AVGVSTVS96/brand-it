@@ -1,9 +1,8 @@
 import { readFileSync, mkdirSync } from "node:fs"
 import { execFileSync } from "node:child_process"
-import { homedir } from "node:os"
 
 const out = import.meta.dirname
-const shoot = `${homedir()}/.agents/skills/brand-it/scripts/shoot.mjs`
+const shoot = `${out}/../../skills/brand-it/scripts/shoot.mjs`
 mkdirSync(`${out}/png`, { recursive: true })
 
 const jobs = [

@@ -1,0 +1,15 @@
+{
+  "name": "brand-it-skill",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "puppeteer-core": "catalog:"
+  },
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  }
+}

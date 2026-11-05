@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync, rmSync } from "node:fs"
 import { execFileSync } from "node:child_process"
-import { chrome, watch, reportMisses } from "../../../.agents/skills/brand-it/scripts/lib.mjs"
+import { chrome, watch, reportMisses } from "../../skills/brand-it/scripts/lib.mjs"
 
 const sites = {
   hex: { url: "https://hex-sand.vercel.app/", og: "og.png?v=3" },

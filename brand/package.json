@@ -3,9 +3,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "logo": "bun logo/gen.mjs"
+    "logo": "bun logo/gen.mjs",
+    "png": "bun logo/png.mjs",
+    "parts": "bun video/parts.mjs",
+    "sweep": "bun video/sweep.mjs",
+    "stills": "bun ../skills/brand-it/scripts/video.mjs video/brand-it stills",
+    "sheet": "bun ../skills/brand-it/scripts/video.mjs video/brand-it sheet 2",
+    "audio": "bun ../skills/brand-it/scripts/video.mjs video/brand-it audio",
+    "video": "bun ../skills/brand-it/scripts/video.mjs video/brand-it video",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "brand-it-skill": "workspace:*",
+    "cuelume": "0.2.8",
+    "motion": "14.9.1",
+    "opentype.js": "catalog:"
   },
   "devDependencies": {
-    "opentype.js": "1.3.4"
+    "@types/bun": "catalog:",
+    "typescript": "catalog:",
+    "@types/opentype.js": "1.3.10"
   }
 }

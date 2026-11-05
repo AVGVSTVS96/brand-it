@@ -1,13 +1,12 @@
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs"
 import { execFileSync } from "node:child_process"
-import { homedir } from "node:os"
 import opentype from "opentype.js"
 
 const here = import.meta.dirname
-const brand = `${here}/../brand`
-const readme = process.argv[2] ?? `${here}/../../brand-it/.github/assets`
-const shoot = `${homedir()}/.agents/skills/brand-it/scripts/shoot.mjs`
-const env = { ...process.env, TMPDIR: process.env.TMPDIR ?? `${here}/../.scratch` }
+const brand = `${here}/../../brand`
+const readme = process.argv[2] ?? `${here}/../../.github/assets`
+const shoot = `${here}/../../skills/brand-it/scripts/shoot.mjs`
+const env = { ...process.env, TMPDIR: process.env.TMPDIR ?? `${here}/../../.scratch` }
 
 const mono = opentype.loadSync(`${brand}/logo/ttf/MonaSansMono-Medium.ttf`)
 const f = n => Number(n.toFixed(2))

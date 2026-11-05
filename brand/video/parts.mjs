@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs"
 
 const here = import.meta.dirname
-const read = name => readFileSync(`${here}/../brand/logo/${name}`, "utf8")
+const read = name => readFileSync(`${here}/../logo/${name}`, "utf8")
 
 const lockup = read("brand-it-lockup.svg")
 const wordmark = lockup.match(/<path fill="#0F1113" d="([^"]+)"/)[1]

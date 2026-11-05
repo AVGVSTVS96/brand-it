@@ -5,9 +5,9 @@ The launch video, made from HTML in the brand's own type and tokens. `brand-it/`
 ```sh
 bun install
 bun parts.mjs                 # brand-it/parts.js: the wordmark, the b and its 29 points, read from brand/logo
-bun sweep.mjs                 # brand-it/sweep/: the site at 45 widths, light and dark, for the check scene (needs site/dist)
+bun sweep.mjs                 # brand-it/sweep/: the site at 45 widths, light and dark, for the check scene (needs apps/site/dist)
 
-s=~/.agents/skills/brand-it/scripts
+s=../../skills/brand-it/scripts
 export TMPDIR=$PWD/.scratch
 bun $s/video.mjs brand-it stills 0 11.5 17.5   # single moments; t=0 is the poster
 bun $s/video.mjs brand-it sheet 2             # a contact sheet, a frame every 2 s

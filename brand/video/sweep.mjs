@@ -1,8 +1,8 @@
 import { mkdir } from "node:fs/promises"
-import { serve, chrome, watch, reportMisses } from "../../../.agents/skills/brand-it/scripts/lib.mjs"
+import { serve, chrome, watch, reportMisses } from "../../skills/brand-it/scripts/lib.mjs"
 
 const here = import.meta.dirname
-const target = process.argv[2] ?? `${here}/../site/dist/index.html`
+const target = process.argv[2] ?? `${here}/../../apps/site/dist/index.html`
 const widths = [...new Set([...Array.from({ length: 41 }, (_, i) => 320 + i * 40), 390, 1035, 1366, 1512])].sort((a, b) => a - b)
 
 await mkdir(`${here}/brand-it/sweep`, { recursive: true })

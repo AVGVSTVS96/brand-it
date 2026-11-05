@@ -1,5 +1,5 @@
-@font-face { font-family: "Mona Sans"; src: url("../../brand/fonts/mona-sans.woff2") format("woff2"); font-weight: 300 800; font-stretch: 85% 110%; }
-@font-face { font-family: "Mona Sans Mono"; src: url("../../brand/fonts/mona-sans-mono.woff2") format("woff2"); font-weight: 400 600; font-stretch: 85% 100%; }
+@font-face { font-family: "Mona Sans"; src: url("../../fonts/mona-sans.woff2") format("woff2"); font-weight: 300 800; font-stretch: 85% 110%; }
+@font-face { font-family: "Mona Sans Mono"; src: url("../../fonts/mona-sans-mono.woff2") format("woff2"); font-weight: 400 600; font-stretch: 85% 100%; }
 
 @property --k { syntax: "*"; inherits: false; }
 @property --d { syntax: "*"; inherits: false; }

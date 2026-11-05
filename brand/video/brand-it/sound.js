@@ -44,7 +44,7 @@ async function renderCue({ name, options }, i) {
   }
   // cuelume keeps one AudioContext and its own randomness for the life of its module, so every cue imports a fresh copy on a seeded Math.random
   Math.random = seeded(i + 1)
-  const { play } = await import(`../node_modules/cuelume/dist/audio/engine.js?cue=${i}`)
+  const { play } = await import(`../../node_modules/cuelume/dist/audio/engine.js?cue=${i}`)
   play(name, options)
   return ctx.startRendering()
 }
