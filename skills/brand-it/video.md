@@ -14,14 +14,14 @@ The page sets `window.END` in seconds and `window.seek(t)`, a pure function of t
 ```sh
 s=~/.agents/skills/brand-it/scripts
 export TMPDIR=$PWD/.scratch
-bun $s/video.mjs video/ stills 0 12 30.5        # single moments; t=0 is the poster
-bun $s/video.mjs video/ sheet 2                 # contact sheet, a frame every 2 s
-bun $s/video.mjs video/ audio                   # stems → soundtrack.wav at -14 LUFS, true peak under -2 dBTP
-bun $s/video.mjs video/ video                   # out/video.mp4: 60 fps, BT.709, 5 s parts that resume
-bun $s/video.mjs video/ video --size 1080x1350  # the 4:5 cut for the feed
+bun $s/video.ts video/ stills 0 12 30.5        # single moments; t=0 is the poster
+bun $s/video.ts video/ sheet 2                 # contact sheet, a frame every 2 s
+bun $s/video.ts video/ audio                   # stems → soundtrack.wav at -14 LUFS, true peak under -2 dBTP
+bun $s/video.ts video/ video                   # out/video.mp4: 60 fps, BT.709, 5 s parts that resume
+bun $s/video.ts video/ video --size 1080x1350  # the 4:5 cut for the feed
 ```
 
-Render and master with `video.mjs`. The kits' own `render.mjs` files predate its color fix (without it, `#D9372B` comes out `#E64427`), and commonplace's masters to -16 LUFS.
+Render and master with `video.ts`. The kits' own `render.mjs` files predate its color fix (without it, `#D9372B` comes out `#E64427`), and commonplace's masters to -16 LUFS.
 
 ## Pacing
 
@@ -75,4 +75,4 @@ Render and master with `video.mjs`. The kits' own `render.mjs` files predate its
 
 ## X (checked Oct 2026)
 
-Free accounts post up to 140 s and 512 MB. Upload H.264 High, yuv420p, AAC, constant frame rate, SDR, up to 60 fps (`video.mjs` does all of that). 16:9 is the safe default; 4:5 (1080×1350) takes more feed height on phones. Short clips under about 6 s loop, so their last frame should cut cleanly back to the first.
+Free accounts post up to 140 s and 512 MB. Upload H.264 High, yuv420p, AAC, constant frame rate, SDR, up to 60 fps (`video.ts` does all of that). 16:9 is the safe default; 4:5 (1080×1350) takes more feed height on phones. Short clips under about 6 s loop, so their last frame should cut cleanly back to the first.

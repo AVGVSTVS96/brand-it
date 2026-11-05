@@ -133,9 +133,9 @@ brand/
 ├ specimen.html        the system in use: hero, type, color, parts, examples, logo, motion, video
 ├ fonts-compare.html   the real page set in each type candidate (reads the full TTFs from .scratch/)
 ├ fonts/               Mona Sans and Mona Sans Mono subsets, OFL alongside
-├ logo/                gen.mjs, png.mjs, the static cuts in ttf/, every SVG, png/ when rendered
+├ logo/                gen.ts, png.ts, path-data.ts, the static cuts in ttf/, every SVG, png/ when rendered
 ├ copy/                messaging, site copy, launch post
 ├ video/               the launch video (video/README.md)
-├ examples/            hex and commonplace: official wordmarks and icons, live renders at 1035 (bun examples/shoot.mjs)
-└ shots/               specimen at 390@2x, 1035 and 1440 in light and dark (the skill's shoot.mjs)
+├ examples/            hex and commonplace: official wordmarks and icons, live renders at 1035 (bun examples/shoot.ts)
+└ shots/               specimen at 390@2x, 1035 and 1440 in light and dark (the skill's shoot.ts)
 ```

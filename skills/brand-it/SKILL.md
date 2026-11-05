@@ -73,8 +73,8 @@ Read the closest one before you start. Copy its shape, never its look. `refs.md`
 ```sh
 s=~/.agents/skills/brand-it/scripts
 export TMPDIR=$PWD/.scratch                      # the server's /tmp is RAM-backed and fills up
-bun $s/shoot.mjs site/ shots/                    # 320 to 1920px, light and dark: overflow, wrapped URLs, highlight overlaps, colors that fight, light images on dark, plus shots and tiles
-bun $s/shoot.mjs site/og.html 1200x630 og.png    # exact renders: og image, icons (--clear for transparent)
+bun $s/shoot.ts site/ shots/                    # 320 to 1920px, light and dark: overflow, wrapped URLs, highlight overlaps, colors that fight, light images on dark, plus shots and tiles
+bun $s/shoot.ts site/og.html 1200x630 og.png    # exact renders: og image, icons (--clear for transparent)
 ```
 
 A local page is served from its repo root, its own folder and its `public/`, so `../brand/fonts`, `/style.css` and Vite's public files resolve. Lazy images and scroll reveals are loaded before each shot. Anything that fails to load is printed; a page with a build step takes its dev server URL instead.
@@ -84,7 +84,7 @@ A local page is served from its repo root, its own folder and its `public/`, so 
 - Then hand the tiles to a fresh subagent told to find problems, ranked, each with its fix, naming the two colors at every edge between big surfaces, and to answer one question: does this beat the closest approved site (hex or commonplace)? You're the worst judge of your own palette. On hex that found seven real bugs; on seqno's dark mode, khaki outlines.
 - Every glyph the motifs use exists in the font. Plex Mono had no box drawing, so commonplace's own tree couldn't render.
 - Text tokens pass 4.5:1. That's all a ratio checks.
-- Two bugs came back twice, so `shoot.mjs` flags both: a highlight band touching the line above (hex's yellow "overlapping the Y", then enclave's), and a URL or command wrapping onto a second line where it should end in a clean ellipsis ("It should of course be just truncated nicely"). It also flags a big light image on a dark page; light-only assets (OG, posters) sit on a light band in both themes.
+- Two bugs came back twice, so `shoot.ts` flags both: a highlight band touching the line above (hex's yellow "overlapping the Y", then enclave's), and a URL or command wrapping onto a second line where it should end in a clean ellipsis ("It should of course be just truncated nicely"). It also flags a big light image on a dark page; light-only assets (OG, posters) sit on a light band in both themes.
 - After deploying, check the live OG image (bump `?v=`, since X and iMessage cache by URL) and the README header in both themes.
 - Test iOS Safari in the Simulator on the Mac before calling an iOS fix done: `xcrun simctl openurl booted <url>`, then `xcrun simctl io booted screenshot shot.png`. commonplace's untested fix got reverted ("i'm over it bro"). For targets you can't reach (Telegram's in-app browser), say so.
 - Fix the bugs you notice (overflow, contrast, stale facts) instead of reporting them. Anything that changes the look still needs a yes first.

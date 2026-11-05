@@ -171,7 +171,7 @@
     <b class="in">BRAND.md</b><span>the system, written down</span>
     <b class="in">specimen.html</b><span>the system in use: hero, type scale, tokens, motion</span>
     <b class="in">references.md</b><span>what was taken from your saves, and what wasn't</span>
-    <b class="in">logo/gen.mjs</b><span>three marks from real font outlines, as SVG paths</span>
+    <b class="in">logo/gen.ts</b><span>three marks from real font outlines, as SVG paths</span>
     <b>copy/</b><span></span>
     <b class="in">MESSAGING.md</b><span>the one line, what it is and isn't, the voice, facts with sources</span>
     <b class="in wide">SITE.md  LAUNCH.md  README.md</b>
@@ -184,7 +184,7 @@
   <p class="rubric label">03 <span>checks</span></p>
   <h2 id="checks-title">Checked before it says done.</h2>
   <p class="small section-line">Two scripts ship with the skill. One shoots a page at 45 widths in light and dark and prints anything that overflows. The other renders the video frame by frame and prints its loudness after encoding.</p>
-  <pre class="term"><i>$</i> <b>bun</b> shoot.mjs site/ shots/
+  <pre class="term"><i>$</i> <b>bun</b> shoot.ts site/ shots/
 page scrolls sideways by 14px
   at light 320, dark 320
 text wider than its box: strong.num "~2,000"
@@ -192,7 +192,7 @@ text wider than its box: strong.num "~2,000"
 
 2 problems · shots in shots/ at 390@2x, 1035, 1440
 
-<i>$</i> <b>bun</b> video.mjs video/ video
+<i>$</i> <b>bun</b> video.ts video/ video
 41s / 41s
 video/out/video.mp4: -14 LUFS, true peak -2.1 dBTP after AAC</pre>
 </section>
