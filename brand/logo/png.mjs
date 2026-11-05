@@ -1,9 +1,9 @@
-import { readFileSync, mkdirSync } from "node:fs"
-import { execFileSync } from "node:child_process"
+import { execFileSync } from "node:child_process";
+import { readFileSync, mkdirSync } from "node:fs";
 
-const out = import.meta.dirname
-const shoot = `${out}/../../skills/brand-it/scripts/shoot.mjs`
-mkdirSync(`${out}/png`, { recursive: true })
+const out = import.meta.dirname;
+const shoot = `${out}/../../skills/brand-it/scripts/shoot.mjs`;
+mkdirSync(`${out}/png`, { recursive: true });
 
 const jobs = [
   ["brand-it", 2000, "--clear"],
@@ -17,11 +17,20 @@ const jobs = [
   ["icon", 180, "", "apple-touch-icon"],
   ["icon", 32, "", "favicon"],
   ["icon", 16, "", "favicon"],
-]
+];
 
 for (const [name, width, clear = "", as = name] of jobs) {
-  const [, w, h] = readFileSync(`${out}/${name}.svg`, "utf8").match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/).map(Number)
-  const height = Math.round((width * h) / w)
-  const file = `${out}/png/${as}${width === 2000 ? "@2x" : `-${width}`}.png`
-  execFileSync("bun", [shoot, `${out}/${name}.svg`, `${width}x${height}`, file, ...(clear ? [clear] : [])], { stdio: "inherit", env: { ...process.env, TMPDIR: process.env.TMPDIR ?? `${out}/../../.scratch` } })
+  const [, w, h] = readFileSync(`${out}/${name}.svg`, "utf8")
+    .match(/viewBox="0 0 ([\d.]+) ([\d.]+)"/)
+    .map(Number);
+  const height = Math.round((width * h) / w);
+  const file = `${out}/png/${as}${width === 2000 ? "@2x" : `-${width}`}.png`;
+  execFileSync(
+    "bun",
+    [shoot, `${out}/${name}.svg`, `${width}x${height}`, file, ...(clear ? [clear] : [])],
+    {
+      stdio: "inherit",
+      env: { ...process.env, TMPDIR: process.env.TMPDIR ?? `${out}/../../.scratch` },
+    },
+  );
 }

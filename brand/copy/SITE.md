@@ -1,6 +1,6 @@
 # brand-it site copy
 
-Final copy. Use it word for word. Text in `code` is shown as code. Notes in *(italics)* are for the designer, not the page.
+Final copy. Use it word for word. Text in `code` is shown as code. Notes in _(italics)_ are for the designer, not the page.
 
 One page: a hero, the examples, two short sections, install, footer. Every section is one headline, one short line and a visual. The examples are the page; everything else stays short. The name is lowercase everywhere, even at the start of a sentence. Nothing on this page may claim something the skill doesn't do today.
 
@@ -20,14 +20,14 @@ One page: a hero, the examples, two short sections, install, footer. Every secti
 - Copy button: Copy · after click: Copied
 - Secondary link: View on GitHub
 
-*(The hero has no visual of its own. The examples start right under the install line and are above the fold at 1035, so the three marks are the first picture on the page.)*
+_(The hero has no visual of its own. The examples start right under the install line and are above the fold at 1035, so the three marks are the first picture on the page.)_
 
 ## Examples
 
 Section title: Each one its own look.
 Line: The rules come from making hex and commonplace. The first thing the skill branded was itself.
 
-*(Three rows, one per project, in this order. Each row shows the real thing and nothing redrawn: that repo's wordmark SVG, the live site shot with `shoot.mjs` at 1035 and 390 in light and dark, and its OG image. Links go to the live site and the repo. The shots follow the system theme, so a dark-mode visitor sees the dark shots. The idea line is one sentence; the facts strip is four short mono items.)*
+_(Three rows, one per project, in this order. Each row shows the real thing and nothing redrawn: that repo's wordmark SVG, the live site shot with `shoot.mjs` at 1035 and 390 in light and dark, and its OG image. Links go to the live site and the repo. The shots follow the system theme, so a dark-mode visitor sees the dark shots. The idea line is one sentence; the facts strip is four short mono items.)_
 
 ### hex
 
@@ -46,8 +46,8 @@ Line: The rules come from making hex and commonplace. The first thing the skill 
 ### brand-it
 
 - Name line: brand-it · brand a project from its own parts
-- The idea: *(the idea line from `brand/BRAND.md`, verbatim, once the brand agent lands it)*
-- Facts strip: *(the two faces and the accent count from `BRAND.md`)* · this page, by the skill
+- The idea: _(the idea line from `brand/BRAND.md`, verbatim, once the brand agent lands it)_
+- Facts strip: _(the two faces and the accent count from `BRAND.md`)_ · this page, by the skill
 - Links: github.com/AVGVSTVS96/brand-it
 
 Caption under the three: They share a method, not a look.
@@ -57,7 +57,7 @@ Caption under the three: They share a method, not a look.
 Section title: All of it is code.
 Line: A brand is one BRAND.md, one specimen page and the scripts that made it, so any asset rebuilds in one command.
 
-*(The visual is a file tree: what a branded repo holds when the skill is done. Monospace, one line per file, the right column in the muted ink.)*
+_(The visual is a file tree: what a branded repo holds when the skill is done. Monospace, one line per file, the right column in the muted ink.)_
 
 ```
 brand/
@@ -77,7 +77,7 @@ video/              HTML scenes on one clock, sound built from the same clock
 Section title: Checked before it says done.
 Line: Two scripts ship with the skill. One shoots a page at 45 widths in light and dark and prints anything that overflows. The other renders the video frame by frame and prints its loudness after encoding.
 
-*(The visual is one terminal with both scripts' output in the exact shape they print. The problems are illustrative but real in kind: the stat that overflowed at 1035 is the width Bassim browses at, and the bug that got past four widths on hex. "2 problems" is the script's own wording.)*
+_(The visual is one terminal with both scripts' output in the exact shape they print. The problems are illustrative but real in kind: the stat that overflowed at 1035 is the width Bassim browses at, and the bug that got past four widths on hex. "2 problems" is the script's own wording.)_
 
 ```
 $ bun shoot.mjs site/ shots/
@@ -105,6 +105,7 @@ npx skills add AVGVSTVS96/brand-it
 Copy button: Copy · after click: Copied
 
 **You'll need**
+
 - Bun, Chrome and ffmpeg, for the scripts. Bun installs puppeteer-core on first run.
 
 Closing line: It points at my own projects and saves, so read it as a worked method, or fork it and point it at yours.

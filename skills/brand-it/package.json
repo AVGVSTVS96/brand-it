@@ -2,11 +2,11 @@
   "name": "brand-it-skill",
   "private": true,
   "type": "module",
-  "dependencies": {
-    "puppeteer-core": "catalog:"
-  },
   "scripts": {
     "typecheck": "tsc"
+  },
+  "dependencies": {
+    "puppeteer-core": "catalog:"
   },
   "devDependencies": {
     "@types/bun": "catalog:",

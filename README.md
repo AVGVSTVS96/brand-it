@@ -18,26 +18,29 @@ npx skills add AVGVSTVS96/brand-it
 Then open a project in Claude Code and say "brand it".
 
 ```
-SKILL.md        the method: the bar, the steps, words, fidelity, checks
-refs.md         saved references, and how an agent pulls more
-video.md        launch videos: HTML scenes on one clock, rendered frame by frame,
-                sound built from the same clock
-scripts/
-  shoot.mjs     a page at 45 widths from 320 to 1920 in light and dark,
-                flagging overflow and colors that fight; screen-high tiles
-                to read at real size; exact renders for OG images and icons
-  video.mjs     any page with window.seek(t): stills, contact sheets,
-                a -14 LUFS soundtrack, a BT.709 mp4 in 5 s parts that resume
+skills/brand-it/    the skill: npx skills add installs only this folder
+  SKILL.md          the method: the bar, the steps, words, fidelity, checks
+  refs.md           saved references, and how an agent pulls more
+  video.md          launch videos: HTML scenes on one clock, rendered frame by frame,
+                    sound built from the same clock
+  scripts/
+    shoot.mjs       a page at 45 widths from 320 to 1920 in light and dark,
+                    flagging overflow and colors that fight; screen-high tiles
+                    to read at real size; exact renders for OG images and icons
+    video.mjs       any page with window.seek(t): stills, contact sheets,
+                    a -14 LUFS soundtrack, a BT.709 mp4 in 5 s parts that resume
+apps/site/          brand-it-seven.vercel.app, built with the skill
+brand/              brand-it's own brand, copy and launch video, made with the skill
 ```
 
 The scripts need Bun, Chrome and ffmpeg. Bun installs puppeteer-core on first run.
 
 ## Made this way
 
-| | | |
-| --- | --- | --- |
-| hex | Claude Code as your personal assistant | [hex-sand.vercel.app](https://hex-sand.vercel.app) |
-| commonplace | your personal data kit for agents | [commonplace-eight-sable.vercel.app](https://commonplace-eight-sable.vercel.app) |
-| brand-it | this skill, branded with itself | [brand-it-seven.vercel.app](https://brand-it-seven.vercel.app) |
+|             |                                        |                                                                                  |
+| ----------- | -------------------------------------- | -------------------------------------------------------------------------------- |
+| hex         | Claude Code as your personal assistant | [hex-sand.vercel.app](https://hex-sand.vercel.app)                               |
+| commonplace | your personal data kit for agents      | [commonplace-eight-sable.vercel.app](https://commonplace-eight-sable.vercel.app) |
+| brand-it    | this skill, branded with itself        | [brand-it-seven.vercel.app](https://brand-it-seven.vercel.app)                   |
 
 MIT

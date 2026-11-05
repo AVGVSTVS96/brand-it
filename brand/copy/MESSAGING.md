@@ -59,6 +59,7 @@ Then the honest line, always: the skill points at Bassim's own projects and save
 Write like the README: short sentences, real numbers, what works and what doesn't. A craftsman talking, not an ad. The copy for a taste skill is the first thing people will judge it by.
 
 **Do**
+
 - Say what happened. "The site was live under two hours after the name." "On hex that found seven real bugs."
 - Use the real names of things: `SKILL.md`, `shoot.mjs`, `video.mjs`, `window.seek(t)`, `BRAND.md`, `specimen.html`, `logo/gen.mjs`.
 - Count with a script and say how. 99 lines is `wc -l SKILL.md`. 45 widths is what `shoot.mjs` loads. Round ours down when the count is rough ("more than 40", not 44).
@@ -67,6 +68,7 @@ Write like the README: short sentences, real numbers, what works and what doesn'
 - Lowercase brand-it always, even at the start of a sentence. Lowercase hex and commonplace too. The launch post is all lowercase.
 
 **Don't**
+
 - No em dashes anywhere. Reword, don't swap in a comma.
 - Never: supercharge, seamless, effortless, blazing, powerful, magical, revolutionary, unlock, unleash, AI-native, AI-powered, automatically, one-click, pixel-perfect, professional-grade, stunning, beautiful (unless inside a Bassim quote), design system, end-to-end, complete.
 - Don't call it a tool, platform, engine, framework, system or generator. Call it a skill, a method, a way of working, a text file.
@@ -79,13 +81,13 @@ Write like the README: short sentences, real numbers, what works and what doesn'
 
 **Examples**
 
-| Don't | Do |
-|---|---|
-| An AI-powered design system generator for your next project. | A skill for coding agents. Say brand it. |
-| Beautiful, on-brand assets in minutes. | Marks drawn from the font's outlines, the link preview from HTML, the video from HTML on one clock. Any asset rebuilds in one command. |
-| Battle-tested taste, distilled into best practices. | Every rule is something one person said to an agent, or a mistake one kept making. |
-| Works everywhere, for any project. | It points at my own projects and saves. Read it as a worked method, or fork it and point it at yours. |
-| Pixel-perfect, fully responsive, accessible by default. | Shot at 45 widths in light and dark. Text tokens pass 4.5:1. Anything that overflows is printed. |
+| Don't                                                        | Do                                                                                                                                     |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| An AI-powered design system generator for your next project. | A skill for coding agents. Say brand it.                                                                                               |
+| Beautiful, on-brand assets in minutes.                       | Marks drawn from the font's outlines, the link preview from HTML, the video from HTML on one clock. Any asset rebuilds in one command. |
+| Battle-tested taste, distilled into best practices.          | Every rule is something one person said to an agent, or a mistake one kept making.                                                     |
+| Works everywhere, for any project.                           | It points at my own projects and saves. Read it as a worked method, or fork it and point it at yours.                                  |
+| Pixel-perfect, fully responsive, accessible by default.      | Shot at 45 widths in light and dark. Text tokens pass 4.5:1. Anything that overflows is printed.                                       |
 
 ## Name
 
@@ -96,6 +98,7 @@ Always `brand-it`, lowercase, with the hyphen: the repo, the skill folder and th
 Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~/Developer/brand-it` (commit `85c627c`) and the research in `~/tmp/brand-it-research/`.
 
 **The skill**
+
 - Repo github.com/AVGVSTVS96/brand-it, MIT, public, created Oct 8 2026, one commit. (`gh repo view`)
 - Files: `SKILL.md` 99 lines, `video.md` 76, `refs.md` 56, `scripts/lib.mjs` 61, `scripts/shoot.mjs` 70, `scripts/video.mjs` 146. Scripts total 277 lines. (`wc -l`)
 - Install: `npx skills add AVGVSTVS96/brand-it`. The skills CLI installs into `~/.agents/skills/` and links it into agent folders. (README; `npx skills add --help`; `~/.agents/.skill-lock.json`)
@@ -115,6 +118,7 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - Sizes: OG 1200×630 with `twitter:card` set to `summary_large_image`; GitHub social preview 1280×640 under 1 MB; iMessage wants `og:image` at least 900 px wide; README column 838 px, export at 2x; `favicon.svg` with its own `prefers-color-scheme`, `apple-touch-icon.png` at 180, `icon-512.png`. (SKILL.md "Sizes", checked Oct 2026)
 
 **shoot.mjs**
+
 - Loads 45 widths: 320 to 1920 in 40 px steps plus 390, 1035, 1366 and 1512, in light and dark, with reduced motion. (`widths` in the script; counted with Bun)
 - Flags "page scrolls sideways by Npx" and "text wider than its box: tag.class "text"", each with the schemes and widths it happened at. (`findProblems`)
 - Saves full-page shots at 390 (2x), 1035 and 1440. (`shots`)
@@ -123,6 +127,7 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - Serves a local page from its repo root, its own folder and its `public/`, so `../brand/fonts` and Vite public files resolve. (`lib.mjs serve`)
 
 **video.mjs**
+
 - The page sets `window.END` (seconds) and `window.seek(t)`, a pure function of time. Optional `window.soundtrack()` returns `{ stem: base64 wav }`. (usage text; video.md "The contract")
 - Modes: `stills <t…>`, `sheet [every]` (a contact sheet, 4 wide at 480 px), `audio`, `video [fps]`. Default 1920×1080; `--size 1080x1350` for the 4:5 cut.
 - Audio: stems mixed, gain measured twice with `ebur128`, mastered to -14 LUFS with a true-peak limiter at 0.794 (under -2 dBTP) at 192 kHz, written as 32-bit float wav. Prints "soundtrack.wav: X LUFS, true peak Y dBTP".
@@ -130,6 +135,7 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - Progress line while rendering: "Ns / ENDs".
 
 **video.md**
+
 - Launch videos are HTML in the brand's fonts and tokens, timed by one clock, rendered frame by frame in headless Chrome, encoded with ffmpeg, with sound built from the same clock "so picture and sound can't drift".
 - Pacing: one statement per screen; hold long enough to read the caption twice; an "Introducing" card before the name, held "maybe a half a second more"; hard cuts on half seconds (120 BPM); cuts never land mid-animation.
 - Look: 1920×1080, rails (wordmark top-left, tagline top-right, scene count bottom-left, URL bottom-right); anything the viewer reads at least 3% of frame width (about 58 px), dense CLI output can drop to 28 px; rules 2 px; the first frame is composed, never blank.
@@ -138,11 +144,13 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - X (checked Oct 2026): free accounts post up to 140 s and 512 MB; H.264 High, yuv420p, AAC, constant frame rate, SDR, up to 60 fps; clips under about 6 s loop.
 
 **Where the rules come from** (`~/tmp/brand-it-research/intent.md`, `hex.md`, `commonplace.md`)
+
 - The research read every design, copy and process prompt Bassim sent to Codex, Claude Code and pi from Sep 2025 to Oct 8 2026 (18,909 rows, about 12,000 unique prompts), plus the hex, commonplace and seqno threads and logs.
 - Rough counts of distinct prompts: `ugly` 51, `slop` 37, em-dash bans 44, gradient complaints 21, `screenshot` 68, light/dark 54, mobile/widths 54. Say "more than 40" for the em dashes; the counts are rough.
 - "everyone has heard most those features a thousand times." "reduce text… add more visuals. add more diagrams." "i'm a craftsman." (hex threads)
 
 **hex** (`hex.md`; `~/Developer/hex-site`; live site checked Oct 8)
+
 - Claude Code as your personal assistant. Site hex-sand.vercel.app, repo github.com/AVGVSTVS96/hex, MIT. Built in 6 hours at the Personal Agents Hackathon (Bassim's own README note).
 - Brief Oct 4 2026 15:04: "brand logo will be a simple lowercase hex with a nice font... the website will be beautiful, stunning, 2026 october standards of design". First landing page commit 15:13. A serif version was rejected ("I don't like that serif kind of font style"), then a flat one ("it doesn't have much pop"). The poppy version at 16:17 is the one that stuck.
 - Wordmark: lowercase "hex" in Archivo ExtraBold at 125% width, glyphs as paths, kerned by hand. Icon: a white "h" on blue `#2B3EFF`. Type: Archivo for headlines, Martian Mono for labels, Caveat only for his handwritten note.
@@ -154,6 +162,7 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - A 45-width sweep and a fresh-eyes reviewer caught the hero overflowing at 1035 px (his own desktop width) and seven other real bugs. (hex.md §2; SKILL.md)
 
 **commonplace** (`commonplace.md`; `~/Developer/commonplace-site`; live site checked Oct 8)
+
 - your personal data kit for agents. A commonplace book for the age of agents. Site commonplace-eight-sable.vercel.app, repo github.com/AVGVSTVS96/commonplace, MIT.
 - The brief, verbatim: "more of a developer/coder minimalist brutalist style, code-terminal-light-terminal vibes... really clean, minimal, data-powerful... approachable and clean, not super deep technical developer neovim."
 - Brand: "a light terminal: paper, mono, one red pen." Paper `#FAF9F6`, ink `#141412`, red `#D2451E` ("this one, now"). Square corners, no shadows, 1 px hairlines. Dark is the same tokens swapped.
@@ -164,5 +173,6 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - The video kit is committed (scenes as data, a deterministic `seek(t)`, sound from the same clock) but the mp4 was never rendered. Don't show or claim a commonplace video.
 
 **brand-it, as a brand**
+
 - The first project branded with the skill, by itself. Its idea line and tokens come from `brand/BRAND.md` once the brand agent lands it. The site URL and asset paths are the site agent's; the README rewrite marks them as `SITE_URL` and `.github/assets/brand-it{,-dark}.svg`.
 - hex's facts strip says "name to launch video in two days": the name came Oct 4 14:47, the third video cut Oct 6 11:41.

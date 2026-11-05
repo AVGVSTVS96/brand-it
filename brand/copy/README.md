@@ -33,10 +33,10 @@ The scripts need Bun, Chrome and ffmpeg. Bun installs puppeteer-core on first ru
 
 ## Made this way
 
-| | | |
-| --- | --- | --- |
-| hex | Claude Code as your personal assistant | [hex-sand.vercel.app](https://hex-sand.vercel.app) |
-| commonplace | your personal data kit for agents | [commonplace-eight-sable.vercel.app](https://commonplace-eight-sable.vercel.app) |
-| brand-it | this skill, branded with itself | [SITE_URL](SITE_URL) |
+|             |                                        |                                                                                  |
+| ----------- | -------------------------------------- | -------------------------------------------------------------------------------- |
+| hex         | Claude Code as your personal assistant | [hex-sand.vercel.app](https://hex-sand.vercel.app)                               |
+| commonplace | your personal data kit for agents      | [commonplace-eight-sable.vercel.app](https://commonplace-eight-sable.vercel.app) |
+| brand-it    | this skill, branded with itself        | [SITE_URL](SITE_URL)                                                             |
 
 MIT

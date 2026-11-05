@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@types/bun": "catalog:",
-    "typescript": "catalog:",
-    "@types/opentype.js": "1.3.10"
+    "@types/opentype.js": "1.3.10",
+    "typescript": "catalog:"
   }
 }

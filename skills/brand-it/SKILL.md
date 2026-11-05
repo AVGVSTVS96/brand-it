@@ -7,11 +7,11 @@ description: Bassim's way of branding a project, from the name to the wordmark, 
 
 A brand here is a small system grown from the product's own parts. It's written down in one `BRAND.md`, shown working in one `specimen.html`, and made by scripts so any asset can be rebuilt. Every project gets its own look. hex and commonplace, which Bassim approved, set the craft bar, not the style.
 
-| project | the idea | where |
-| --- | --- | --- |
-| hex | poppy neo-brutalist: cream and ink, blue/yellow/pink blocks, hard shadows, real app UIs | `~/Developer/hex-site/site` (`style.css`, `COPY.md`) |
-| commonplace | a light terminal: paper, mono, one red pen, a cursor wordmark | `~/Developer/commonplace-site/brand` |
-| seqno (dark mode unreviewed) | an outliner built from its own parts: bullet, guide line, dot grid; apricot by day, its screenshots' blue by night | `~/dev/seqno-site/brand` |
+| project                      | the idea                                                                                                           | where                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| hex                          | poppy neo-brutalist: cream and ink, blue/yellow/pink blocks, hard shadows, real app UIs                            | `~/Developer/hex-site/site` (`style.css`, `COPY.md`) |
+| commonplace                  | a light terminal: paper, mono, one red pen, a cursor wordmark                                                      | `~/Developer/commonplace-site/brand`                 |
+| seqno (dark mode unreviewed) | an outliner built from its own parts: bullet, guide line, dot grid; apricot by day, its screenshots' blue by night | `~/dev/seqno-site/brand`                             |
 
 Read the closest one before you start. Copy its shape, never its look. `refs.md` has what Bassim has saved and how to find more; `video.md` covers launch videos.
 

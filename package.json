@@ -2,7 +2,11 @@
   "name": "brand-it",
   "private": true,
   "workspaces": {
-    "packages": ["apps/site", "brand", "skills/brand-it"],
+    "packages": [
+      "apps/site",
+      "brand",
+      "skills/brand-it"
+    ],
     "catalog": {
       "@types/bun": "1.4.4",
       "opentype.js": "2.0.0",

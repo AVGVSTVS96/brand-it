@@ -12,12 +12,12 @@
 
 ## What it is and isn't
 
-| it is | it isn't |
-| --- | --- |
-| a skill: a text file and two scripts | a tool, a platform, a generator |
-| a method with a bar | a theme, a UI kit, a palette |
-| the drafting layer: guides, measures, nodes | a dashboard, a design-tool costume |
-| a frame for other brands | a brand that competes with the ones it shows |
+| it is                                       | it isn't                                     |
+| ------------------------------------------- | -------------------------------------------- |
+| a skill: a text file and two scripts        | a tool, a platform, a generator              |
+| a method with a bar                         | a theme, a UI kit, a palette                 |
+| the drafting layer: guides, measures, nodes | a dashboard, a design-tool costume           |
+| a frame for other brands                    | a brand that competes with the ones it shows |
 
 ## The visual system
 
@@ -34,17 +34,17 @@ One family, two voices. Mona Sans carries everything a person reads; Mona Sans M
 
 Light is the default. Dark is the same tokens swapped, never a second design.
 
-| token | light | dark | job |
-| --- | --- | --- | --- |
-| `--paper` | `#FFFFFF` | `#101214` | the page: white, not cream, so the brands shown on it keep their own color |
-| `--paper-2` | `#F4F5F6` | `#181B1E` | surfaces inside the page: tab strips, code panels |
-| `--ink` | `#0F1113` | `#ECEEF0` | text, wordmark, frames: the finished thing (18.9:1) |
-| `--ink-2` | `#5B6168` | `#9AA1A8` | second-level text, captions (6.3:1) |
-| `--ink-3` | `#6B7177` | `#8E959C` | the dimmest text allowed: section names, rails (4.9:1) |
-| `--hair` | `rgb(15 17 19 / 0.12)` | `rgb(236 238 240 / 0.14)` | 1px rules, table rows, borders of things that aren't the subject |
-| `--hair-2` | `rgb(15 17 19 / 0.06)` | `rgb(236 238 240 / 0.07)` | row dividers inside a table |
-| `--pencil` | `#0A6DC8` | `#62BBFF` | dimension lines, ticks, nodes, callouts, labels, focus rings (5.2:1 on paper) |
-| `--pencil-soft` | `rgb(11 116 212 / 0.10)` | `rgb(98 187 255 / 0.14)` | selection, the region a measurement covers |
+| token           | light                    | dark                      | job                                                                           |
+| --------------- | ------------------------ | ------------------------- | ----------------------------------------------------------------------------- |
+| `--paper`       | `#FFFFFF`                | `#101214`                 | the page: white, not cream, so the brands shown on it keep their own color    |
+| `--paper-2`     | `#F4F5F6`                | `#181B1E`                 | surfaces inside the page: tab strips, code panels                             |
+| `--ink`         | `#0F1113`                | `#ECEEF0`                 | text, wordmark, frames: the finished thing (18.9:1)                           |
+| `--ink-2`       | `#5B6168`                | `#9AA1A8`                 | second-level text, captions (6.3:1)                                           |
+| `--ink-3`       | `#6B7177`                | `#8E959C`                 | the dimmest text allowed: section names, rails (4.9:1)                        |
+| `--hair`        | `rgb(15 17 19 / 0.12)`   | `rgb(236 238 240 / 0.14)` | 1px rules, table rows, borders of things that aren't the subject              |
+| `--hair-2`      | `rgb(15 17 19 / 0.06)`   | `rgb(236 238 240 / 0.07)` | row dividers inside a table                                                   |
+| `--pencil`      | `#0A6DC8`                | `#62BBFF`                 | dimension lines, ticks, nodes, callouts, labels, focus rings (5.2:1 on paper) |
+| `--pencil-soft` | `rgb(11 116 212 / 0.10)` | `rgb(98 187 255 / 0.14)`  | selection, the region a measurement covers                                    |
 
 Rule: **the pencil draws the construction and never the thing.** Text, wordmarks, frames and shots are ink; what the method drew around them while checking is pencil. brand-it has one color because the brands it shows bring theirs (hex three accents on cream, commonplace one red on paper). Blue was chosen because it is the non-photo pencil, the one drafters sketch guides in because it drops out of the final print, and it sits well away from hex's violet `#2B3EFF` and commonplace's red. A problem is a dashed pencil line and the script's words, not a second color.
 
@@ -94,15 +94,15 @@ Same system on a 1920×1080 paper stage, one clock. The video agent builds from 
 
 **Storyboard.** 37 seconds, seven scenes, hard cuts on half seconds at 120 BPM in C major, no crossfades.
 
-| t | scene | on screen | caption | why |
-| --- | --- | --- | --- | --- |
-| 0.0 – 3.0 | the ask | an agent prompt, typed at 45ms a character: `brand it` | Say brand it. | the name is the command; open on the point |
-| 3.0 – 8.5 | the parts | a README line, a CLI line, a glyph outline, each with a callout, settling into one row | A brand grown from the product's own parts. | the thesis |
-| 8.5 – 15.0 | the mark | the b's outline draws, 29 nodes land in order, the glyph fills ink, a dimension measures it | Marks from real font outlines. | the magic underneath; the one big sound |
-| 15.0 – 21.0 | the check | frames step from 320 to 1920, light then dark, then `shoot.mjs` prints its last line | Shot at 45 widths, light and dark. | it checks its own work |
-| 21.0 – 29.0 | each one its own look | hex and commonplace in frames, side by side, their names as labels | Each one its own look. | the proof: the loud one and the quiet one |
-| 29.0 – 33.0 | introducing | the lockup lands with its dimension, held | brand-it | the reveal, held half a second longer than feels needed |
-| 33.0 – 37.0 | install | `npx skills add AVGVSTVS96/brand-it` typed; the last frame is complete | brand a project from its own parts | the one ask; a poster frame |
+| t           | scene                 | on screen                                                                                   | caption                                     | why                                                     |
+| ----------- | --------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------- |
+| 0.0 – 3.0   | the ask               | an agent prompt, typed at 45ms a character: `brand it`                                      | Say brand it.                               | the name is the command; open on the point              |
+| 3.0 – 8.5   | the parts             | a README line, a CLI line, a glyph outline, each with a callout, settling into one row      | A brand grown from the product's own parts. | the thesis                                              |
+| 8.5 – 15.0  | the mark              | the b's outline draws, 29 nodes land in order, the glyph fills ink, a dimension measures it | Marks from real font outlines.              | the magic underneath; the one big sound                 |
+| 15.0 – 21.0 | the check             | frames step from 320 to 1920, light then dark, then `shoot.mjs` prints its last line        | Shot at 45 widths, light and dark.          | it checks its own work                                  |
+| 21.0 – 29.0 | each one its own look | hex and commonplace in frames, side by side, their names as labels                          | Each one its own look.                      | the proof: the loud one and the quiet one               |
+| 29.0 – 33.0 | introducing           | the lockup lands with its dimension, held                                                   | brand-it                                    | the reveal, held half a second longer than feels needed |
+| 33.0 – 37.0 | install               | `npx skills add AVGVSTVS96/brand-it` typed; the last frame is complete                      | brand a project from its own parts          | the one ask; a poster frame                             |
 
 **Motion.** Springs without bounce (Motion's, baked to `linear()`), entrances 0.3 to 0.8s, exits faster. Dimensions draw tick to tick; nodes pop in outline order; typed text lands like real output. Every frame complete: rails on every frame, frames never missing a side mid-animation. No breathing, no drifting pans.
 
