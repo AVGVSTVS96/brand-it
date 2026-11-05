@@ -6,8 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "examples": "bun examples.mjs",
-    "assets": "bun assets.mjs",
+    "examples": "bun examples.ts",
+    "assets": "bun assets.ts",
     "typecheck": "tsc"
   },
   "devDependencies": {

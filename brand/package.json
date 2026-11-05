@@ -3,14 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "logo": "bun logo/gen.mjs",
-    "png": "bun logo/png.mjs",
-    "parts": "bun video/parts.mjs",
-    "sweep": "bun video/sweep.mjs",
-    "stills": "bun ../skills/brand-it/scripts/video.mjs video/brand-it stills",
-    "sheet": "bun ../skills/brand-it/scripts/video.mjs video/brand-it sheet 2",
-    "audio": "bun ../skills/brand-it/scripts/video.mjs video/brand-it audio",
-    "video": "bun ../skills/brand-it/scripts/video.mjs video/brand-it video",
+    "logo": "bun logo/gen.ts",
+    "png": "bun logo/png.ts",
+    "parts": "bun video/parts.ts",
+    "sweep": "bun video/sweep.ts",
+    "stills": "bun ../skills/brand-it/scripts/video.ts video/brand-it stills",
+    "sheet": "bun ../skills/brand-it/scripts/video.ts video/brand-it sheet 2",
+    "audio": "bun ../skills/brand-it/scripts/video.ts video/brand-it audio",
+    "video": "bun ../skills/brand-it/scripts/video.ts video/brand-it video",
     "typecheck": "tsc"
   },
   "dependencies": {

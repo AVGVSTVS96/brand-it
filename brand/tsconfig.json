@@ -2,9 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "lib": ["es2024", "dom", "dom.iterable"],
-    "types": ["bun"],
-    "allowJs": true,
-    "checkJs": true
+    "types": ["bun"]
   },
-  "include": ["logo/*.mjs", "examples/*.mjs", "video/*.mjs", "video/brand-it/*.js"]
+  "include": ["logo/*.ts", "examples/*.ts", "video/*.ts", "video/brand-it/*.ts"]
 }

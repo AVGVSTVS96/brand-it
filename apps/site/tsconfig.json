@@ -2,9 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "lib": ["es2024", "dom", "dom.iterable"],
-    "types": ["vite/client", "bun"],
-    "allowJs": true,
-    "checkJs": true
+    "types": ["vite/client", "bun"]
   },
-  "include": ["src", "*.mjs"]
+  "include": ["src", "*.ts"]
 }

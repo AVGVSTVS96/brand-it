@@ -2,9 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "lib": ["es2024", "dom", "dom.iterable"],
-    "types": ["bun"],
-    "allowJs": true,
-    "checkJs": true
+    "types": ["bun"]
   },
   "include": ["scripts"]
 }
