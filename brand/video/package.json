@@ -1,0 +1,17 @@
+{
+  "name": "brand-it-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "parts": "bun parts.mjs",
+    "sweep": "bun sweep.mjs",
+    "stills": "bun ~/.agents/skills/brand-it/scripts/video.mjs . stills",
+    "sheet": "bun ~/.agents/skills/brand-it/scripts/video.mjs . sheet 2",
+    "audio": "bun ~/.agents/skills/brand-it/scripts/video.mjs . audio",
+    "video": "bun ~/.agents/skills/brand-it/scripts/video.mjs . video"
+  },
+  "dependencies": {
+    "cuelume": "0.2.4",
+    "motion": "14.0.0"
+  }
+}
