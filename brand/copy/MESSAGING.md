@@ -41,7 +41,7 @@ Then the honest line, always: the skill points at Bassim's own projects and save
 
 ## What it is
 
-- **A skill.** One `SKILL.md` (99 lines), two short companions (`video.md`, `refs.md`) and two scripts, installed next to your other skills with `npx skills add AVGVSTVS96/brand-it`. An agent reads it when you say "brand it".
+- **A skill.** One `SKILL.md` (109 lines), two short companions (`video.md`, `refs.md`) and two scripts, installed next to your other skills with `npx skills add AVGVSTVS96/brand-it`. An agent reads it when you say "brand it".
 - **A method with a bar.** Nine steps from brief to launch, a Words section, a Fidelity section and a checklist to run before saying done. The bar is in Bassim's words: "2026 october standards of design, minimal, clean, crafted, designer, and design engineered."
 - **One person's taste, verbatim.** The rules are quotes and the mistakes behind them, not adjectives. They name what never ships: gradients, glows, glass on the page, fake shadows, pills and callouts nobody needs, emoji, bento grids, the 2026 "tasteful AI" defaults.
 - **Assets as code.** `logo/gen.ts` draws three marks from real font outlines with opentype.js. `shoot.ts` renders the OG image and icons from HTML. `video.ts` renders any page that implements `window.seek(t)` into a BT.709 mp4 and masters its soundtrack to -14 LUFS.
@@ -62,7 +62,7 @@ Write like the README: short sentences, real numbers, what works and what doesn'
 
 - Say what happened. "The site was live under two hours after the name." "On hex that found seven real bugs."
 - Use the real names of things: `SKILL.md`, `shoot.ts`, `video.ts`, `window.seek(t)`, `BRAND.md`, `specimen.html`, `logo/gen.ts`.
-- Count with a script and say how. 99 lines is `wc -l SKILL.md`. 45 widths is what `shoot.ts` loads. Round ours down when the count is rough ("more than 40", not 44).
+- Count with a script and say how. 109 lines is `wc -l SKILL.md`. 45 widths is what `shoot.ts` loads. Round ours down when the count is rough ("more than 40", not 44).
 - Keep Bassim's words verbatim when quoting the bar, and mark them as quotes.
 - One headline, one short line, one visual per section. The hero is the shortest part.
 - Lowercase brand-it always, even at the start of a sentence. Lowercase hex and commonplace too. The launch post is all lowercase.
@@ -100,7 +100,7 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 **The skill**
 
 - Repo github.com/AVGVSTVS96/brand-it, MIT, public, created Oct 8 2026, one commit. (`gh repo view`)
-- Files: `SKILL.md` 99 lines, `video.md` 76, `refs.md` 56, `scripts/lib.ts` 61, `scripts/shoot.ts` 70, `scripts/video.ts` 146. Scripts total 277 lines. (`wc -l`)
+- Files: `SKILL.md` 109 lines, `video.md` 78, `refs.md` 50, `scripts/shoot.ts` 136, `scripts/video.ts` 338, and the two modules they share, `scripts/lib.ts` 153 and `scripts/checks.ts` 364. Scripts total 991 lines. (`wc -l`)
 - Install: `npx skills add AVGVSTVS96/brand-it`. The skills CLI installs into `~/.agents/skills/` and links it into agent folders. (README; `npx skills add --help`; `~/.agents/.skill-lock.json`)
 - Triggers on "brand it", naming a project, or any brand, logo, wordmark, palette, landing page, OG image, favicon, README header, launch post or launch video ask. (SKILL.md frontmatter)
 - Needs Bun, Chrome and ffmpeg. Bun installs puppeteer-core on first run. (README; `lib.ts` imports `puppeteer-core`)

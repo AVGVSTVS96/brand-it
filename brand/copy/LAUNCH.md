@@ -33,7 +33,7 @@ hex and commonplace look nothing alike. they were made the same way, and now tha
 
 brand-it: say "brand it" and your agent makes the name, wordmark, palette, type, site, link preview, readme header, launch post and launch video, as code, from the product's own parts
 
-99 lines of rules i actually said to agents, plus two scripts: one shoots the site at 45 widths in light and dark, one renders the video and prints the loudness numbers
+109 lines of rules i actually said to agents, plus two scripts: one shoots the site at 45 widths in light and dark, one renders the video and prints the loudness numbers
 
 link in replies
 ```
@@ -47,7 +47,7 @@ a launch video as a web page: every scene is html in the brand's own fonts and t
 
 that's one part of brand-it, a skill that brands a project from its own parts: name, wordmark, palette, type, site, link preview, readme header, launch post and the video, all as code
 
-hex and commonplace were made this way. the skill is 99 lines plus two scripts
+hex and commonplace were made this way. the skill is 109 lines plus two scripts
 
 link in replies
 ```
