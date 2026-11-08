@@ -255,7 +255,7 @@ footer .label { line-height: 1.5; overflow-wrap: anywhere; }
     <div><p class="label">body <b>17 / 1.55</b> 400 · 62ch</p><p class="t-body">A brand here is a small system grown from the product's own parts. It's written down in one BRAND.md, shown working in one specimen.html, and made by scripts so any asset can be rebuilt.</p></div>
     <div><p class="label">small <b>15 / 1.5</b> 400 · ink-2</p><p class="t-small">hex took two days. commonplace went from a name to a live site in under two hours.</p></div>
     <div><p class="label">label <b>12 / 1</b> mono 500 · pencil</p><p class="t-label">320 · 390 · 1035 · 1440 · 1920</p></div>
-    <div><p class="label">code <b>14 / 1.6</b> mono 400</p><pre class="t-code">$ <b>bun</b> shoot.mjs site/ shots/
+    <div><p class="label">code <b>14 / 1.6</b> mono 400</p><pre class="t-code">$ <b>bun</b> shoot.ts site/ shots/
 no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
   </div>
   <div class="widths">
@@ -315,7 +315,7 @@ no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
     </div>
     <div class="part">
       <h3>The node</h3>
-      <p>The on-curve points of a glyph, as gen.mjs reads them with opentype.js. Shown at display size, gone below 48px.</p>
+      <p>The on-curve points of a glyph, as gen.ts reads them with opentype.js. Shown at display size, gone below 48px.</p>
       <div class="part-fig fig-nodes">
         <picture><source srcset="logo/mark-dark.svg" media="(prefers-color-scheme: dark)"><img src="logo/mark.svg" alt="the mark: a b with its 29 on-curve points"></picture>
         <picture><source srcset="logo/icon-dark.svg" media="(prefers-color-scheme: dark)"><img src="logo/icon.svg" alt="the icon: the same b, plain" style="width: 3rem; height: 3rem"></picture>
@@ -341,9 +341,9 @@ no problems · shots in shots/ at 390@2x, 1035, 1440</pre></div>
     </div>
     <div class="part">
       <h3>The check</h3>
-      <p>What shoot.mjs prints, in its exact shape. A problem is a dashed line and the script's own words.</p>
+      <p>What shoot.ts prints, in its exact shape. A problem is a dashed line and the script's own words.</p>
       <div class="part-fig">
-        <pre>$ <b>bun</b> shoot.mjs site/ shots/
+        <pre>$ <b>bun</b> shoot.ts site/ shots/
 page scrolls sideways by 14px
   at light 320, dark 320
 text wider than its box: h1.hero "Say brand it."
@@ -400,7 +400,7 @@ text wider than its box: h1.hero "Say brand it."
 <section id="logo">
   <p class="rubric label">05 <span>wordmark and mark</span></p>
   <h2>The name in the face, and the b with its own construction.</h2>
-  <p class="small" style="margin-top: var(--s4)">Three directions, each drawn from the real outlines by <code>logo/gen.mjs</code>. The pick is A.</p>
+  <p class="small" style="margin-top: var(--s4)">Three directions, each drawn from the real outlines by <code>logo/gen.ts</code>. The pick is A.</p>
   <div class="dirs">
     <div class="dir pick">
       <p class="label">A · nodes <span style="color: var(--ink-3)">· the pick</span></p>
@@ -411,7 +411,7 @@ text wider than its box: h1.hero "Say brand it."
         <picture><source srcset="logo/icon-dark.svg" media="(prefers-color-scheme: dark)"><img src="logo/icon.svg" width="32" height="32" alt=""></picture>
         <picture><source srcset="logo/icon-dark.svg" media="(prefers-color-scheme: dark)"><img src="logo/icon.svg" width="16" height="16" alt=""></picture>
       </div>
-      <p>The wordmark in Mona Sans 600, and the first letter shown the way gen.mjs sees it: 29 on-curve points in pencil. It is the mechanism (marks from real outlines) drawn once, and it says what a brand here is: the finished thing with its construction still visible. Below 48px the points drop out and it is a plain b, which is the pencil's whole idea.</p>
+      <p>The wordmark in Mona Sans 600, and the first letter shown the way gen.ts sees it: 29 on-curve points in pencil. It is the mechanism (marks from real outlines) drawn once, and it says what a brand here is: the finished thing with its construction still visible. Below 48px the points drop out and it is a plain b, which is the pencil's whole idea.</p>
     </div>
     <div class="dir">
       <p class="label">B · seam</p>
@@ -486,7 +486,7 @@ text wider than its box: h1.hero "Say brand it."
     <tr><td>0.0 – 3.0</td><td>the ask</td><td>an agent prompt, typed at 45ms a character: <code>brand it</code></td><td>Say brand it.</td><td>the name is the command; open on the point</td></tr>
     <tr><td>3.0 – 8.5</td><td>the parts</td><td>a README line, a CLI line, a glyph outline, each with a callout, settling into one row</td><td>A brand grown from the product's own parts.</td><td>the thesis</td></tr>
     <tr><td>8.5 – 15.0</td><td>the mark</td><td>the b's outline draws, 29 nodes land in order, the glyph fills ink, a dimension measures it</td><td>Marks from real font outlines.</td><td>the magic underneath, the one big sound</td></tr>
-    <tr><td>15.0 – 21.0</td><td>the check</td><td>frames step from 320 to 1920, light then dark, then shoot.mjs prints its last line</td><td>Shot at 45 widths, light and dark.</td><td>it checks its own work</td></tr>
+    <tr><td>15.0 – 21.0</td><td>the check</td><td>frames step from 320 to 1920, light then dark, then shoot.ts prints its last line</td><td>Shot at 45 widths, light and dark.</td><td>it checks its own work</td></tr>
     <tr><td>21.0 – 29.0</td><td>each one its own look</td><td>hex and commonplace in frames, side by side, their names as labels</td><td>Each one its own look.</td><td>the proof; the loud one and the quiet one</td></tr>
     <tr><td>29.0 – 33.0</td><td>introducing</td><td>the lockup lands with its dimension, held</td><td>brand-it</td><td>the reveal, half a second longer than feels needed</td></tr>
     <tr><td>33.0 – 37.0</td><td>install</td><td><code>npx skills add AVGVSTVS96/brand-it</code> typed; the end frame is complete</td><td>brand a project from its own parts</td><td>the one ask; a poster frame</td></tr>

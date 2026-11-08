@@ -23,9 +23,9 @@ refs.md         saved references, and how an agent pulls more
 video.md        launch videos: HTML scenes on one clock, rendered frame by frame,
                 sound built from the same clock
 scripts/
-  shoot.mjs     a page at 45 widths from 320 to 1920 in light and dark,
+  shoot.ts     a page at 45 widths from 320 to 1920 in light and dark,
                 flagging overflow; exact renders for OG images and icons
-  video.mjs     any page with window.seek(t): stills, contact sheets,
+  video.ts     any page with window.seek(t): stills, contact sheets,
                 a -14 LUFS soundtrack, a BT.709 mp4 in 5 s parts that resume
 ```
 

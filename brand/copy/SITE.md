@@ -27,7 +27,7 @@ _(The hero has no visual of its own. The examples start right under the install 
 Section title: Each one its own look.
 Line: The rules come from making hex and commonplace. The first thing the skill branded was itself.
 
-_(Three rows, one per project, in this order. Each row shows the real thing and nothing redrawn: that repo's wordmark SVG, the live site shot with `shoot.mjs` at 1035 and 390 in light and dark, and its OG image. Links go to the live site and the repo. The shots follow the system theme, so a dark-mode visitor sees the dark shots. The idea line is one sentence; the facts strip is four short mono items.)_
+_(Three rows, one per project, in this order. Each row shows the real thing and nothing redrawn: that repo's wordmark SVG, the live site shot with `shoot.ts` at 1035 and 390 in light and dark, and its OG image. Links go to the live site and the repo. The shots follow the system theme, so a dark-mode visitor sees the dark shots. The idea line is one sentence; the facts strip is four short mono items.)_
 
 ### hex
 
@@ -64,7 +64,7 @@ brand/
   BRAND.md          the system, written down
   specimen.html     the system in use: hero, type scale, tokens, motion
   references.md     what was taken from your saves, and what wasn't
-  logo/gen.mjs      three marks from real font outlines, as SVG paths
+  logo/gen.ts      three marks from real font outlines, as SVG paths
 copy/
   MESSAGING.md      the one line, what it is and isn't, the voice, facts with sources
   SITE.md  LAUNCH.md  README.md
@@ -80,7 +80,7 @@ Line: Two scripts ship with the skill. One shoots a page at 45 widths in light a
 _(The visual is one terminal with both scripts' output in the exact shape they print. The problems are illustrative but real in kind: the stat that overflowed at 1035 is the width Bassim browses at, and the bug that got past four widths on hex. "2 problems" is the script's own wording.)_
 
 ```
-$ bun shoot.mjs site/ shots/
+$ bun shoot.ts site/ shots/
 page scrolls sideways by 14px
   at light 320, dark 320
 text wider than its box: strong.num "~2,000"
@@ -88,7 +88,7 @@ text wider than its box: strong.num "~2,000"
 
 2 problems · shots in shots/ at 390@2x, 1035, 1440
 
-$ bun video.mjs video/ video
+$ bun video.ts video/ video
 41s / 41s
 video/out/video.mp4: -14 LUFS, true peak -2.1 dBTP after AAC
 ```

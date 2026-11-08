@@ -13,7 +13,7 @@ What the brand-it system is built on, pulled from Bassim's own X bookmarks and l
 4. **"this css-only annotation library is so cool and elegant"**, @vivitseng_ on Maxim Syabro's neat-annotations. https://x.com/vivitseng_/status/2097744577465929822 · https://neat-annotations.syabro.com/. An annotation is wrapped around the real inline element and drawn by CSS, so it can never drift from what it points at. The specimen's dimensions and callouts are positioned from `getBoundingClientRect` for the same reason. Not taken: the hand-drawn arrows and handwriting; hex already has the handwritten note, and brand-it is drafting, not sketching.
 5. **"an interactive wireframe reveal animation for each component"**, @wheresryan22, and the reply he saved: "the blueprint/spec-sheet preview is way more interesting than the usual docs experience" (@armondme). https://x.com/wheresryan22/status/2096184499016999199 · https://x.com/armondme/status/2096230574457561423. The construction under the finished thing is what people want to see. The mark (the b with its nodes) and the hero (the wordmark with its dimensions) are that, held still.
 6. **Linear, "Output isn't design"**. https://linear.app/now/output-isn-t-design. Forces first: who it's for (agents and the people who brief them), where it shows up (a README, a skills list, one page, one post), what it must say (grown from the product, all of it code, it checks itself). The brand came from that list, not from a mood board.
-7. **"bespoke brand design tools are a great use case for building your own tools"**, @kazdenc. https://x.com/kazdenc/status/2099603500220973096. `logo/gen.mjs` draws every mark from the font's outlines; `logo/png.mjs` renders the set; the hero measures itself. Knobs, not files.
+7. **"bespoke brand design tools are a great use case for building your own tools"**, @kazdenc. https://x.com/kazdenc/status/2099603500220973096. `logo/gen.ts` draws every mark from the font's outlines; `logo/png.ts` renders the set; the hero measures itself. Knobs, not files.
 8. **@oliverhamrin on Jacqueline Casey**: "Take a simple idea and take it seriously." https://x.com/oliverhamrin/status/2091117071308370089. One idea here: the drafting layer. Everything on the page is either the thing or a line drawn to check it.
 9. **"introducing mesurer, a tiny tool to measure spacing and align your UI"**, @Ibelick. https://x.com/Ibelick/status/2042508446671499405. Measuring is a design-engineer's reflex; brand-it makes the measurement the picture.
 10. **US Graphics TX-24 printed specimens**, @fatih. https://x.com/fatih/status/2061033715891917088. The specimen as the brand's own artifact. `specimen.html` is the deliverable, not a side page.
@@ -34,7 +34,7 @@ What the brand-it system is built on, pulled from Bassim's own X bookmarks and l
 ## His own projects
 
 - **hex** (`~/Developer/hex-site`): the craft bar and the live render in `examples/`. Not its look: no thick borders, offset shadows, cream or sticker colors.
-- **commonplace** (`~/Developer/commonplace-site/brand`): the shape of this folder (BRAND.md headings, references.md, explorations argued in the specimen, `gen.mjs`) and the live render. Not its look: no paper tint, no mono-for-everything, no red.
+- **commonplace** (`~/Developer/commonplace-site/brand`): the shape of this folder (BRAND.md headings, references.md, explorations argued in the specimen, `gen.ts`) and the live render. Not its look: no paper tint, no mono-for-everything, no red.
 
 ## What was deliberately not taken
 

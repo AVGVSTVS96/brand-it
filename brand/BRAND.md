@@ -6,7 +6,7 @@
 
 - **A workbench, not a brand.** Its job is to frame other brands. hex is loud and commonplace is quiet, and both have to look right on this page. So the page is white, the type is neutral, and the only color is the one the method draws with.
 - **Measured.** Every number on a brand-it surface was measured by a script, never typed: the wordmark's width in the hero, the 1035 under a shot, the 5.2:1 next to a token. If it can't be measured it isn't shown as a number.
-- **Construction visible.** The finished thing with its guides still on. The mark is the b with the 29 points gen.mjs read from the font; the hero wordmark has its dimensions drawn around it. The guides drop out at small sizes, the way a non-photo pencil drops out of the print.
+- **Construction visible.** The finished thing with its guides still on. The mark is the b with the 29 points gen.ts read from the font; the hero wordmark has its dimensions drawn around it. The guides drop out at small sizes, the way a non-photo pencil drops out of the print.
 - **Plain.** It says what the file is and what the script prints. "Shot at 45 widths, light and dark." Not a feature, a fact.
 - **One person's taste, shown.** The examples are the argument. The page spends its space on hex and commonplace, not on describing a method.
 
@@ -27,7 +27,7 @@ One family, two voices. Mona Sans carries everything a person reads; Mona Sans M
 
 - **Mona Sans** for prose, headlines, the wordmark. Display at 600, letter-spacing −0.03em, line-height 1.0, `font-optical-sizing: auto`. h2 at 36/1.1 600 −0.025em; h3 at 18/1.3 600; body 17/1.55 at 400, measure 62ch; small 15/1.5 in `--ink-2`. Width 100 everywhere; the narrow cut (85) is for a number that has to fit, never a style.
 - **Mona Sans Mono** for labels, measurements, code, rails. Labels at 12px 500 in `--pencil`, tabular figures, no uppercase, no tracking. Code at 14/1.6 400. Ligatures off (`font-variant-ligatures: none`): `--pencil` stays two hyphens, like a terminal.
-- Shipped as subsets in `fonts/` (Latin plus `→ ← · × ✓ − ≈ ≠`), with weight 300 to 800 and width 85 to 110 kept, optical size kept: `mona-sans.woff2` 202 KB, `mona-sans-mono.woff2` 34 KB. The license is next to them. The static cuts `logo/gen.mjs` reads (SemiBold at width 100 and optical size 100, Mono Medium) are in `logo/ttf/`.
+- Shipped as subsets in `fonts/` (Latin plus `→ ← · × ✓ − ≈ ≠`), with weight 300 to 800 and width 85 to 110 kept, optical size kept: `mona-sans.woff2` 202 KB, `mona-sans-mono.woff2` 34 KB. The license is next to them. The static cuts `logo/gen.ts` reads (SemiBold at width 100 and optical size 100, Mono Medium) are in `logo/ttf/`.
 - Candidates set on the real page and shot (`fonts-compare.html`): Instrument Sans (softer, wider, reads 2024-indie), Overused Grotesk (the Swiss spec-sheet voice, but Helvetica isn't "new"), JetBrains Mono (crisper code, no family tie). Mona Sans was picked for the engineered cut, the axes, and the matching mono. The compare page reads the full TTFs from `.scratch/fonts/`, which isn't committed; they come from `github/mona-sans`, `google/fonts` (Instrument Sans, JetBrains Mono) and `RandomMaerks/Overused-Grotesk`.
 
 ### Color: paper, ink, one pencil
@@ -60,10 +60,10 @@ Rule: **the pencil draws the construction and never the thing.** Text, wordmarks
 Every motif is something the skill already does.
 
 1. **The dimension.** Ticks at both ends, a 1px line, the number knocked out of the middle in a 12px pencil label. Horizontal under a thing, vertical beside it. The number is the real size of the thing, never typed: a wordmark shown at full size is measured in the browser (`getBoundingClientRect`); a shot shown smaller than it was taken carries the width it was taken at (`1035`), the way a drawing at scale still carries real dimensions. From the check: shots at 320 to 1920.
-2. **The node.** The on-curve points of a glyph as `gen.mjs` reads them with opentype.js: 3.4-unit pencil squares with a 0.8 paper halo, on the outline. The mark is the b with its 29. Shown at display sizes, gone below 48px.
+2. **The node.** The on-curve points of a glyph as `gen.ts` reads them with opentype.js: 3.4-unit pencil squares with a 0.8 paper halo, on the outline. The mark is the b with its 29. Shown at display sizes, gone below 48px.
 3. **The frame.** 1px ink around a real render, a label on top (`hex · 1035 · light`), a dimension below (`1035`). Shots never float.
 4. **The callout.** A 6px pencil dot on the part, a horizontal leader, a label after it. One per thing. From the spec-sheet references.
-5. **The check.** What `shoot.mjs` prints, in its exact shape, in the code style. A problem is the dashed dimension plus the script's words.
+5. **The check.** What `shoot.ts` prints, in its exact shape, in the code style. A problem is the dashed dimension plus the script's words.
 6. **The pair.** Light and dark side by side. Anything shown once is shown twice.
 
 ### Iconography
@@ -76,7 +76,7 @@ Diagrams look measured: 1px ink boxes, pencil dimensions and callouts, mono labe
 
 ### Data viz
 
-A number is a dimension or a row. Horizontal bars on a `--hair-2` track in ink, the one being talked about in pencil, label left in `--ink-2`, number right in tabular figures. Only numbers a script produced (`wc -l`, the width list in `shoot.mjs`, the LUFS line from `video.mjs`), with how they were counted.
+A number is a dimension or a row. Horizontal bars on a `--hair-2` track in ink, the one being talked about in pencil, label left in `--ink-2`, number right in tabular figures. Only numbers a script produced (`wc -l`, the width list in `shoot.ts`, the LUFS line from `video.ts`), with how they were counted.
 
 ### Motion
 
@@ -99,30 +99,30 @@ Same system on a 1920×1080 paper stage, one clock. The video agent builds from 
 | 0.0 – 3.0   | the ask               | an agent prompt, typed at 45ms a character: `brand it`                                      | Say brand it.                               | the name is the command; open on the point              |
 | 3.0 – 8.5   | the parts             | a README line, a CLI line, a glyph outline, each with a callout, settling into one row      | A brand grown from the product's own parts. | the thesis                                              |
 | 8.5 – 15.0  | the mark              | the b's outline draws, 29 nodes land in order, the glyph fills ink, a dimension measures it | Marks from real font outlines.              | the magic underneath; the one big sound                 |
-| 15.0 – 21.0 | the check             | frames step from 320 to 1920, light then dark, then `shoot.mjs` prints its last line        | Shot at 45 widths, light and dark.          | it checks its own work                                  |
+| 15.0 – 21.0 | the check             | frames step from 320 to 1920, light then dark, then `shoot.ts` prints its last line         | Shot at 45 widths, light and dark.          | it checks its own work                                  |
 | 21.0 – 29.0 | each one its own look | hex and commonplace in frames, side by side, their names as labels                          | Each one its own look.                      | the proof: the loud one and the quiet one               |
 | 29.0 – 33.0 | introducing           | the lockup lands with its dimension, held                                                   | brand-it                                    | the reveal, held half a second longer than feels needed |
 | 33.0 – 37.0 | install               | `npx skills add AVGVSTVS96/brand-it` typed; the last frame is complete                      | brand a project from its own parts          | the one ask; a poster frame                             |
 
 **Motion.** Springs without bounce (Motion's, baked to `linear()`), entrances 0.3 to 0.8s, exits faster. Dimensions draw tick to tick; nodes pop in outline order; typed text lands like real output. Every frame complete: rails on every frame, frames never missing a side mid-animation. No breathing, no drifting pans.
 
-**Sound.** Six cues, all in C: typing ticks under the two typed lines (about .35), one tone when the b fills ink (1, the big moment), a quiet tap when the width sweep stops (.5), a tap for the introducing card (.5), and an end chord that rings out. Music: 120 BPM, "high energy and crafty and elegant and simple and sleek and crisp", something changes every 4 bars, stops down before scene 6. No gong, no big low hits. Mastered by `video.mjs` to −14 LUFS; report the numbers, since nobody here can listen.
+**Sound.** Six cues, all in C: typing ticks under the two typed lines (about .35), one tone when the b fills ink (1, the big moment), a quiet tap when the width sweep stops (.5), a tap for the introducing card (.5), and an end chord that rings out. Music: 120 BPM, "high energy and crafty and elegant and simple and sleek and crisp", something changes every 4 bars, stops down before scene 6. No gong, no big low hits. Mastered by `video.ts` to −14 LUFS; report the numbers, since nobody here can listen.
 
 **Process.** Storyboard above, then stills at every cut (0.1s before, 0.2s after), a contact sheet every 2s, one mp4 at one path refreshed for peeks, then a fresh subagent told to roast it with timecodes. Commit the pipeline with a README.
 
 ## Logo
 
-`logo/brand-it.svg` (light), `logo/brand-it-dark.svg`, `logo/brand-it-mono.svg` (`currentColor`, for inline use), `logo/brand-it-lockup.svg` and `-dark` (the wordmark with the b's nodes, display sizes only), `logo/mark.svg` and `-dark` (the b with nodes on a tile, for the README and OG), `logo/mark-mono.svg`, `logo/icon.svg` and `-dark` (the plain b on a tile, for 180 and 512), `logo/favicon.svg` (follows the system theme). `bun logo/gen.mjs` regenerates all of them from the two static cuts in `logo/ttf/`; `bun logo/png.mjs` renders the PNG set into `logo/png/`: `brand-it@2x.png`, `brand-it-dark@2x.png`, `brand-it-lockup@2x.png`, `brand-it-lockup-dark@2x.png` (2000px wide, transparent), `mark-512.png`, `mark-dark-512.png`, `icon-512.png`, `icon-dark-512.png`, `apple-touch-icon-180.png` (full bleed), `favicon-32.png`, `favicon-16.png`.
+`logo/brand-it.svg` (light), `logo/brand-it-dark.svg`, `logo/brand-it-mono.svg` (`currentColor`, for inline use), `logo/brand-it-lockup.svg` and `-dark` (the wordmark with the b's nodes, display sizes only), `logo/mark.svg` and `-dark` (the b with nodes on a tile, for the README and OG), `logo/mark-mono.svg`, `logo/icon.svg` and `-dark` (the plain b on a tile, for 180 and 512), `logo/favicon.svg` (follows the system theme). `bun logo/gen.ts` regenerates all of them from the two static cuts in `logo/ttf/`; `bun logo/png.ts` renders the PNG set into `logo/png/`: `brand-it@2x.png`, `brand-it-dark@2x.png`, `brand-it-lockup@2x.png`, `brand-it-lockup-dark@2x.png` (2000px wide, transparent), `mark-512.png`, `mark-dark-512.png`, `icon-512.png`, `icon-dark-512.png`, `apple-touch-icon-180.png` (full bleed), `favicon-32.png`, `favicon-16.png`.
 
 Three directions were drawn (`logo/explore-*.svg`, shown and argued in `specimen.html`):
 
-- **A, nodes (the pick).** The wordmark in Mona Sans 600, and the first letter shown the way gen.mjs sees it: 29 on-curve points in pencil. It is the mechanism (marks from real outlines) drawn once, it says what a brand here is (the finished thing with its construction still on), and below 48px the points drop out and it's a plain b, which is the pencil's whole idea.
+- **A, nodes (the pick).** The wordmark in Mona Sans 600, and the first letter shown the way gen.ts sees it: 29 on-curve points in pencil. It is the mechanism (marks from real outlines) drawn once, it says what a brand here is (the finished thing with its construction still on), and below 48px the points drop out and it's a plain b, which is the pencil's whole idea.
 - **B, seam.** Light and dark in one square, the b crossing the seam; "it" knocked out of an ink block in the lockup. The boldest icon of the three. Not picked: at 32px and under the b reads as a glitch, the lockup reads like a Pro badge, and the seam is a fact about every brand made this way, not this one.
 - **C, dimension.** The wordmark measured, with its width. Not picked as the mark because the dimension is the motif the whole system uses on everything else; as a logo it would measure nothing but itself. It lives on in the OG image and the README header, where the number is real.
 
 Clear space: one b-height on every side. Minimum height 14px for the wordmark, 16px for the icon. The lockup with nodes is for display sizes only (hero, OG image, README header); everywhere else the plain wordmark. Never recolor the nodes to anything but `--pencil` (or `currentColor` in the mono file). Never set the name in anything but lowercase.
 
-**Assets for the site agent.** The OG image (1200×630) is the lockup on paper with a dimension line under it that reads `1200`, the tagline in `--ink-2`, nothing in the bottom fifth; `twitter:card` is `summary_large_image`. The README header is the same at 2x for the 838px column, light and dark through `<picture>`, its dimension reading `838`. The favicon is `logo/favicon.svg`; `apple-touch-icon.png` and `icon-512.png` are the plain b on the tile, full bleed. Those numbers are real only if the file is that wide, so render them from HTML at those sizes with `shoot.mjs`.
+**Assets for the site agent.** The OG image (1200×630) is the lockup on paper with a dimension line under it that reads `1200`, the tagline in `--ink-2`, nothing in the bottom fifth; `twitter:card` is `summary_large_image`. The README header is the same at 2x for the 838px column, light and dark through `<picture>`, its dimension reading `838`. The favicon is `logo/favicon.svg`; `apple-touch-icon.png` and `icon-512.png` are the plain b on the tile, full bleed. Those numbers are real only if the file is that wide, so render them from HTML at those sizes with `shoot.ts`.
 
 ## Files
 

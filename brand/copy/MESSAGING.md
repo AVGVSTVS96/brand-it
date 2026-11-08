@@ -44,7 +44,7 @@ Then the honest line, always: the skill points at Bassim's own projects and save
 - **A skill.** One `SKILL.md` (99 lines), two short companions (`video.md`, `refs.md`) and two scripts, installed next to your other skills with `npx skills add AVGVSTVS96/brand-it`. An agent reads it when you say "brand it".
 - **A method with a bar.** Nine steps from brief to launch, a Words section, a Fidelity section and a checklist to run before saying done. The bar is in Bassim's words: "2026 october standards of design, minimal, clean, crafted, designer, and design engineered."
 - **One person's taste, verbatim.** The rules are quotes and the mistakes behind them, not adjectives. They name what never ships: gradients, glows, glass on the page, fake shadows, pills and callouts nobody needs, emoji, bento grids, the 2026 "tasteful AI" defaults.
-- **Assets as code.** `logo/gen.mjs` draws three marks from real font outlines with opentype.js. `shoot.mjs` renders the OG image and icons from HTML. `video.mjs` renders any page that implements `window.seek(t)` into a BT.709 mp4 and masters its soundtrack to -14 LUFS.
+- **Assets as code.** `logo/gen.ts` draws three marks from real font outlines with opentype.js. `shoot.ts` renders the OG image and icons from HTML. `video.ts` renders any page that implements `window.seek(t)` into a BT.709 mp4 and masters its soundtrack to -14 LUFS.
 
 ## What it isn't
 
@@ -61,8 +61,8 @@ Write like the README: short sentences, real numbers, what works and what doesn'
 **Do**
 
 - Say what happened. "The site was live under two hours after the name." "On hex that found seven real bugs."
-- Use the real names of things: `SKILL.md`, `shoot.mjs`, `video.mjs`, `window.seek(t)`, `BRAND.md`, `specimen.html`, `logo/gen.mjs`.
-- Count with a script and say how. 99 lines is `wc -l SKILL.md`. 45 widths is what `shoot.mjs` loads. Round ours down when the count is rough ("more than 40", not 44).
+- Use the real names of things: `SKILL.md`, `shoot.ts`, `video.ts`, `window.seek(t)`, `BRAND.md`, `specimen.html`, `logo/gen.ts`.
+- Count with a script and say how. 99 lines is `wc -l SKILL.md`. 45 widths is what `shoot.ts` loads. Round ours down when the count is rough ("more than 40", not 44).
 - Keep Bassim's words verbatim when quoting the bar, and mark them as quotes.
 - One headline, one short line, one visual per section. The hero is the shortest part.
 - Lowercase brand-it always, even at the start of a sentence. Lowercase hex and commonplace too. The launch post is all lowercase.
@@ -100,13 +100,13 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 **The skill**
 
 - Repo github.com/AVGVSTVS96/brand-it, MIT, public, created Oct 8 2026, one commit. (`gh repo view`)
-- Files: `SKILL.md` 99 lines, `video.md` 76, `refs.md` 56, `scripts/lib.mjs` 61, `scripts/shoot.mjs` 70, `scripts/video.mjs` 146. Scripts total 277 lines. (`wc -l`)
+- Files: `SKILL.md` 99 lines, `video.md` 76, `refs.md` 56, `scripts/lib.ts` 61, `scripts/shoot.ts` 70, `scripts/video.ts` 146. Scripts total 277 lines. (`wc -l`)
 - Install: `npx skills add AVGVSTVS96/brand-it`. The skills CLI installs into `~/.agents/skills/` and links it into agent folders. (README; `npx skills add --help`; `~/.agents/.skill-lock.json`)
 - Triggers on "brand it", naming a project, or any brand, logo, wordmark, palette, landing page, OG image, favicon, README header, launch post or launch video ask. (SKILL.md frontmatter)
-- Needs Bun, Chrome and ffmpeg. Bun installs puppeteer-core on first run. (README; `lib.mjs` imports `puppeteer-core`)
+- Needs Bun, Chrome and ffmpeg. Bun installs puppeteer-core on first run. (README; `lib.ts` imports `puppeteer-core`)
 - "A brand here is a small system grown from the product's own parts. It's written down in one `BRAND.md`, shown working in one `specimen.html`, and made by scripts so any asset can be rebuilt." (SKILL.md, first line)
 - Nine steps: brief; references from Bassim's saves; brand and copy in parallel; marks from real font outlines; specimen; show, don't block; site; assets; launch. (SKILL.md "How it goes")
-- Marks: three directions that genuinely differ, drawn as SVG paths with opentype.js by `logo/gen.mjs`, checked at 16 px. (SKILL.md step 4)
+- Marks: three directions that genuinely differ, drawn as SVG paths with opentype.js by `logo/gen.ts`, checked at 16 px. (SKILL.md step 4)
 - Site: a static Vite+ page on Vercel, deployed early. (SKILL.md step 7)
 - Assets: OG image rendered from HTML, a favicon that follows the theme, the README `<picture>` header in light and dark, every logo as SVG and PNG. (SKILL.md step 8)
 - The rules "come from what was actually said to agents while building those three, and from the mistakes they kept making." (README)
@@ -117,16 +117,16 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - Checks: shots read at 390, 1035 and 1440; a fresh subagent finds problems, ranked ("On hex that found seven real bugs"); every motif glyph exists in the font; text tokens pass 4.5:1; the live OG image is checked after deploy. (SKILL.md "Check before saying done")
 - Sizes: OG 1200×630 with `twitter:card` set to `summary_large_image`; GitHub social preview 1280×640 under 1 MB; iMessage wants `og:image` at least 900 px wide; README column 838 px, export at 2x; `favicon.svg` with its own `prefers-color-scheme`, `apple-touch-icon.png` at 180, `icon-512.png`. (SKILL.md "Sizes", checked Oct 2026)
 
-**shoot.mjs**
+**shoot.ts**
 
 - Loads 45 widths: 320 to 1920 in 40 px steps plus 390, 1035, 1366 and 1512, in light and dark, with reduced motion. (`widths` in the script; counted with Bun)
 - Flags "page scrolls sideways by Npx" and "text wider than its box: tag.class "text"", each with the schemes and widths it happened at. (`findProblems`)
 - Saves full-page shots at 390 (2x), 1035 and 1440. (`shots`)
 - Prints "no problems" or "N problems", then "shots in <dir>/ at 390@2x, 1035, 1440". Prints "didn't load: …" for anything that 404s.
-- One-shot mode: `bun shoot.mjs page WxH[@scale] out.png [--clear]` for OG images, icons and banners; `--clear` makes the background transparent.
-- Serves a local page from its repo root, its own folder and its `public/`, so `../brand/fonts` and Vite public files resolve. (`lib.mjs serve`)
+- One-shot mode: `bun shoot.ts page WxH[@scale] out.png [--clear]` for OG images, icons and banners; `--clear` makes the background transparent.
+- Serves a local page from its repo root, its own folder and its `public/`, so `../brand/fonts` and Vite public files resolve. (`lib.ts serve`)
 
-**video.mjs**
+**video.ts**
 
 - The page sets `window.END` (seconds) and `window.seek(t)`, a pure function of time. Optional `window.soundtrack()` returns `{ stem: base64 wav }`. (usage text; video.md "The contract")
 - Modes: `stills <t…>`, `sheet [every]` (a contact sheet, 4 wide at 480 px), `audio`, `video [fps]`. Default 1920×1080; `--size 1080x1350` for the 4:5 cut.
@@ -167,7 +167,7 @@ Every claim on any surface traces to one of these. Checked Oct 8 2026 against `~
 - The brief, verbatim: "more of a developer/coder minimalist brutalist style, code-terminal-light-terminal vibes... really clean, minimal, data-powerful... approachable and clean, not super deep technical developer neovim."
 - Brand: "a light terminal: paper, mono, one red pen." Paper `#FAF9F6`, ink `#141412`, red `#D2451E` ("this one, now"). Square corners, no shadows, 1 px hairlines. Dark is the same tokens swapped.
 - Type: Ioskeley Mono (an Iosevka build in Berkeley Mono's proportions, OFL) for everything the computer says; IBM Plex Sans for everything a person says. Bassim picked the Berkeley clone over the agent's recommendation.
-- Wordmark: the name in Ioskeley Mono Medium with a red block cursor exactly x-height tall, drawn from glyph outlines with opentype.js in `logo/gen.mjs`. Three directions (cursor, bookplate, rows); the cursor won because it "says CLI without drawing a window" and reduces to a 16 px favicon (`c▮`). The favicon follows the system theme.
+- Wordmark: the name in Ioskeley Mono Medium with a red block cursor exactly x-height tall, drawn from glyph outlines with opentype.js in `logo/gen.ts`. Three directions (cursor, bookplate, rows); the cursor won because it "says CLI without drawing a window" and reduces to a 16 px favicon (`c▮`). The favicon follows the system theme.
 - Timeline Oct 8 2026: naming 07:10 to 07:29; repo 07:39; brand brief 07:55; brand and copy agents in parallel from 07:57; copy done 08:02, brand 08:10; approved 08:20 ("looks perfect no need to block"); font comparison in context 08:26, Ioskeley picked 08:27; site live 08:48; approved 09:19 ("great work on the site"). Name to live site: 1 h 38 min. Say "under two hours".
 - The font comparison caught that Plex Mono has no box-drawing glyphs, so the brand's own snapshot tree couldn't render in it. (commonplace.md §4)
 - The video kit is committed (scenes as data, a deterministic `seek(t)`, sound from the same clock) but the mp4 was never rendered. Don't show or claim a commonplace video.
