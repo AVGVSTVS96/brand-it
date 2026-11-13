@@ -1,109 +1,91 @@
 ---
 name: brand-it
-description: Bassim's way of branding a project, from the name to the wordmark, palette, type, site, link preview, README header, launch post and launch video, all built as code from the product's own parts. Use when naming a project, or making or extending a brand, logo, wordmark, palette, landing page, OG image, favicon, README header, launch post or launch video for one of Bassim's projects, or when asked to "brand it".
+description: Bassim's way of branding a project, from the name to the wordmark, palette, type, site, link preview, README header, launch post and launch video, each project its own look, drawn from real references and built as code. Use when naming a project, or making or extending a brand, logo, wordmark, palette, landing page, OG image, favicon, README header, launch post or launch video for one of Bassim's projects, or when asked to "brand it".
 ---
 
 # brand it
 
-A brand here is a small system grown from the product's own parts. It's written down in one `BRAND.md`, shown working in one `specimen.html`, and made by scripts so any asset can be rebuilt. Every project gets its own look. hex and commonplace, which Bassim approved, set the craft bar, not the style.
+A brand is a look that belongs to one product, made by someone who studied real work first. Every project gets its own: seqno's hero borrows from Buzz and is still seqno's, the portfolio is nineties Japanese tech, iikb is Swiss Helvetica, BROADCOM is Bloomberg terminal meets Vercel and Linear. What they share is how they were made, not how they look.
 
-| project                      | the idea                                                                                                           | where                                                |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| hex                          | poppy neo-brutalist: cream and ink, blue/yellow/pink blocks, hard shadows, real app UIs                            | `~/Developer/hex-site/site` (`style.css`, `COPY.md`) |
-| commonplace                  | a light terminal: paper, mono, one red pen, a cursor wordmark                                                      | `~/Developer/commonplace-site/brand`                 |
-| seqno (dark mode unreviewed) | an outliner built from its own parts: bullet, guide line, dot grid; apricot by day, its screenshots' blue by night | `~/dev/seqno-site/brand`                             |
+The bar is a page a designer would ship in 2026: minimal but thoughtful, rich where it carries something, finished in every detail. Bassim says he isn't a designer and expects you to bring the craft.
 
-Read the closest one before you start. Copy its shape, never its look. `refs.md` has what Bassim has saved and how to find more; `video.md` covers launch videos.
+## 1. Read the product
 
-## The bar
+Read the README, the code, and the real app or CLI output. Keep Bassim's words about the project as he said them; the style words in them are the brief. If he named a style or a reference for this project, that wins over anything here.
 
-"2026 october standards of design, minimal, clean, crafted, designer, and design engineered." "Non-cringe, non-vibe sloppy."
+Names are lowercase. Search for collisions before falling for one.
 
-- **Minimal, but never flat.** Every element earns its place, and a flat page is just as ugly ("doesn't have much pop, doesn't have much character"). Richness has to carry information or feel: real UIs, data in its real shape, motion that follows state.
-- **Grown from the product.** commonplace's mark is the CLI cursor; seqno's is the outliner's bullet. Start with the forces (who it's for, where it shows up, what it has to say), then draw.
-- **Color means something.** commonplace's one red means "this one, now"; hex runs three poppy accents. A lone accent is how hex v2 went flat.
-- **Dark is designed against what sits on it**, then shipped as the same tokens swapped, following the system theme. Light works for a reason; keep the reason. seqno's apricot held neutral white screenshots, but its dark screenshots are Solarized blue, so its dark field is that blue a step darker. A dark field is the product's hue a step below its UI, or near neutral, never the opposite hue at the same lightness.
-- **A light brand color stays light.** Dark orange is brown: darkened, seqno's apricot cancelled the app's blue into mud. Keep it as it is, or move it into the ink at full strength, and never lay it over a dark field at low opacity (a 30% apricot outline on blue is khaki).
-- **Distinctive beats safe.** Agents keep recommending the safe pick, and Bassim keeps choosing the bolder one (the Berkeley Mono clone over Plex, poppy over flat). Always include the distinctive option.
-- **Never:** gradients, glows, blur and glass on the page itself, aggressive or fake shadows, pills and callouts nobody needs, emoji, isometric or 3D, AI backgrounds, ASCII as wallpaper, bento grids, generic SaaS themes. Serif display type was rejected for hex.
-- **The 2026 "tasteful AI" defaults are tells too:** cream with terracotta, near-black with one acid accent, a hairline broadsheet, tracked all-caps eyebrows, mono labels as costume. hex and commonplace use some of these because their idea calls for it. Never reach for them by default.
+## 2. Find the references
 
-## How it goes
+The looks Bassim loves all came from real references; the ones he calls generic had none. His X saves are the source (`refs.md` shows how to pull them):
 
-1. **Brief.** Read the product: README, code, and real CLI or app output. Keep Bassim's words verbatim; the style words in them are the brief. Names are lowercase, always. Search for collisions before falling for a name, and never invent what a name means.
-2. **References from Bassim's saves.** Pull from the X bookmark folders and Raindrop (`refs.md`). Study one or two deeply instead of making a mood board. Write `references.md`: link, what to take, and a "deliberately not taken" list.
-3. **Brand and copy in parallel.** Two agents, one repo: `brand/` and `copy/`. Copy always gets its own agent. `copy/MESSAGING.md` is the source of truth for words, and brand reads it before committing.
-4. **Marks from real font outlines.** Three directions that genuinely differ, drawn as SVG paths with opentype.js by a `logo/gen.mjs`. Pick one, argue it, and say why not for the others. Check every mark at 16px and next to its neighbors.
-5. **Specimen.** One page with the system in use: a hero, type scale, tokens, a ledger or diagram, the logo directions, motion, and each field holding the product's real screenshot in its theme. Render it in both themes, look at every shot, fix what you see. `BRAND.md` follows commonplace's headings.
-6. **Directions as hero mockups.** Two or three real heroes, each with its own layout, type and motif, so they differ at a glance ("these are just color palettes, not an actual like full design direction"; "all three of these are still very, very similar"). Send them full size, side by side, with your pick, then keep building what doesn't hang on the answer. When he narrows to two, ask which one reads busy ("a little bit too busy"). For fonts, set the real page in each candidate, including the one Bassim admires and a free clone.
-7. **Site direction.** The site gets its own round; enclave's skipped it and came out "subpar for what I would expect for something built using my Brandit skill". Write the section list: what each section shows and the visual that carries it. Each section gets a layout of its own, so the page reads as a designed piece and not anchor, heading, line, box on repeat. Show Bassim the hero plus one section first.
-8. **Site.** A static Vite+ page, deployed to Vercel early with the Vercel CLI (`bunx vercel@latest`, logged in on the server and the Mac): link first, polish after. Commit a first pass so there's something to deploy.
-9. **Assets.** The OG image rendered from HTML, a favicon that follows the theme, the README `<picture>` header in light and dark, and every logo file as SVG and PNG, all delivered to Bassim. Each asset's source (`og.html`, `gen.mjs`) is committed beside its output, and the OG image ships with the first deploy. Sizes are at the bottom.
-10. **Launch.** The X post, then the video (`video.md`).
+1. Pull 20 to 40 candidates from his inspiration and project folders, plus real sites of products like this one.
+2. Put them on one HTML board with the images, so he and you can see them together. The model is the BROADCOM board, `~/Developer/pages/pages/broadcom-inspiration.html`.
+3. Pick one or two to study closely: their grid, type, color, how they show the product. Write `references.md` with what each direction takes and from where.
 
-## Words
+Evoke a reference, don't clone it. Credit a direct inspiration in the README.
 
-- Write like the README: short sentences, real numbers, what works and what doesn't. A craftsman talking, not an ad.
-- No em dashes anywhere. Reword the sentence; don't just swap in a comma.
-- Less text. The hero is the name or one line plus one sentence of about 15 words ("the hero text for it is just too long"). Lists of what ships live in the README and meta tags. A section is a headline, one short line and a visual: "reduce text... add more visuals."
-- Each fact appears once, where it means the most ("I don't think we need to be showing that everywhere").
-- The user's choices are theirs: "pick your apps", not a role we hand them ("Pick your personal surface").
-- When one number dwarfs another, say both in words with a footnote; a bar can't show 3 next to 3,000 ("don't have that kind of visualization at all").
-- No feature lists ("everyone has heard most those features a thousand times"). Say what happened, and lead with the edge, not table stakes.
-- Never: supercharge, seamless, effortless, blazing, powerful, magical, revolutionary, unlock, unleash, AI-native, second brain, waitlist. No moral-of-the-story closers, invented origin stories or manufactured hooks.
-- Numbers are honest and still impressive: count with a script, round yours up and theirs down, and footnote how.
-- Anything landing within the hour is shown as live. "Coming" is only for real future work, and don't label something coming when it's cheap to just build.
-- Bassim's own words (a note, the origin story) stay verbatim.
-- Every claim is checked against the code. Never invent a requirement or a feature ("sad requirement u fabricated").
-- Numbers and names live in one `copy/facts.json`, written by a script that counts them; the site, README, OG image and video read from it. When a fact changes, `rg` every asset for the old value ("there's still discord being mentioned in some places").
-- Launch copy follows `~/Developer/side-projects/x-pipeline/08-writing-style-guide.md` on the Mac. Run drafts through `~/Developer/side-projects/delvish` (`node src/cli.ts draft.txt --no-pager`).
+## 3. Directions
 
-## Fidelity
+Two or three directions, each a whole first screen and one section below it, built in HTML with the product's real UI or output in it. They should differ at a glance in layout, type and motif, not just color ("these are just color palettes, not an actual like full design direction"). Draw each from a named reference on the board.
 
-- Real UIs look like the real apps in their current version, rebuilt from real screenshots (Bassim's, or the vendor's own). Real CLI output keeps its exact shape.
-- Never draw a feature the product doesn't have ("visualizations that actually don't even match the existing app").
-- Examples show the product's whole breadth. Made up but realistic beats a narrow slice of real data. Bassim's real personal data never goes on a public page without a yes.
-- Other brands' logos are the official SVG or the exact file you were given.
-- Comparisons are like for like: same state, same content.
-- The brand bends to the product: seqno's `BRAND.md` banned Logseq's teal while every dark screenshot on its page was that teal.
-- Credit a direct inspiration by name in the README and the commit (seqno's hero credits Buzz and Wes Billman).
+Make one a more creative take than the safe pick. Rank them blind with `crit` before sending. Show them to him as screenshots side by side, light and dark, with your pick and why, then keep building whatever doesn't depend on the answer.
 
-## Check before saying done
+## 4. The system
+
+Once a direction is picked, write it down in `BRAND.md` and show it in `specimen.html`: tokens, type scale, the mark, motion, and the product's real screenshots in both themes.
+
+- **Marks** are SVG paths drawn from real font outlines by a `logo/gen.mjs` (opentype.js), checked at 16px.
+- **Type and color:** one small set of sizes, weights and colors, used the same way everywhere, with a clear hierarchy. Color has a job; visualizations can be rich and colorful. Set the real page in each font candidate before choosing.
+- **Dark mode** is designed against what sits on it: the product's own dark screenshots set the field, then the tokens swap with the system theme. When `shoot.ts` says colors fight, move the field to the product's hue a step darker, or toward neutral. A light brand color darkened turns brown; keep it light.
+
+## 5. Site
+
+Write the section list first: what each section shows and the visual that carries it. Each section gets a layout of its own, so the page reads as designed all the way down, not just in the hero, and every section draws from the references like the hero does. Show the visual instead of explaining it: real UIs rebuilt from current screenshots, data in its real shape, motion that follows state. Other brands' logos are their official SVGs.
+
+A static Vite+ page on Vercel (`bunx vercel@latest`, logged in on the server and the Mac). Deploy early, then polish.
+
+## 6. Words
+
+Copy gets its own agent, working in `copy/` beside `brand/`. Run it through the `clean-copy` skill.
+
+- Short. The hero is the name or one line, plus one sentence of about 15 words. A section is a headline, a line and a visual.
+- Say what the product does and what's true about it; lead with what's different. Bassim writes like a craftsman, not an ad, and uses no em dashes.
+- Every claim is checked against the code, and nothing gets drawn that the product doesn't do. Numbers come from a script that counts them into `copy/facts.json`, which the site, README, OG image and video all read.
+- His personal data stays off public pages unless he says yes.
+
+## 7. Assets and launch
+
+The OG image and a short silent OG video, both rendered from HTML, a favicon that follows the theme, a README `<picture>` header in light and dark, the logo as SVG and PNG. Each asset's source sits beside its output. Then the X post and the launch video (`video.md`).
+
+## Check
 
 ```sh
 s=~/.agents/skills/brand-it/scripts
-export TMPDIR=$PWD/.scratch                      # the server's /tmp is RAM-backed and fills up
-bun $s/shoot.ts site/ shots/                    # 320 to 1920px, light and dark: overflow, wrapped URLs, highlight overlaps, colors that fight, light images on dark, plus shots and tiles
-bun $s/shoot.ts site/og.html 1200x630 og.png    # exact renders: og image, icons (--clear for transparent)
+export TMPDIR=$PWD/.scratch                      # the server's /tmp is RAM
+bun $s/shoot.ts site/ shots/                    # 320 to 1920px, light and dark: overflow, wrapped URLs, colors that fight, plus 1:1 tiles
+bun $s/shoot.ts site/og.html 1200x630 og.png    # exact renders: OG image, icons (--clear for transparent)
 ```
 
-A local page is served from its repo root, its own folder and its `public/`, so `../brand/fonts`, `/style.css` and Vite's public files resolve. Lazy images and scroll reveals are loaded before each shot. Anything that fails to load is printed; a page with a build step takes its dev server URL instead.
-
-- Read every tile in `shots/tiles/` at 1035 and 390, in both themes. Bassim browses at 1035, often in dark; that's where the last hero broke. A full-page shot reaches you shrunk four to six times, which erases 1px rules, small text and the edges where screenshots meet the page. Look longest where you expect no problem: seqno's dark hero was checked, its dark page never opened.
-- "Colors fight" is two big areas in one view at the same lightness with hues 90° or more apart, like seqno's ember beside its blue screenshots. Contrast ratios are blind to it (1.03:1, as if one surface), and so is a swatch: brown only appears next to something brighter. Move the field to the product's hue or toward neutral.
-- Then hand the tiles to a fresh subagent told to find problems, ranked, each with its fix, naming the two colors at every edge between big surfaces, and to answer one question: does this beat the closest approved site (hex or commonplace)? You're the worst judge of your own palette. On hex that found seven real bugs; on seqno's dark mode, khaki outlines.
-- Every glyph the motifs use exists in the font. Plex Mono had no box drawing, so commonplace's own tree couldn't render.
-- Text tokens pass 4.5:1. That's all a ratio checks.
-- Two bugs came back twice, so `shoot.ts` flags both: a highlight band touching the line above (hex's yellow "overlapping the Y", then enclave's), and a URL or command wrapping onto a second line where it should end in a clean ellipsis ("It should of course be just truncated nicely"). It also flags a big light image on a dark page; light-only assets (OG, posters) sit on a light band in both themes.
-- After deploying, check the live OG image (bump `?v=`, since X and iMessage cache by URL) and the README header in both themes.
-- Test iOS Safari in the Simulator on the Mac before calling an iOS fix done: `xcrun simctl openurl booted <url>`, then `xcrun simctl io booted screenshot shot.png`. commonplace's untested fix got reverted ("i'm over it bro"). For targets you can't reach (Telegram's in-app browser), say so.
-- Fix the bugs you notice (overflow, contrast, stale facts) instead of reporting them. Anything that changes the look still needs a yes first.
+- Read the tiles yourself at 1035 and 390, both themes, top to bottom. Bassim browses at 1035, often in dark. A full-page shot reaches you shrunk and hides the small stuff.
+- Run `crit` on the page; where it replaces one, it should win the blind compare.
+- After deploying, check the live OG image (bump `?v=`, X and iMessage cache by URL) and the README header in both themes.
+- iOS: `xcrun simctl openurl booted <url>` and a Simulator screenshot on the Mac before calling a phone fix done.
+- Fix the bugs you find. Changing the look (colors, type, hiding the wordmark) waits for his yes.
 
 ## Working with Bassim
 
-- A small note means a small change. Feedback comes in small steps, and overcorrection gets noticed both ways.
-- Finishing isn't redesigning. Never swap colors or type, or hide the wordmark, without asking.
-- Decide the small things yourself. Bring only real decisions, each with your pick. A compliment isn't a decision.
-- Stay visible: keep previews at one stable path and send peeks mid-work.
-- Do the chore yourself instead of handing it back. If you're blocked, ship what you can and say exactly what unblocks you.
-- Brief sub-agents with Bassim's words and the files, not your assumptions.
-- Render headless and never open windows on the Mac. On the server, run one render at a time.
-- Commits are signed, one line, prefixed `Brand:`, `Copy:`, `Site:` or `Video:`.
+- Send screenshots the moment there's something to see, at one stable preview path.
+- A small note means a small change. Finishing isn't redesigning.
+- Decide the small things yourself, and bring him real choices with your pick.
+- Render headless; on the server, one render at a time.
+- Commits are signed, Conventional Commits (`feat(brand): …`, `fix(site): …`).
 
 ## Sizes (checked Oct 2026)
 
-- **OG image:** 1200×630 PNG with `og:image:width`, `height` and `alt`, plus `twitter:card` set to `summary_large_image` (X needs it). X lays the title over the bottom fifth, so keep that clear, and the type has to read at 400px wide.
-- **GitHub social preview:** 1280×640, under 1 MB, uploaded in the repo's settings.
+- **OG image:** 1200×630 PNG with `og:image:width`, `height` and `alt`, and `twitter:card` `summary_large_image`. X lays the title over the bottom fifth; the type has to read at 400px wide.
+- **OG video:** 1200×630 H.264 mp4, a few seconds, silent, with `og:video`, `og:video:type`, `width` and `height` beside the image tags.
+- **GitHub social preview:** 1280×640, under 1 MB, set in the repo's settings.
 - **iMessage** wants `og:image` at least 900px wide.
-- **README header:** the column is 838px wide, so export at 2x. Use `<picture>` with a `prefers-color-scheme: dark` source.
-- **Icons:** `favicon.svg` with its own `prefers-color-scheme` style, plus `apple-touch-icon.png` at 180 (full bleed, no transparency) and `icon-512.png`. Check them at 16, 32 and 48.
+- **README header:** the column is 838px, so export at 2x, with a `prefers-color-scheme: dark` `<source>`.
+- **Icons:** `favicon.svg` with its own `prefers-color-scheme` style, `apple-touch-icon.png` at 180 (full bleed, opaque) and `icon-512.png`. Check at 16, 32 and 48.

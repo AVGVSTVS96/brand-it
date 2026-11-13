@@ -7,9 +7,9 @@
 
 <p align="center">brand a project from its own parts<br><a href="https://brand-it-seven.vercel.app">brand-it-seven.vercel.app</a></p>
 
-A skill for coding agents that brands a project the way [hex](https://github.com/AVGVSTVS96/hex) and [commonplace](https://github.com/AVGVSTVS96/commonplace) were made: name, wordmark, palette, type, site, link preview, README header, launch post and launch video, all built as code from the product's own parts.
+A skill for coding agents that brands a project: name, wordmark, palette, type, site, link preview, README header, launch post and launch video, each project its own look, drawn from real references in the owner's saves and shown as two or three directions to pick from, all built as code.
 
-The rules are what was actually said to agents while those were built, and the mistakes they kept making. It points at those projects' folders and saves, so read it as a worked method, or fork it and point it at yours.
+It points at one person's projects and saves, so read it as a worked method, or fork it and point it at yours.
 
 ```sh
 npx skills add AVGVSTVS96/brand-it
@@ -19,7 +19,7 @@ Then open a project in Claude Code and say "brand it".
 
 ```
 skills/brand-it/    the skill: npx skills add installs only this folder
-  SKILL.md          the method: the bar, the steps, words, fidelity, checks
+  SKILL.md          the method: references, directions, system, site, words, checks
   refs.md           saved references, and how an agent pulls more
   video.md          launch videos: HTML scenes on one clock, rendered frame by frame,
                     sound built from the same clock

@@ -7,7 +7,7 @@ What Bassim has saved, and how to find more. Those saves beat your defaults: "th
 On the Mac (`ssh mac` from the server), through the `commonplace` CLI of the archive in `~/Developer/personal/commonplace`.
 
 ```sh
-# X bookmark folders and other saved collections: inspiration, cool projects, Workflow Tips, CSS Tips, prompts, webDev Inspiration (Raindrop)
+# X bookmark folders and other saved collections: inspiration, cool projects, Workflow Tips, CSS Tips, prompts, Design Engineers, designers, webDev Inspiration (Raindrop)
 commonplace sql "select t.author, substr(replace(t.text, char(10), ' '), 1, 120) as text, t.url
   from events e join things t on t.id = e.thing_id, json_each(e.collections) c
   where e.verb = 'saved' and c.value = 'inspiration'"
@@ -15,8 +15,6 @@ commonplace sql "select t.author, substr(replace(t.text, char(10), ' '), 1, 120)
 # likes and everything else, full text
 commonplace search "wordmark OR typeface" --limit 40
 ```
-
-X syncs every day; `commonplace stats` shows how fresh each source is, so say so. Two brands already mined it, so start from what they took: `~/Developer/commonplace-site/brand/references.md` and `~/dev/seqno-site/brand/references.md` on the server.
 
 ## The strongest
 
@@ -35,11 +33,29 @@ X syncs every day; `commonplace stats` shows how fresh each source is, so say so
 
 ## Looks Bassim has picked
 
-- **hex:** neo-brutalist with pop, framed by a strict ruled grid.
-- **commonplace:** light-terminal brutalist-minimal; mono, red rubrics, ledger tables. Earlier, openleaf was "brutalist terminal minimalism."
+Each project its own; these are the range, not a style to copy.
+
+- **seqno's hero:** after Buzz's hero, still its own. Below the hero the page had no reference and shows it.
+- **His portfolio:** nineties Japanese tech.
+- **BROADCOM:** Bloomberg terminal x Vercel x Linear, built from an inspiration board of his saves. His bar for dashboards and hex's own pages.
+- **iikb:** Swiss, Helvetica, lowercase.
+- **Vercel and Linear** where he asks for clean and modern, with richer visuals and a bit more color.
+- **Apple and iOS** for apps and phone pages.
 - **Grid-line sites** like voidzero.dev and greptile: "this new style of minimal grid style design language."
-- **Apple and iOS** for apps and phone pages (`clean-page`, the hex keyboard).
-- **References Bassim has sent agents to:** factory.ai's site, Logseq's 2021 site, buzz.xyz's hero, Linear.
+- **References he has sent agents to:** factory.ai's site, Logseq's 2021 site, buzz.xyz's hero, Linear.
+
+The hex site's neo-brutalism was a 20-minute hackathon page, and he calls it basic.
+
+## Launch films and brand systems
+
+X has no launch or OG folder; these sit in inspiration, cool projects and Workflow Tips, mostly as video or image with a one-line caption, so open the media.
+
+- **@LexnLin's cinetic** (launch films in Remotion) and **earshot** (sound effects made in code, timed to the frame). `~/Developer/films` has three films made with them.
+- **@kyleanthony's** brand systems: Synthetic, American Turbines, Pan Am, "Neo Industrial ... Swiss design and technical spec sheets".
+- **@keilethh**, ZeroNode and "UI Rules": a whole system grown from one reference image.
+- **@miralizain**, a brand system around physical artifacts; **@BrettFromDJ**, 14 variations of one logo.
+- **@shadcn**, skills that write a DESIGN.md (tokens, type scale, elevation) an agent can follow.
+- **@ctatedev's webreel**, scripted screen recordings with a real cursor, for product shots in a video.
 
 ## People
 

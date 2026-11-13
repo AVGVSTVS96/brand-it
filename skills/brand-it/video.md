@@ -2,10 +2,11 @@
 
 Launch videos are made like the site: HTML in the brand's own fonts and tokens, timed by one clock, rendered frame by frame in headless Chrome and encoded with ffmpeg. The sound is built from the same clock, so picture and sound can't drift. The source is committed with the project, "part of the overall design system", so the next video is cheap.
 
-Start from the closest kit:
+Take the look and pacing from real launch films (`refs.md`). For the pipeline, start from the closest kit:
 
-- **hex** · `~/Developer/hex-media/media` (README). The richest one: scenes with `data-s`/`data-e`, Motion springs baked into CSS `linear()` curves, Telegram (iOS 26), Discord and Buzz chrome drawn like the real apps, cuelume cues and music in Web Audio.
+- **hex** · `~/Developer/hex-site/media` (README). The richest one: scenes with `data-s`/`data-e`, Motion springs baked into CSS `linear()` curves, Telegram (iOS 26), Discord and Buzz chrome drawn like the real apps, cuelume cues and music in Web Audio.
 - **commonplace** · `~/Developer/commonplace-site/video` (README, LEARNED.md). Terminal scenes as data (`scenes.js`), typed commands, key ticks and tones. `LEARNED.md` is everything the hex video taught, in Bassim's words.
+- **films** · `~/Developer/films/{hex,autofork,living}`. Remotion films made with @LexnLin's cinetic: a brief and treatment first, a beat grid, sound computed from the picture's own frames, critic rounds, then a motion-blurred master. Reach for it when the launch wants a cinematic film rather than the product's UI on a clock.
 
 ## The contract
 
@@ -25,7 +26,7 @@ Render and master with `video.ts`. The kits' own `render.mjs` files predate its 
 
 ## Pacing
 
-- "Nice, short, punchy", but "some of the slides go by quite fast... a little bit more time for them to sink in." Nobody has said too long: hex grew 48 → 73 → 89 s on Bassim's asks.
+- "Nice, short, punchy", but "some of the slides go by quite fast... a little bit more time for them to sink in." Length follows the project: hex grew to 89 s on his asks; a small one is 30 to 45 s.
 - One statement per screen. Every scene holds after its last element lands, long enough to read the caption twice.
 - Open on the point, then an "Introducing" card before the name, held "maybe a half a second more".
 - Hard cuts, no crossfades, no stock-video feel. Cuts land on half seconds (the beat at 120 BPM), elements stagger by 0.5 s, and a cut never lands mid-animation.
