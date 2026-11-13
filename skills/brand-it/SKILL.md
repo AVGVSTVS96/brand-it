@@ -27,7 +27,7 @@ Evoke a reference, don't clone it. Credit a direct inspiration in the README.
 
 ## 3. Directions
 
-Two or three directions, each a whole first screen and one section below it, built in HTML with the product's real UI or output in it. They should differ at a glance in layout, type and motif, not just color ("these are just color palettes, not an actual like full design direction"). Draw each from a named reference on the board.
+Two or three directions, each a whole first screen and one section below it, built in HTML with the product's real UI or output in it. They should differ at a glance in layout, type and motif, not just color ("these are just color palettes, not an actual like full design direction"). Draw each from a named reference on the board, and hold each to the type and color notes in step 4.
 
 Make one a more creative take than the safe pick. Rank them blind with `crit` before sending. Show them to him as screenshots side by side, light and dark, with your pick and why, then keep building whatever doesn't depend on the answer.
 
@@ -36,7 +36,8 @@ Make one a more creative take than the safe pick. Rank them blind with `crit` be
 Once a direction is picked, write it down in `BRAND.md` and show it in `specimen.html`: tokens, type scale, the mark, motion, and the product's real screenshots in both themes.
 
 - **Marks** are SVG paths drawn from real font outlines by a `logo/gen.mjs` (opentype.js), checked at 16px.
-- **Type and color:** one small set of sizes, weights and colors, used the same way everywhere, with a clear hierarchy. Color has a job; visualizations can be rich and colorful. Set the real page in each font candidate before choosing.
+- **Type and color:** one small set of sizes, weights and colors, used the same way everywhere, with a clear hierarchy. Color has a job; visualizations can be rich and colorful. Set the real page in each font candidate before choosing. Bassim wants clean sans type, not serif.
+- **Reach past the 2026 "tasteful AI" look:** cream with terracotta, near-black with one acid accent, hairline broadsheet rules, tracked all-caps mono labels. It reads as generated. Use a piece of it only when the reference calls for it.
 - **Dark mode** is designed against what sits on it: the product's own dark screenshots set the field, then the tokens swap with the system theme. When `shoot.ts` says colors fight, move the field to the product's hue a step darker, or toward neutral. A light brand color darkened turns brown; keep it light.
 
 ## 5. Site
