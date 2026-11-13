@@ -27,7 +27,7 @@ Evoke a reference, don't clone it. Credit a direct inspiration in the README.
 
 ## 3. Directions
 
-Two or three directions, each a whole first screen and one section below it, built in HTML with the product's real UI or output in it. They should differ at a glance in layout, type and motif, not just color ("these are just color palettes, not an actual like full design direction"). Draw each from a named reference on the board, and hold each to the type and color notes in step 4.
+Two or three directions, each a whole first screen and a section or two below it, built in HTML with the product's real UI or output in it. They should differ at a glance in layout, type and motif, not just color ("these are just color palettes, not an actual like full design direction"). Draw each from a named reference on the board, and hold each to the type and color notes in step 4.
 
 Make one a more creative take than the safe pick. Rank them blind with `crit` before sending. Show them to him as screenshots side by side, light and dark, with your pick and why, then keep building whatever doesn't depend on the answer.
 
@@ -67,6 +67,8 @@ export TMPDIR=$PWD/.scratch                      # the server's /tmp is RAM
 bun $s/shoot.ts site/ shots/                    # 320 to 1920px, light and dark: overflow, wrapped URLs, colors that fight, plus 1:1 tiles
 bun $s/shoot.ts site/og.html 1200x630 og.png    # exact renders: OG image, icons (--clear for transparent)
 ```
+
+Shoot a static build (`dist/`), not a dev server: the shots wait for the network to go quiet, and a dev server never does.
 
 - Read the tiles yourself at 1035 and 390, both themes, top to bottom. Bassim browses at 1035, often in dark. A full-page shot reaches you shrunk and hides the small stuff.
 - Run `crit` on the page; where it replaces one, it should win the blind compare.
